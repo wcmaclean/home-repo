@@ -1,0 +1,72 @@
+package examples.match; 
+
+import java.sql.*;
+import java.lang.Long;
+
+public class SeqCount{
+
+	public long getSeqCount(){
+		Connection aConnection = null;
+		int iRowCount = 0;
+		Statement stmt = null;
+		long returnThis =0;
+		ResultSet aResultSet = null;
+
+		// get a connection to the database
+		//aConnection = DBLink.getConnection();
+
+	try{
+			aConnection = DBLink.getConnection();
+	    	stmt = aConnection.createStatement();
+	}catch ( Exception e){
+	    	System.err.println( "problems connecting");
+	    	System.err.println( e.getMessage() );
+	    	if( aConnection != null){
+			try { aConnection.close(); }
+				catch( Exception e2 ) { return returnThis; }
+	    	}
+	   	return returnThis;
+	} // end catch
+	// execute SQL commands 
+	// to create table and insert data
+	try{
+	    String requestSeqCount = 
+	    	"SELECT SeqCountNum FROM SeqCount WHERE SeqCountKey=1";
+
+	    	// execute query and get SeqCount 	    	
+			aResultSet = stmt.executeQuery(requestSeqCount);
+
+			
+//long tempLong = Long.parseLong(request.getParameter("clSeqID"));
+			while(aResultSet.next()) {
+				returnThis = Long.parseLong(aResultSet.getString(1));
+			}
+			System.out.println(returnThis);
+			// increment SeqCount 
+			returnThis = returnThis+1;
+
+	    // update database with new SeqCount 
+	   stmt.executeUpdate(
+	   	"UPDATE SeqCount SET SeqCountNum=" + returnThis + "WHERE SeqCountKey=1");
+
+
+	 	}catch( Exception e ){
+	    	System.err.println("problem with SQL" );
+	    	System.err.println( e.getMessage() );
+		}finally{
+	    	try { stmt.close(); }
+	    	catch( Exception e ) {}
+
+	    	try { aConnection.close(); }
+	    	catch( Exception e ) {}
+		} // end finally clause	
+		
+		return returnThis;
+	}
+
+    public static void main(String[] args) {
+		SeqCount aSeqCount = new SeqCount();
+		System.out.println(aSeqCount.getSeqCount());
+
+    } // end main
+} // end class CreateSeqCountTable

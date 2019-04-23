@@ -1,0 +1,13 @@
+// Will MacLean
+// CSPP 51024
+//
+// Mutated from the Bank.idl
+//
+// CorbaCalc.idl
+
+module CorbaCalc {
+  interface Calculator {
+    int compute(in int op1, in int op2, in string operation);
+  };
+};
+

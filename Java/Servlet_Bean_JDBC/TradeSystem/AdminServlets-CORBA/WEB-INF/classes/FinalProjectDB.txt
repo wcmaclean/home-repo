@@ -1,0 +1,39 @@
+Trade
+-----
+LIMIT - char, +/-
+ClientID - long int
+ClSeqID - long int
+Quantity - int
+Price - int
+ClTime - long int
+
+FilledTrade (for admin)
+-----------
+BuyerID - long int
+SellerID - long int
+ClSeqID - long int
+Quantity - int
+Price - int
+MktTime - long int
+
+Message (for admin)
+-------
+Type
+LIMIT - char, +/-
+ClientID - long int
+ClSeqID - long int
+Quantity - int
+Price - int
+ClTime - long int
+
+Volume
+------
+Volume - long int
+
+TradeTotal
+----------
+TradeTotal - long int
+
+SeqCount
+--------
+SeqCount - int

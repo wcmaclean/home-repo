@@ -1,0 +1,12 @@
+module SQLQueryResultSet {
+
+    struct aResultSetStruct {
+         string aString;
+    };
+
+    typedef sequence <aResultSetStruct> aResultSetSeq;
+
+    interface ResultSetSeq {
+	aResultSetSeq getSQLQueryResultSet(in string aQuery);
+    };
+};

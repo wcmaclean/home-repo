@@ -1,0 +1,11 @@
+#!/bin/sh
+
+for file in *.c
+do
+ed $file<<-EOF
+%s/stdio.h/STDIO.H/g
+w
+q
+EOF
+done
+exit 0

@@ -1,0 +1,134 @@
+// Will MacLean
+// CSPP 51037
+// Homework 1
+// SynthStoreServer class
+
+import java.io.*;
+import java.net.*;
+import java.util.*;
+
+
+public class SynthStoreServer{
+	private ServerSocket servSocket;
+	private SynthStore mySynthStore;
+	private static final int PORT = 1492;
+
+	SynthStoreServer(SynthStore synthStoreIn){
+		mySynthStore = synthStoreIn;
+	} // end constructor
+	
+	public void letsDoThis(){
+		Socket sockIt;
+		System.out.println("SynthStoreServer listening on port " + PORT);
+		try{
+			servSocket = new ServerSocket(PORT);
+		}
+		catch(IOException ioe){
+			System.out.println("Can't start server on port: " + PORT);
+			System.out.println(ioe);
+		}
+
+		while(true){
+			try{
+				sockIt = servSocket.accept();
+			}
+			catch(IOException ioe) {
+				System.out.println("Can't connect to client");
+				System.out.println(ioe);
+				continue;	
+			}
+			Thread threadliest = new SynthClientThread(sockIt, mySynthStore);
+			threadliest.start();
+		}
+		
+	} // end letsDoThis
+
+
+	public static void main(String[] args){
+		System.out.println("starting SynthStoreServer...");
+		new SynthStoreServer(new SynthStore("fireSale", 5)).letsDoThis();
+		System.out.println("SynthStoreServer shutting down...");
+		
+	} // end main
+
+
+} // end SynthStoreServer
+
+
+
+class SynthClientThread extends Thread{
+	Socket sockIt;
+	SynthStore mySynthStore;
+
+	SynthClientThread(Socket clientSockIn, SynthStore synthStoreIn){
+		sockIt = clientSockIn;
+		mySynthStore = synthStoreIn;
+	} // end constructor
+
+	public void run(){ 
+		String stuffIn = "";
+		BufferedReader inTo = null;
+		PrintWriter outFrom = null;
+//		String input;
+
+		try{
+			inTo = new BufferedReader (new InputStreamReader(sockIt.getInputStream()));
+			outFrom = new PrintWriter(sockIt.getOutputStream(), true);
+		}catch(IOException ioe){
+			System.out.println("Couldn't setup I/O streams");
+			System.out.println(ioe);
+		}
+
+		try{
+			while((stuffIn = inTo.readLine()) != null){
+				if(stuffIn.equals("exit")){
+					break;
+				}else{
+					String reply = stuffIn;
+//					String reply = handle(stuffIn);
+					outFrom.println(reply);
+				}
+			}
+		}catch(IOException ioe){
+			System.out.println("closed the connection");
+			return;
+		}
+
+	} // end run
+
+
+} // end SynthClientThread
+
+// I straight-up borrowed this code below...
+// Because there's already too much I'm having trouble wrapping my head around.
+
+class ParserUtils{
+
+public static String getKeyInput(){
+	String input = null;
+	try{
+	    BufferedReader in = 
+		new BufferedReader(new InputStreamReader(System.in));
+	    input = in.readLine();
+
+	}
+	catch (IOException ioe){
+	    System.out.println(ioe);
+	}
+	return input;
+    }
+
+    public static String[] getTokens(String input){
+	int i = 0;
+	StringTokenizer st = new StringTokenizer(input);
+	int numTokens = st.countTokens();
+	String[] tokenList = new String[numTokens];
+	while (st.hasMoreTokens()){
+	    tokenList[i] = st.nextToken();
+	    i++;
+	}
+	return(tokenList);
+    }
+}
+
+

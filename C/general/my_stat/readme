@@ -1,0 +1,61 @@
+Will MacLean
+CSPP 51081
+Lab 3, Ex 2 - mystat
+
+------
+mystat
+------
+
+1. Run the makefile:
+	prompt> make
+	
+2. Run the program:
+	prompt> mystat <filename>
+	
+3. To clean up after:
+	prompt> make clean 
+	
+------------
+what it does
+------------
+It takes a string from the command line, creates an 
+empty stat structure, and uses lstat to read the 
+filename named in the string into the empty stat 
+structure. 
+
+It then uses the stat methods, printf, and some
+other things to show everything:
+
+-the filename is printed straight from the args array
+-st_size reads the filesize 
+-st_blocksize and st_block give you the block info
+-a mode_t is read analyzed in else-if to print file type
+-the mode is also used to print access permissions in octal
+-the mode is analyzed in else-ifs to print the file type again,
+	but this time for the permissions string
+-the mode is analyzed in more else-ifs to build the
+	owner, group, other permissions string
+-a passwd is created and used to see if the owner
+	has a real name to print - and prints it is so
+-a group is created and used to print the group name
+-a tm is used to translate the st_atime, st_ctime, and st_mtime 
+	into human-readable form to print
+
+------
+output
+------
+$ dir
+Makefile  my_stat.c  readme
+
+$ make
+gcc -c my_stat.c
+gcc -o mystat my_stat.o
+
+$ mystat my_stat.c
+Filename: "my_stat.c"
+Size: 4408   Blocks: 8192   IO Block: 16   Filetype: regular file
+Device: (null)    Inode: 444428   Links: 1
+Access: [100600/rw-------]   Uid: [10083/wmaclean]   Gid: [13000/cppcs   ]
+Access: Sat Oct 20 11:36:09 2007
+Modify: Tue Oct 16 21:08:08 2007
+Change: Tue Oct 16 21:08:15 2007

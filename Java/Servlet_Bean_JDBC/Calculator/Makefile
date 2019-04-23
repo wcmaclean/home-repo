@@ -1,0 +1,44 @@
+MYCLASSPATH=$(CLASSPATH)
+CLIENT_DIR=$(CLIENT_CLASSES)
+APPLIC_DIR=$(WL_HOME)/samples/domains/examples/applications
+
+JAVAC=javac -classpath '$(MYCLASSPATH)'
+
+BEAN_API=Calculator.java CalculatorHome.java 
+BEAN_IMPL=CalculatorBean.java
+BEAN_CLIENT=CalculatorClient.java
+BEAN_SERVLET=CalculatorServletEJB.java
+BEAN_JAR=ejb_calculator.jar
+BEAN_EAR=ejb_calculator.ear
+
+all: build_dir EJB ear install servlet
+
+build_dir:
+	mkdir -p build build/META-INF 
+	cp -f ejb-jar.xml weblogic-ejb-jar.xml build/META-INF
+
+EJB: build_dir
+	$(JAVAC) -d build $(BEAN_API) $(BEAN_IMPL)
+	$(JAVAC) -d $(CLIENT_DIR) $(BEAN_API) $(BEAN_CLIENT)
+	cd build && jar cv0f tmp_$(BEAN_JAR) META-INF examples 
+	java -classpath '$(MYCLASSPATH)' -Dweblogic.home=$(WL_HOME) weblogic.ejbc build/tmp_$(BEAN_JAR) build/$(BEAN_JAR)
+	rm build/tmp_$(BEAN_JAR)
+
+ear: EJB
+	mkdir build/ear/ build/ear/META-INF/
+	cp application.xml build/ear/META-INF/
+	mv build/$(BEAN_JAR) build/ear/$(BEAN_JAR)
+	cd build/ear && jar -cvf $(BEAN_EAR) $(BEAN_JAR) META-INF
+
+servlet: EJB
+	$(JAVAC) -d $(SERVLET_DIR) $(BEAN_API) $(BEAN_SERVLET)
+
+install:
+	rm -rf $(APPLIC_DIR)/$(BEAN_JAR) 
+	cp build/ear/$(BEAN_EAR) $(APPLIC_DIR)/$(BEAN_EAR)
+
+clean:
+	rm -rf build
+	rm -rf $(CLIENT_DIR)/examples/helloworld/
+	rm -rf $(APPLIC_DIR)/$(BEAN_JAR)
+	rm -rf $(APPLIC_DIR)/$(BEAN_EAR)

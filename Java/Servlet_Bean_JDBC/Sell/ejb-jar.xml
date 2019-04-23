@@ -1,0 +1,104 @@
+<?xml version="1.0"?>
+
+<!DOCTYPE ejb-jar PUBLIC "-//Sun Microsystems, Inc.//DTD Enterprise JavaBeans 2.0//EN" "http://java.sun.com/j2ee/dtds/ejb-jar_2_0.dtd">
+
+<ejb-jar>
+ <enterprise-beans>
+  <entity>
+   <ejb-name>Sell</ejb-name>
+   <home>examples.sell.SellHome</home>
+   <remote>examples.sell.Sell</remote>
+   <ejb-class>examples.sell.SellBean</ejb-class>
+   <persistence-type>Container</persistence-type>
+   <prim-key-class>java.lang.String</prim-key-class>
+
+   <reentrant>False</reentrant>
+
+   <cmp-version>2.x</cmp-version>
+   <abstract-schema-name>SellBean</abstract-schema-name>
+
+   <cmp-field>
+    <field-name>SellID</field-name>
+   </cmp-field>
+   <cmp-field>
+    <field-name>ClientID</field-name>
+   </cmp-field>
+   <cmp-field>
+    <field-name>ClSeqID</field-name>
+   </cmp-field>
+   <cmp-field>
+    <field-name>Quantity</field-name>
+   </cmp-field>
+   <cmp-field>
+    <field-name>Price</field-name>
+   </cmp-field>
+   <cmp-field>
+    <field-name>ClTime</field-name>
+   </cmp-field>
+
+   <primkey-field>SellID</primkey-field>
+
+   <query>
+    <query-method>
+     <method-name>findBySellID</method-name>
+     <method-params>
+      <method-param>java.lang.String</method-param>
+     </method-params>
+    </query-method>
+    <ejb-ql>
+     <![CDATA[SELECT OBJECT(a) FROM SellBean AS a WHERE a.sellID = ?1]]>
+    </ejb-ql>
+   </query>
+
+
+   <query>
+    <query-method>
+     <method-name>findByPrice</method-name>
+     <method-params>
+      <method-param>double</method-param>
+     </method-params>
+    </query-method>
+    <ejb-ql>
+     <![CDATA[SELECT OBJECT(a) FROM SellBean AS a WHERE a.Price = ?1]]>
+    </ejb-ql>
+   </query>
+
+   <query>
+    <query-method>
+     <method-name>findSellsAbove</method-name>
+     <method-params>
+      <method-param>double</method-param>
+     </method-params>
+    </query-method>
+    <ejb-ql>
+     <![CDATA[SELECT OBJECT(a) FROM SellBean AS a WHERE a.Price > ?1]]>
+    </ejb-ql>
+   </query>
+
+
+   <query>
+    <query-method>
+     <method-name>findAllSells</method-name>
+     <method-params>
+     </method-params>
+    </query-method>
+    <ejb-ql>
+     <![CDATA[SELECT OBJECT(a) FROM SellBean AS a WHERE a.SellID IS NOT NULL]]>
+    </ejb-ql>
+   </query>
+
+  </entity>
+ </enterprise-beans>
+
+ <assembly-descriptor>
+  <container-transaction>
+   <method>
+    <ejb-name>Sell</ejb-name>
+    <method-intf>Remote</method-intf>
+    <method-name>*</method-name>
+   </method>
+   <trans-attribute>Required</trans-attribute>
+  </container-transaction>
+ </assembly-descriptor>
+
+</ejb-jar>

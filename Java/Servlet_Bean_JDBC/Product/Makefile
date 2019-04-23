@@ -1,0 +1,39 @@
+CLIENT_DIR=$(CLIENT_CLASSES)
+APPLIC_DIR=$(WL_HOME)/samples/domains/examples/applications
+
+JAVAC=javac 
+
+BEAN_API=Product.java ProductHome.java 
+BEAN_IMPL=ProductBean.java
+BEAN_CLIENT=ProductClient.java
+BEAN_JAR=ejb_product.jar
+BEAN_EAR=ejb_product.ear
+
+all: build_dir EJB ear install 
+
+build_dir:
+	mkdir -p build build/META-INF 
+	cp -f ejb-jar.xml weblogic-ejb-jar.xml weblogic-cmp-rdbms-jar.xml build/META-INF
+
+EJB: build_dir
+	$(JAVAC) -d build $(BEAN_API) $(BEAN_IMPL)
+	$(JAVAC) -d $(CLIENT_DIR) $(BEAN_API) $(BEAN_CLIENT)
+	cd build && jar cv0f tmp_$(BEAN_JAR) META-INF examples 
+	java -Dweblogic.home=$(WL_HOME)/server weblogic.ejbc build/tmp_$(BEAN_JAR) build/$(BEAN_JAR)
+	rm build/tmp_$(BEAN_JAR)
+
+ear: EJB
+	mkdir build/ear/ build/ear/META-INF/
+	cp application.xml build/ear/META-INF/
+	mv build/$(BEAN_JAR) build/ear/$(BEAN_JAR)
+	cd build/ear && jar -cvf $(BEAN_EAR) $(BEAN_JAR) META-INF
+
+install:
+	rm -rf $(APPLIC_DIR)/$(BEAN_JAR) 
+	cp build/ear/$(BEAN_EAR) $(APPLIC_DIR)/$(BEAN_EAR)
+
+clean:
+	rm -rf build
+	rm -rf $(CLIENT_DIR)/examples/helloworld/
+	rm -rf $(APPLIC_DIR)/$(BEAN_JAR)
+	rm -rf $(APPLIC_DIR)/$(BEAN_EAR)

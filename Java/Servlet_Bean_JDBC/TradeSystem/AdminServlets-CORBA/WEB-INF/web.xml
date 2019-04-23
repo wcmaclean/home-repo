@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<!DOCTYPE web-app 
+    PUBLIC "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN" 
+    "http://java.sun.com/dtd/web-app_2_3.dtd">
+
+<web-app>
+    <servlet>
+      <servlet-name>SimpleServlet</servlet-name>
+      <description>
+        A servlet get example for CSPP 51024.
+      </description>
+
+      <servlet-class>SimpleServlet</servlet-class>
+      <!-- Load this servlet at server startup time -->
+      <load-on-startup>5</load-on-startup>
+    </servlet>
+
+    <servlet>
+      <servlet-name>AuditAdminServlet</servlet-name>
+      <description>
+        Audit Admin for final.
+      </description>
+      <servlet-class>AuditAdminServlet</servlet-class>
+      <!-- Load this servlet at server startup time -->
+      <load-on-startup>5</load-on-startup>
+    </servlet> 
+    
+   <servlet>
+      <servlet-name>FilledTradeAdminServlet</servlet-name>
+      <description>
+        Audit Admin for final.
+      </description>
+      <servlet-class>FilledTradeAdminServlet</servlet-class>
+      <!-- Load this servlet at server startup time -->
+      <load-on-startup>5</load-on-startup>
+    </servlet> 
+    
+   <servlet>
+      <servlet-name>AdminServlet</servlet-name>
+      <description>
+        Admin frame for containing both.
+      </description>
+      <servlet-class>AdminServlet</servlet-class>
+      <!-- Load this servlet at server startup time -->
+      <load-on-startup>5</load-on-startup>
+    </servlet> 
+    
+   <servlet>
+      <servlet-name>MarketDataServlet</servlet-name>
+      <description>
+        Audit Admin for final.
+      </description>
+      <servlet-class>MarketDataServlet</servlet-class>
+      <!-- Load this servlet at server startup time -->
+      <load-on-startup>5</load-on-startup>
+    </servlet>         
+
+    <servlet-mapping>
+      <servlet-name>AuditAdminServlet</servlet-name>
+      <url-pattern>/AuditAdminServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+      <servlet-name>FilledTradeAdminServlet</servlet-name>
+      <url-pattern>/FilledTradeAdminServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+      <servlet-name>AdminServlet</servlet-name>
+      <url-pattern>/AdminServlet</url-pattern>
+    </servlet-mapping>
+    
+    <servlet-mapping>
+      <servlet-name>MarketDataServlet</servlet-name>
+      <url-pattern>/MarketDataServlet</url-pattern>
+    </servlet-mapping>    
+
+    <!-- Define the default session timeout for your application,
+         in minutes.  From a servlet or JSP page, you can modify
+         the timeout for a particular session dynamically by using
+         HttpSession.getMaxInactiveInterval(). -->
+
+    <session-config>
+      <session-timeout>30</session-timeout>    <!-- 30 minutes -->
+    </session-config>
+
+
+</web-app>

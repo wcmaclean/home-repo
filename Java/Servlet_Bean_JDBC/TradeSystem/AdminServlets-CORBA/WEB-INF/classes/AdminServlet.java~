@@ -1,0 +1,43 @@
+import java.io.*;
+import java.text.*;
+import java.util.*;
+import java.sql.*;
+import javax.servlet.*;
+import javax.servlet.http.*;
+import SQLQueryResultSet.*;
+import java.lang.Integer;
+import java.lang.reflect.Array;
+
+public class AdminServlet extends HttpServlet {
+
+	SQLQueryResultSet.ResultSetCORBA aResultSetCORBA = null;
+		
+    public void doGet(HttpServletRequest request, 
+		HttpServletResponse response) throws IOException, ServletException {
+
+        response.setContentType("text/html");
+	PrintWriter out = response.getWriter();
+
+
+	// start the page
+        out.println("<html>");
+        out.println("<head>");
+        String title = "Admin Servlet";
+        out.println("<title>" + title + "</title>");
+        out.println("</head>");
+        out.println("<body>");
+        out.println("<h1>" + title + "</h1>");
+
+ 	out.println("<frameset rows=\"80,*\">");
+	out.println("<frame src=\"guts.cs.uchicago.edu:19141/FinalProject-DB/AuditAdminServlet\" name=\"top\" id=\"top\" />");
+	out.println("<frame src=\"guts.cs.uchicago.edu:19141/FinalProject-DB/FilledTradeAdminServlet\" name=\"main\" id=\"main\" />");
+	out.println("</frameset>");
+  
+        out.println("</form>");
+        out.println("</body>");
+        out.println("</html>");
+	out.close();
+
+    } // close doGet
+
+} // close AdminServlet class

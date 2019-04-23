@@ -1,0 +1,34 @@
+<project name="jms-marketdatatopic" default="compile" basedir=".">
+
+  <property environment="env"/>
+  <property file="../../../examples.properties"/>
+  <property name="build.compiler" value="${compiler}"/>
+
+  <!-- set global properties for this build -->
+  <property name="source" value="."/>
+
+  <target name="compile">
+    <!-- Compile the java code from ${source} into ${dest} -->
+    <javac srcdir="${source}"
+      destdir="${client.classes.dir}"
+      includes="*.java"
+    />
+  </target>
+  
+  <target name="get_host">
+     <property name="myurl" value="t3://${hostname}:${port}"/>
+  </target>
+  
+  <target name="run.receive" depends="get_host">
+    <java classname="examples.jms.marketdatatopic.MarketDataTopicReceive" failonerror="yes">
+       <arg line="${myurl}"/>
+    </java>
+  </target>
+  
+  <target name="run.send" depends="get_host">
+    <java classname="examples.jms.marketdatatopic.MarketDataTopicSend" failonerror="yes">
+      <arg line="${myurl}"/>
+    </java>
+  </target>
+  
+</project>

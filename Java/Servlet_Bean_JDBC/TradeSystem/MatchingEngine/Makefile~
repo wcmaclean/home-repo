@@ -1,0 +1,7 @@
+SRC =  DBLink.java SeqCount.java MatchingEngine.java
+
+all: $(SRC)
+	javac $(SRC)
+
+clean:
+	/bin/rm *.class *~

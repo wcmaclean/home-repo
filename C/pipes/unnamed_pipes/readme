@@ -1,0 +1,24 @@
+Will MacLean
+CSPP51081
+Lab 4-2
+my_upipe
+
+----------
+To compile
+----------
+make
+
+------
+To run
+------
+my_upipe "<command and options>" "<command and options">
+
+----------
+Transcript
+----------
+wmaclean@cspp158:~/cspp51081/labs/wmaclean.lab4/ex2$ my_upipe "cat /etc/passwd" "grep root"
+parent process id is: 29209
+root:x:0:0:root:/root:/bin/bash
+wmaclean@cspp158:~/cspp51081/labs/wmaclean.lab4/ex2$ cat /etc/passwd | grep rootroot:x:0:0:root:/root:/bin/bash
+wmaclean@cspp158:~/cspp51081/labs/wmaclean.lab4/ex2$
+ 

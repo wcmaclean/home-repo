@@ -1,0 +1,67 @@
+Will MacLean
+
+CSPP51081
+
+Lab 6
+
+
+
+==========
+server
+==========
+
+
+NOTE: run this first
+
+
+
+1. Open a command shell
+
+
+
+2. Run the makefile:
+
+	prompt> make
+
+	
+
+3. Run the program:
+
+	prompt> server <port>
+
+   For example:
+        prompt> server 1560
+
+
+
+
+
+==========
+client==========
+
+
+NOTE: run this second
+
+
+
+1. Open a second command shell
+
+
+
+2. Run the program:
+
+	prompt> client <IP Address> <port>
+
+   For example:
+        prompt> server 127.0.0.1 1560
+
+	
+
+3. Enter a word, and the server analyzes the
+   word, returning to the client if it 
+   is spelled correctly - which the client reports.
+
+==========word============
+Taken from Shacklette's Hangman game, and
+used by the server as the dictionary to 
+check words against.

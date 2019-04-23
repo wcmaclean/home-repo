@@ -1,0 +1,47 @@
+
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?xml-stylesheet href="weather.xsl"  type="text/xsl"?>
+
+
+<theWeather xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="./theWeather.xsd">
+
+
+<locationName>Chicago</locationName>
+
+<locationCode>CHI</locationCode>
+
+
+<weather>
+
+<dateTime>2/9/2006 21:29:53:957</dateTime>
+
+<windSpeed>12</windSpeed>
+
+<windDirection>West</windDirection>
+
+<barometricPressure>46</barometricPressure>
+
+<relativeHumidity>15</relativeHumidity>
+
+<dewPointTemp>5</dewPointTemp>
+
+<precipitationLast24Hours>7</precipitationLast24Hours>
+
+<currentHighLast24Hours>47</currentHighLast24Hours>
+
+<currentLowLast24Hours>44</currentLowLast24Hours>
+
+<snowfallLast24Hours>0</snowfallLast24Hours>
+
+<heatIndex>0</heatIndex>
+
+<windChill>5</windChill>
+
+<officialWarnings>Tropical Storm</officialWarnings>
+
+<officialWatches>Timex</officialWatches>
+
+</weather>
+
+</theWeather>

@@ -1,0 +1,79 @@
+// Will MacLean
+// CSPP 51024
+// 
+// This finger client is modelled of one located here...
+// http://patriot.net/~tvalesky/jFinger.html
+
+
+// add to package
+package edu.cspp51024.wmaclean;
+
+import java.net.Socket;
+import java.util.StringTokenizer;
+import java.io.DataInputStream;
+import java.io.PrintStream;
+
+class FingerClient{
+
+	// instance variables
+        public static final int FINGER_PORT = 79;
+	private String aUsername;
+	private String aServerAddress;
+
+	// 
+        public FingerClient(String anAddress){
+
+		// Split input into required variables
+		StringTokenizer aStringTokenizer = 
+			new StringTokenizer(anAddress, "@");
+		aUsername = aStringTokenizer.nextToken();
+		aServerAddress = aStringTokenizer.nextToken();
+
+		//make finger connection
+
+		Socket aSocket = null;
+		try{
+			aSocket = new Socket(aServerAddress, FINGER_PORT);
+			DataInputStream anInputStream = 
+				new DataInputStream(aSocket.getInputStream());
+			PrintStream anOutputStream =
+	 			new PrintStream(aSocket.getOutputStream());
+
+			// login as user
+			anOutputStream.println(aUsername);
+
+			// read stuff from server
+			String moreInput = anInputStream.readLine();
+
+			// display stuff
+			while (moreInput != null){
+                                        System.out.println(moreInput);
+                                        moreInput = anInputStream.readLine();
+			}
+		}catch (Exception e){
+			System.out.println("Error: " + e);
+			e.printStackTrace();
+		}finally{
+			try{
+				if (aSocket != null)
+				aSocket.close();
+			}catch (Exception e){
+				System.out.println("Exception while closing socket: " + e);
+				e.printStackTrace();
+			} 
+		} //end try-catch-finally
+	}
+
+        public static void main(String[] args){
+
+		// Test args for proper size
+		if (args.length != 1){
+			System.out.println("Error. Please run as follows:");
+			System.out.println(">java edu.cspp521024.wmaclean.FingerClient <username>@<serverAddress>");
+			System.exit(0);
+		}
+
+		// Create a FingerClient
+		FingerClient aFingerClient = new FingerClient(args[0]);            
+	}
+}

@@ -1,0 +1,7 @@
+module SQLQueryResultSet {
+
+   interface ResultSetCORBA {
+		string getSQLQueryResultSet(in string aQuery);
+		long long getClSeqID();
+    };
+};

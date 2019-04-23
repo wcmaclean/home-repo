@@ -1,0 +1,50 @@
+// the Home interface for the TradeBean.
+
+
+package examples.trade; 
+
+import javax.ejb.*;
+import java.rmi.RemoteException;
+import java.util.Collection;
+import java.lang.Long;
+
+// modified from ProductHome.java
+
+/**
+ * This is the home interface for Trade.  This interface
+ * is implemented by the EJB Server's glue-code tools.
+ * The implemented object is called the Home Object, and
+ * serves as a factory for EJB Objects.
+ * 
+ * One create() method is in this Home Interface, which
+ * corresponds to the ejbCreate() method in the Trade file.
+ */
+
+public interface TradeHome extends EJBHome {
+
+	/*
+	 * Creates a trade
+	 *
+	 * @param clSeqID The PK of the Trade (unique)
+	 *
+	 * @return The newly created EJB Object.
+	 */
+
+	Trade create(String limit, long clientID, Long clSeqID, int quantity, int price, long clTime) throws CreateException, RemoteException;
+
+	// Finder methods.  These are implemented by the
+	// container.  You can customize the functionality of
+	// these methods by using the EJB Container tools.
+
+	public Trade findByPrimaryKey(Long key) throws FinderException, RemoteException;
+	public Collection findByLimit(String limit) throws FinderException, RemoteException;
+	public Collection findByPrice(double aPrice) throws FinderException, RemoteException;
+	public Collection findTradesAbove(double aPrice) throws FinderException, RemoteException;
+	public Collection findAllTrades() throws FinderException, RemoteException;
+
+//	public Collection findByDescription(String description) throws FinderException, RemoteException;
+//	public Collection findByBasePrice(double basePrice) throws FinderException, RemoteException;
+//	public Collection findExpensiveProducts(double minPrice) throws FinderException, RemoteException;
+//	public Collection findCheapProducts(double maxPrice) throws FinderException, RemoteException;
+//	public Collection findAllProducts() throws FinderException, RemoteException;
+}

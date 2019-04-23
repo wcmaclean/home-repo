@@ -1,0 +1,10 @@
+In one command window:
+rmiregistry
+
+In another command window on same machine:
+java -Djava.rmi.server.codebase=file:/home/wmaclean/cspp51024/wmaclean_hw1/RMI_Calculator/ 
+-Djava.security.policy=/home/wmaclean/cspp51024/wmaclean_hw1/RMI_Calculator/policy CalcServerImpl
+
+In yet another command window on the same machine:
+java -Djava.security.policy=/home/wmaclean/cspp51024/wmaclean_hw1/RMI_Calculator/policy CalcClient
+

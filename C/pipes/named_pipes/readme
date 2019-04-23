@@ -1,0 +1,58 @@
+Will MacLean
+CSPP51081
+Lab 4-3
+my_npipe_writer and my_npipe_reader
+
+----------
+To compile
+----------
+make
+
+------
+To run
+------
+1. Open one command shell and enter:
+		my_npipe_reader
+		
+2. Open a second command shell and enter:
+		my_npipe_writer
+
+----------
+Transcript
+----------
+
+======
+reader
+======
+wmaclean@cspp158:~/cspp51081/labs/wmaclean.lab4/ex3$ my_npipe_reader
+We already have a MYFIFO, but we can borrow it
+Waiting for input...Got it: stuff, man
+
+Waiting for input...Got it: cool
+
+Waiting for input...Got it:
+
+Waiting for input...
+Received exit - and closing down now.
+wmaclean@cspp158:~/cspp51081/labs/wmaclean.lab4/ex3$
+
+ 
+======
+writer
+======
+wmaclean@cspp158:~/cspp51081/labs/wmaclean.lab4/ex3$ my_npipe_writer
+We already have a MYFIFO, but we can borrow it
+Enter stuff: stuff, man
+Writing buffer to pipe...done
+Enter more stuff: cool
+Writing buffer to pipe...done
+Enter more stuff:
+Writing buffer to pipe...done
+Enter more stuff: exit
+done - and closing down now.
+
+wmaclean@cspp158:~/cspp51081/labs/wmaclean.lab4/ex3$
+
+
+ 
+ 

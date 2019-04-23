@@ -1,0 +1,46 @@
+Will MacLean
+CSPP51081
+Lab 4-1
+Shell
+
+----------
+To compile
+----------
+make
+
+------
+To run
+------
+gosh
+
+-------
+to exit
+-------
+exit
+
+----------
+transcript
+----------
+> wmaclean@cspp158:~/cspp51081/labs/wmaclean.lab4/ex1$ make
+> gcc -g -c -I./ gosh_from_scratch.c
+> gcc -g -I./ gosh_from_scratch.o -o gosh
+> wmaclean@cspp158:~/cspp51081/labs/wmaclean.lab4/ex1$ gosh
+> 
+> Yer wish is my command... > ls -l /etc/passwd
+> 
+> Cl 0: ls
+> Cl 1: -l
+> Cl 2: /etc/passwd
+> 
+Running command
+> 
+> -rw-r--r-- 1 root root 1335 Oct 23 12:15 /etc/passwd
+> 
+> Yer wish is my command... >
+> 
+> Ignoring and returning 2
+> 
+> Yer wish is my command... > exit
+> 
+> Exiting...
+> wmaclean@cspp158:~/cspp51081/labs/wmaclean.lab4/ex1$

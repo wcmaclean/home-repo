@@ -1,0 +1,28 @@
+Will MacLean
+CSPP 51081
+Lab 3, Ex 3 - filecopy
+
+------
+mystat
+------
+
+1. Run the makefile:
+	prompt> make
+	
+2. Run the program:
+	prompt> filecopy <source filename> <destination filename>
+	
+3. To clean up after:
+	prompt> make clean 
+	
+What it  does:
+
+It takes two arguments from the command line, the source and
+target file names, and assign a char pointer to each. It 
+checks to make sure the contents of the filenames are different -
+if they are the same, it reports an error. It also checks that there
+are two filenames before it proceeds. Then, it opens the 
+source file in read-only mode and opens (creating if it does not
+exist) the target file. It reads a char at a time from the source 
+and writes each char as it goes, doing this as long as there 
+are chars to read from the source.

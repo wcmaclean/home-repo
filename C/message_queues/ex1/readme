@@ -1,0 +1,86 @@
+Will MacLean
+CSPP51081
+Lab 5-1
+
+==========
+server
+==========
+
+NOTE: run this first
+
+1. Open a command shell
+
+2. Run the makefile:
+	prompt> make
+	
+3. Run the program:
+	prompt> server
+	
+	It prints out the pid to enter
+
+==========
+client 1
+==========
+
+NOTE: run this second
+
+1. Open a second command shell
+
+2. Run the program:
+	prompt> client
+	
+3. Enter anything caps or small letters 
+    and the server returns it converted to the opposite
+	
+==========
+client 2
+==========
+
+NOTE: run this third
+
+1. Open a third command shell
+
+2. Run the program:
+	prompt> client
+	
+3. Enter anything caps or small letters 
+    and the server returns it converted to the opposite
+   
+==========
+running
+==========
+---------
+server
+---------
+wmaclean@cspp168:~/cspp51081/labs/wmaclean.lab5/ex1$ make
+gcc -c server.c
+gcc -o server server.o
+gcc -c client.c
+gcc -o client client.o
+wmaclean@cspp168:~/cspp51081/labs/wmaclean.lab5/ex1$ server
+Listening on message queue...
+Received message from client: Q-WERTY
+Processed msg: q-werty
+Received message from client: q-werty
+Processed msg: Q-WERTY
+
+---------
+client 1
+---------
+wmaclean@cspp168:~/cspp51081/labs/wmaclean.lab5/ex1$ client
+Insert message to send to server: Q-WERTY
+Msg processed: q-werty
+
+Insert message to send to server:
+
+---------
+client 2
+---------
+wmaclean@cspp168:~/cspp51081/labs/wmaclean.lab5/ex1$ client
+Insert message to send to server: q-werty
+Msg processed: Q-WERTY
+
+Insert message to send to server:
+
+
+  

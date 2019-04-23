@@ -1,0 +1,9 @@
+#Will MacLean
+
+#Output from ex2.awk
+
+wmaclean@cspp164:~/cspp51081/labs/wmaclean.lab2.2$ awk -f ex2.awk normal.precip.txt
+The average for California rain is 3.062 inches.
+The average for Texas rain is 1.50059 inches.
+The average for Alaskan rain is 2.63571 inches.
+wmaclean@cspp164:~/cspp51081/labs/wmaclean.lab2.2$           

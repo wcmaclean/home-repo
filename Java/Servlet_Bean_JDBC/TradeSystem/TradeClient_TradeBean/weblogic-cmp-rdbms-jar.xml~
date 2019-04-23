@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+
+<!DOCTYPE weblogic-rdbms-jar PUBLIC 
+ '-//BEA Systems, Inc.//DTD WebLogic 8.1.0 EJB RDBMS Persistence//EN'
+ 'http://www.bea.com/servers/wls810/dtd/weblogic-rdbms20-persistence-810.dtd'>
+
+<weblogic-rdbms-jar>
+ <weblogic-rdbms-bean>
+  <ejb-name>Trade</ejb-name>
+  <data-source-name>MateiJDBCTxDataSource</data-source-name>
+  <table-map>
+  <table-name>Trade</table-name>
+  <field-map>
+   <cmp-field>limit</cmp-field>
+   <dbms-column>limit</dbms-column>
+  </field-map>
+  <field-map>
+   <cmp-field>clientID</cmp-field>
+   <dbms-column>clientID</dbms-column>
+  </field-map>
+  <field-map>
+   <cmp-field>clSeqID</cmp-field>
+   <dbms-column>clSeqID</dbms-column>
+  </field-map>
+  <field-map>
+   <cmp-field>quantity</cmp-field>
+   <dbms-column>quantity</dbms-column>
+  </field-map>   
+  <field-map>
+   <cmp-field>price</cmp-field>
+   <dbms-column>price</dbms-column>
+  </field-map>   
+  <field-map>
+   <cmp-field>clTime</cmp-field>
+   <dbms-column>clTime</dbms-column>
+  </field-map>   
+  </table-map>
+ </weblogic-rdbms-bean>
+</weblogic-rdbms-jar>

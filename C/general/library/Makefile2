@@ -1,0 +1,51 @@
+#Will MacLean
+#CSPP 51081
+#Lab 3.1 - Makefile2 (shared lib)
+
+all: hello2
+
+#macros
+CC = gcc
+CFLAGS = -Wall -g -c
+POSINDFLAG = -fPIC
+DYNLNKFLAGS = -g -shared -WI,-soname,
+
+# shared library
+MYLIB=mylib
+
+# shared library soname
+SHARED_LIB=lib$(MYLIB).so
+
+# versions
+MAJOR=5
+MINOR=1
+RELEASE=10
+
+#creating library
+$(MYLIB): $(MYLIB)(hello.o) $(MYLIB)(here.o) $(MYLIB)(bye.o) 
+	$(CC) $(DYNLNKFLAGS)$(SHARED_LIB).$(MAJOR) -o $(SHARED_LIB).$(MAJOR).$(MINOR).$(RELEASE) hello.o -lc here.o -lc bye.o -lc
+	ln -sf $(SHARED_LIB).$(MAJOR).$(MINOR).$(RELEASE) $(SHARED_LIB).$(MAJOR).$(MINOR)
+	ln -sf $(SHARED_LIB).$(MAJOR).$(MINOR) $(SHARED_LIB).$(MAJOR)
+	ln -sf $(SHARED_LIB).$(MAJOR) $(SHARED_LIB)
+# /sbin/ldconfig -vn .
+
+#compiling the files
+main.o: main.c
+	$(CC) $(POSINDFLAG) $(CFLAGS) main.c
+	
+hello.o: hello.c
+	$(CC) $(POSINDFLAG) $(CFLAGS) hello.c
+	
+here.o: here.c
+	$(CC) $(POSINDFLAG) $(CFLAGS) here.c
+	
+bye.o: bye.c
+	$(CC) $(POSINDFLAG) $(CFLAGS) bye.c
+
+# creating program
+hello2:  main.c $(MYLIB)
+	$(CC) -Wall -g  -o hello2 main.c -lc -L. $(MYLIB)
+#$(CC) $(CFLAGS) -o hello2 main.c -L. -l$(MYLIB)
+
+clean:
+	-rm -rf main.o hello.o here.o bye.o  $(SHARED_LIB).$(MAJOR).$(MINOR).$(RELEASE) $(SHARED_LIB).$(MAJOR).$(MINOR) $(SHARED_LIB).$(MAJOR) $(SHARED_LIB) hello2

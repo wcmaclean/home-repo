@@ -1,0 +1,33 @@
+#Will MacLean
+#CSPP 51081
+#Lab 3.1 - static lib makefile
+
+MYLIB = mylib.a
+
+#macros
+CC = gcc
+CFLAGS = -Wall -g -c -ansi
+
+hello1: main.o $(MYLIB)
+	$(CC) -o hello1 main.o $(MYLIB)
+	
+$(MYLIB): $(MYLIB)(hello.o) $(MYLIB)(here.o) $(MYLIB)(bye.o)
+	ar rcs $(MYLIB) hello.o here.o bye.o
+	
+main.o: main.c
+	$(CC) $(CFLAGS) main.c
+	
+hello.o: hello.c
+	$(CC) $(CFLAGS) hello.c
+	
+here.o: here.c
+	$(CC) $(CFLAGS) here.c
+	
+bye.o: bye.c
+	$(CC) $(CFLAGS) bye.c
+
+hello1:
+	$(CC) main.o -lc -L. $(MYLIB) -o hello1	
+	
+clean:
+	rm -rf main.o hello.o here.o bye.o $(MYLIB) hello1

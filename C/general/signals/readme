@@ -1,0 +1,24 @@
+Will MacLean
+CSPP 51081
+Lab 3, Ex 4 - my_sig
+
+------
+mystat
+------
+
+1. Run the makefile:
+	prompt> make
+	
+2. Run the program:
+	prompt> my_sig <number>
+	
+3. To clean up after:
+	prompt> make clean 
+
+------------	
+What it does
+------------
+It takes a number from the command line, and assigns that number to
+MAXSTOPS. It loops until you CTRL-C up to the number of MAXSTOPS.
+With each loop, it waits, then trigger a SIGUSR1, which only
+prints out that it has been handled.

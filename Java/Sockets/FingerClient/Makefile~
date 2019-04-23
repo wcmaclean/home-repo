@@ -1,0 +1,7 @@
+SRC =  FingerClient.java
+
+all: $(SRC)
+	javac $(SRC)
+
+clean:
+	/bin/rm *.class *~

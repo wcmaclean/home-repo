@@ -1,0 +1,19 @@
+#!/bin/sh
+
+x=1
+while [ "$x" -lt 4 ]; do
+
+echo file$x.c
+
+ed file$x.c <<!stdioToSTDIO!
+%s/STDIO.H/stdio.h/g
+w
+q
+!stdioToSTDIO!
+
+x=$(($x+1))
+done
+
+
+exit 0
+

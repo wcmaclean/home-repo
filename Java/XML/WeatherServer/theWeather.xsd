@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+
+<xs:element name="theWeather">
+  <xs:complexType>
+    <xs:sequence>
+
+      <xs:element name="locationName" minOccurs="1" maxOccurs="1">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="Chicago"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+
+      <xs:element name="locationCode" minOccurs="1" maxOccurs="1">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="CHI"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+
+      <xs:element name="weather" maxOccurs="unbounded">
+        <xs:complexType>
+
+          <xs:sequence>
+            <xs:element name="dateTime" type="xs:string"/>
+            <xs:element name="windSpeed" type="xs:integer"/>
+            <xs:element name="windDirection" type="xs:string"/>
+            <xs:element name="barometricPressure" type="xs:integer"/>
+            <xs:element name="relativeHumidity" type="xs:integer"/>
+            <xs:element name="dewPointTemp" type="xs:integer"/>
+            <xs:element name="precipitationLast24Hours" type="xs:integer"/>
+            <xs:element name="currentHighLast24Hours" type="xs:integer"/>
+            <xs:element name="currentLowLast24Hours" type="xs:integer"/>
+            <xs:element name="snowfallLast24Hours" type="xs:integer"/>
+            <xs:element name="heatIndex" type="xs:integer"/>
+            <xs:element name="windChill" type="xs:integer"/>
+            <xs:element name="officialWarnings" type="xs:string"/>
+            <xs:element name="officialWatches" type="xs:string"/>
+
+          </xs:sequence>
+        </xs:complexType>  
+      </xs:element>
+
+    </xs:sequence>
+  </xs:complexType>
+</xs:element>
+
+</xs:schema>
