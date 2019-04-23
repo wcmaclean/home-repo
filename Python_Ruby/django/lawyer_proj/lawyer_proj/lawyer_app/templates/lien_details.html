@@ -1,0 +1,17 @@
+<h2>Lien Details</h2>
+
+{% if error_message %}
+    <p><strong>{{ error_message }}</strong></p>
+{% endif %}
+
+<form action="/lawyer_app/lien_edit/{{ lien.lien_id }}/" method="post">
+    {% csrf_token %}
+    Lien Id:
+    <input type="text" id="lien_id" name="lien_id" value="{{ lien.lien_id }}" readonly /><br/>
+    Lien Name
+    <input type="text" id="lien_name" name="lien_name" value="{{ lien.lien_name }}" /><br/>
+    Lien Amount
+    <input type="text" id="lien_amt" name="lien_amt" value="{{ lien.lien_amt }}" /><br/>
+    <input type = "submit" value = "lien_edit">
+</form>
+

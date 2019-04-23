@@ -1,0 +1,56 @@
+Will MacLean
+CSPP 51060
+Assign 5 Readme
+
+------------
+findcache.py
+------------
+Does a reursive search from a given starting path and 
+prints out all filepaths containing caches. Prints 
+results to a file called "cache_paths".
+
+Run as:
+prompt>  python findcache.py <path>
+
+For example:
+prompt> python findcache.py /Users/williammaclean
+
+-----------
+requests.py
+-----------
+Searches a given filepath for cache files. If it finds one,
+it opens it and looks for all request dates and urls. It
+prints them out and write them to a file called "request_data".
+
+Run as:
+prompt>  python requests.py <filepath>
+
+For example:
+python requests.py /Users/williammaclean/Library/Caches/Firefox/Profiles/b578cbmq.default/Cache/
+
+----------
+domains.py
+----------
+Searches a given filepath for caches diretories, reads them, 
+and prints out all requested domains in alphabetical order,
+sorting out duplicates. Writes results in the file "domains_data".
+
+Run as:
+prompt>  python domains.py <filepath>
+
+For example:
+python domains.py /Users/williammaclean/Library/Caches/Firefox/Profiles/b578cbmq.default/Cache/
+
+----------
+content.py
+----------
+
+
+Run as:
+prompt>  python content.py <dest_dir> <source_dir>
+
+For example:
+python content.py filecache /Users/williammaclean/Library/Caches/Firefox/Profiles/b578cbmq.default/Cache/
+
+
+

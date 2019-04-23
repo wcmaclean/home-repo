@@ -1,0 +1,37 @@
+<h2>New Insurance</h2>
+
+{% if error_message %}
+    <p><strong>{{ error_message }}</strong></p>
+{% endif %}
+
+<form action="/lawyer_app/insurance_new/" method="post">
+    {% csrf_token %}
+    ins_co_name:
+    <input type="text" id="ins_co_name" name="ins_co_name" value="" /><br/>
+    adj_first_name:
+    <input type="text" id="adj_first_name" name="adj_first_name" value="" /><br/>
+    adj_last_name:
+    <input type="text" id="adj_last_name" name="adj_last_name" value="" /><br/>
+    Address 1:
+    <input type="text" id="address_1" name="address_1" value="" /><br/>
+    Address 2:
+    <input type="text" id="address_2" name="address_2" value="" /><br/>
+    City:
+    <input type="text" id="city" name="city" value="" /><br/>
+    State:
+    <input type="text" id="state" name="state" value="" /><br/>
+    Zip:
+    <input type="text" id="zip" name="zip" value="" /><br/>
+    Phone:
+    <input type="text" id="phone_1" name="phone_1" value="" /><br/>
+    Phone 2:
+    <input type="text" id="phone_2" name="phone_2" value="" /><br/>
+    Fax:
+    <input type="text" id="fax" name="fax" value="" /><br/>
+    Email:
+    <input type="text" id="email" name="email" value="" /><br/>
+    Claim Number:
+    <input type="text" id="claim_number" name="claim_number" value="" /><br/>
+    <input type = "submit" value = "Submit">
+</form>
+

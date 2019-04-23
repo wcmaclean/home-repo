@@ -1,0 +1,14 @@
+<h1>Liens</h1>
+<table border = 1px cellpadding="3" style="font-family:Arial">
+<tr>
+<th>lien id</th>
+<th>lien name</th>
+</tr>
+{% for lien in ldb_liens %}
+<tr>
+<td>{{lien.lien_id}}</td>
+<td>{{lien.lien_name}}</td>
+<td><a href="/lawyer_app/lien_details/{{ lien.lien_id  }}/">{{ lien.lien_name }} </a></td>
+</tr>
+{% endfor %}
+</table>

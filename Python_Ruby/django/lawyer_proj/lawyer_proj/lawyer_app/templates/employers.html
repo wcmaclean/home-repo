@@ -1,0 +1,14 @@
+<h1>Employers</h1>
+<table border = 1px cellpadding="3" style="font-family:Arial">
+<tr>
+<th>employer id</th>
+<th>employer name</th>
+</tr>
+{% for employer in ldb_employers %}
+<tr>
+<td>{{employer.emp_id}}</td>
+<td>{{employer.employer_name}}</td>
+<td><a href="/lawyer_app/employer_details/{{ employer.emp_id  }}/">{{ employer.employer_name }} </a></td>
+</tr>
+{% endfor %}
+</table>

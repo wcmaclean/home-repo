@@ -1,0 +1,43 @@
+Will MacLean
+CSPP 51060
+Assignment 2 Readme
+
+------------
+smackdown.py
+------------
+Python solution - run as:
+prompt> python smackdown.py
+
+------------
+smackdown.rb
+------------
+Ruby solution - run as:
+prompt> ruby smackdown.rb
+
+-------
+Issues:
+-------
+I handled the missing data by initializing everything 
+with values from the original portfolio. I realized 
+later what I should have done was, at the beginning of 
+the calculation, initialize only the first attempt with 
+that data. Then, copy the changed values for the next 
+calculation into the same set - to carry over previous 
+changes.
+
+I didn't think of handling it this way until my brain 
+was burnt.
+
+I suspect that my solutions look alot like a Java 
+programmer trying figure out Python and Ruby. 
+
+This is algorithm is far from effecient...
+But it mostly works at least.
+
+---------------------------------
+completely_dysfunctional_attempts
+---------------------------------
+These are all the versions I started that don't work 
+much at all...
+
+The reason my brain was burnt.

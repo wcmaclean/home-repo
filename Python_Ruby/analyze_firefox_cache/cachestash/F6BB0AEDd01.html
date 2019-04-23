@@ -1,0 +1,380 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+    <html>
+    
+    <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="description" content="Unix tar command help.">
+    <meta name="keywords" content="unix, tar, untar, command, help, examples, syntax, about, what, is, tar, tar.gz, .tar"><title>Linux and UNIX tar command help</title>
+    <link rel="stylesheet" type="text/css" href="http://www.computerhope.com/basic.css">
+    </head>
+    
+    <body>
+    
+    <table border="0" width="100%" cellspacing="0" cellpadding="0" class="tclb"><tr><td><a href="http://www.computerhope.com">
+		<img src="http://www.computerhope.com/toptitle.jpg" width="364" height="57" alt="Computer Hope"></a></td><td align="right"><script type="text/javascript"  src="http://www.computerhope.com/topbar.js"></script><noscript><img src="http://www.computerhope.com/top4.jpg" alt=""></noscript></td></tr></table>
+<div id="navcontainer">
+<ul id="navlist">
+<li><a href="http://www.computerhope.com/">Home</a></li>
+<li><a href="http://www.computerhope.com/oh.htm">Free help</a></li>
+<li><a href="http://www.computerhope.com/cgi-bin/mail.cgi">Contact</a></li>
+<li><a href="http://www.computerhope.com/network.htm">Links</a></li>
+<li><a href="http://www.computerhope.com/tips/">Tips</a></li>
+<li><a href="http://www.computerhope.com/jargon.htm">Dictionary</a></li>
+<li><a href="http://www.computerhope.com/forum/index.php">Forums</a></li>
+</ul>
+</div>
+
+<table border="0" cellspacing="0" cellpadding="0" width="100%"><tr><td class="tclb" align="center"><SCRIPT language="JavaScript">
+<!--
+if ((screen.width>=1024) && (screen.height>=768))
+{
+document.write( '<img src="http://www.computerhope.com/pixel.gif" width="120" height="1" border="0" alt=""><form id="searchbox_003411668307610607965:h4yba8pbdco" action="http://www.computerhope.com/search.htm"><h4>Search<br><input name="q" type="text" size="10"><br><a HREF="http://www.computerhope.com/tips.htm"><img src="http://www.computerhope.com/btips.gif" border="0" alt="Tips"></a><input type="hidden" name="cx" value="003411668307610607965:h4yba8pbdco"><input type="hidden" name="cof" value="FORID:9;NB:1"><input TYPE="image" BORDER="0" SRC="http://www.computerhope.com/bsearch.gif" VALUE="Search" alt="Search" name="sa"></h4></form>');
+}
+//-->
+</SCRIPT> </td><td class="tclb" width="100%"><table border="0" width="100%" cellspacing="0" cellpadding="0"><tr><td class="icell"></td></tr><tr><td align="center"><script type="text/javascript"  src="http://www.computerhope.com/adunix.js"></script>
+<script type="text/javascript"
+  src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script></td></tr><tr><td class="icell"></td></tr></table></td></tr></table><table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr>
+        
+        <td valign="top" width="120" nowrap class="tclb icell"><SCRIPT language="JavaScript">
+<!--
+if ((screen.width<=800) && (screen.height<=600))
+{
+document.write( '<form id="searchbox_003411668307610607965:h4yba8pbdco" action="http://www.computerhope.com/search.htm"><h4>Search<br><input name="q" type="text" size="10"><br><a HREF="http://www.computerhope.com/tips.htm"><img src="http://www.computerhope.com/btips.gif" border="0" alt="Tips"></a><input type="hidden" name="cx" value="003411668307610607965:h4yba8pbdco"><input type="hidden" name="cof" value="FORID:9;NB:1"><input TYPE="image" BORDER="0" SRC="http://www.computerhope.com/bsearch.gif" VALUE="Search" alt="Search" name="sa"></h4></form>');
+}
+//-->
+</SCRIPT>
+<NOSCRIPT>
+<form id="searchbox_003411668307610607965:h4yba8pbdco" action="http://www.computerhope.com/search.htm"><h4>Search<br><input name="q" type="text" size="10"><br><a HREF="http://www.computerhope.com/tips.htm"><img src="http://www.computerhope.com/btips.gif" border="0" alt="Tips"></a><input type="hidden" name="cx" value="003411668307610607965:h4yba8pbdco"><input type="hidden" name="cof" value="FORID:9;NB:1"><input TYPE="image" BORDER="0" SRC="http://www.computerhope.com/bsearch.gif" VALUE="Search" alt="Search" name="sa"></h4></form></NOSCRIPT><p class="nb">Other Pages</p>
+		<span class="sm"><a href="http://www.computerhope.com/index.htm">Home</a><br><a href="http://www.computerhope.com/sindex.htm">Site map</a><a href="http://www.computerhope.com/oh.htm"><br>Computer help</a><br><a href="http://www.computerhope.com/jargon.htm">Dictionary</a><br><a href="http://www.computerhope.com/news.htm">News</a><br><a href="http://www.computerhope.com/qanda.htm">Q&amp;A</a><br><a href="http://www.computerhope.com/whatnew.htm">What's new</a></span>
+		<p class="nb">Tools</p>
+		<span class="sm"><a href="http://www.computerhope.com/cgi-bin/email.cgi" rel="nofollow">E-mail this page</a><br><a href="http://www.computerhope.com/cgi-bin/print.cgi" rel="nofollow">Print Preview</a><br><a href="http://www.computerhope.com/cgi-bin/edit.cgi" rel="nofollow">Edit this page</a></span>
+<p>
+<script type="text/javascript"><!--
+google_ad_client = "pub-3999293766533555";
+google_alternate_color = "9FCFFF";
+google_ad_width = 120;
+google_ad_height = 90;
+google_ad_format = "120x90_0ads_al";
+google_ad_channel ="3098358542";
+google_color_border = "9FCFFF";
+google_color_bg = "9FCFFF";
+google_color_link = "000000";
+google_color_text = "000000";
+google_color_url = "000000";
+//--></script>
+<script type="text/javascript"
+  src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script><br><br></td>
+        <td class="icell"></td>
+        <td width="100%">&nbsp;<h1>Linux / Unix tar command</h1>
+        <table border="0" width="100%" cellspacing="0" cellpadding="0">
+          <tr>
+            <td valign="top" width="80%">
+			<p class="nb">Quick links</p><p class="tab"><a href="#01">About
+                tar</a><br><a href="#02">Syntax</a><br><a href="#03">Examples<br>
+				</a><a href="#04">Related commands<br></a><a href="../unix.htm">Unix
+                main page</a></p>
+              <p class="nb"><a name="01"></a>About tar</p>
+              <p>Create tape archives and add or extract files.</p>
+              <p class="nb"><a name="02"></a>Syntax</p>
+              <p>tar c  [ bBeEfFhiklnopPqvwX  [ 0-7 ]  ]  [ block ]   [
+              tarfile  ]   [ exclude-file ]  {-I include-file  | -C directory | file  | file }</p>
+              <p>tar r   [  bBeEfFhiklnqvw   [  0-7  ]   ]   [  block  ]   {-I include-file  | -C directory  | file  | file }</p>
+              <p>tar t  [ BefFhiklnqvX  [ 0-7 ]  ]  [ tarfile ]   [
+              exclude-file ]  {-I include-file  | file }  ...</p>
+              <p>tar u  [ bBeEfFhiklnqvw  [ 0-7 ]  ]  [ block ]  [ tarfile  ]
+              file ...</p>
+              <p>tar x  [ BefFhiklmnopqvwX  [  0-7  ]   ]   [  tarfile  ]   [
+              exclude-file ]  [ file ... ]</p>
+              <table border="0" width="100%" cellspacing="0" cellpadding="0">
+                <tr>
+                  <td valign="top" width="120">c</td>
+                  <td valign="top">Create. Writing begins at  the  beginning  of  the               tarfile, instead of at the end.</td>
+                </tr>
+                <tr>
+                  <td valign="top" width="120">r</td>
+                  <td valign="top">Replace. The named file s are written at  the  end               of  the  tarfile.  A  file  created  with extended               headers must be updated with extended headers (see               E  flag  under Function Modifiers). A file created               without extended headers cannot be  modified  with               extended headers.</td>
+                </tr>
+                <tr>
+                  <td valign="top" width="120">t</td>
+                  <td valign="top">Table of Contents.  The  names  of  the  specified               files  are listed each time they occur in the
+                    tar               file.  If no file  argument is given, the names of               all  files  in the tarfile are listed.  With the v<br>
+                   function modifier, additional information for  the               specified files is displayed.</td>
+                </tr>
+                <tr>
+                  <td valign="top" width="120">u</td>
+                  <td valign="top">Update. The named file s are written at the end of               the  tarfile  if  they are not already in the
+                    tar               file, or if they have  been  modified  since  last               written  to  that tarfile. An update can be rather               slow. A tarfile created on a 5.x system cannot  be               updated  on  a  4.x  system.  A  file created with               extended headers must  be  updated  with  extended               headers  (see  E flag under Function Modifiers). A               file created without extended  headers  cannot  be               modified with extended headers.</td>
+                </tr>
+                <tr>
+                  <td valign="top" width="120">x</td>
+                  <td valign="top">Extract or restore. The named file s are extracted               from  the  tarfile  and  written  to the directory               specified in the tarfile, relative to the  current               directory.  Use  the  relative path names of files               and directories to be extracted.  If a named  file               matches  a directory whose contents has been
+                    writ               ten to the tarfile, this directory is  recursively               extracted.  The owner, modification time, and mode               are restored (if possible); otherwise, to  restore               owner,  you  must  be  the  super-user.
+                    Character               special  and  block-special  devices  (created  by               mknod(1M))  can  only  be  extracted by the
+                    super               user. If no file  argument is  given,  the  entire               content  of  the tarfile is extracted. If the tar-               file contains several files with  the  same  name,               each file is written to the appropriate directory,               overwriting the previous one.  Filename
+                    substitu               tion wildcards cannot be used for extracting files               from the archive; rather, use  a  command  of  the               form:
+                    <p>tar xvf... /dev/rmt/0 `tar tf... /dev/rmt/0 | grep 'pattern' `</p>
+                    <p>     When extracting tapes created with the  r  or  u  functions,     directory modification times may not be set correctly. These     same functions cannot be used with many tape drives  due  to     tape  drive  limitations such as the absence of backspace or     append capabilities.</p>
+                    <p>When using the r, u, or x functions or the X function
+                    modifier,  the  named  files must match exactly the corresponding     files in the tarfile. For example,  to  extract
+                    ./thisfile, you  must  specify ./thisfile, and not thisfile. The t
+                    function displays how each file was archived.</td>
+                </tr>
+              </table>
+              <p><b>Function Modifiers</b><br>
+         The characters below may be used  in  conjunction  with  the letter that selects the desired function.</p>
+              <table border="0" width="100%" cellspacing="0" cellpadding="0">
+                <tr>
+                  <td valign="top" width="120">b</td>
+                  <td valign="top">Blocking Factor. Use when reading  or  writing  to               raw  magnetic  archives  (see  f below). The block               argument specifies the  number  of  512-byte  tape
+                    blocks to be included in each read or write operation performed on the tarfile. The minimum  is  1,               the default is 20. The maximum value is a function               of the amount of memory available and the blocking               requirements  of the specific tape device involved&nbsp;
+                    (see mtio(7I) for  details.)  The  maximum  cannot               exceed
+                    INT_MAX/512 (4194303).
+                    <p>When a tape archive  is  being  read,  its  actual               blocking  factor  will  be automatically detected,               provided that it is less than or equal to the
+                    nominal blocking factor (the value of the block argument, or the default value if the  b  modifier  is               not  specified).  If the actual blocking factor is               greater than the nominal blocking factor,  a  read               error will result. See Example 5 in Examples.</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td valign="top" width="120">B</td>
+                  <td valign="top">Block. Force tar  to perform  multiple  reads  (if               necessary)  to read exactly enough bytes to fill a               block. This function modifier enables tar  to work               across  the  Ethernet,  since  pipes  and  sockets               return partial blocks even when more data is
+                    coming.  When  reading from standard input, '-', this               function modifier is selected by default to ensure
+                    that tar  can recover from short reads.</td>
+                </tr>
+                <tr>
+                  <td valign="top" width="120">e</td>
+                  <td valign="top">Error.  Exit  immediately  with  a  positive  exit               status  if  any unexpected errors occur. The SYSV3               environment   variable   overrides   the   default               behavior. (See ENVIRONMENT section below.)</td>
+                </tr>
+                <tr>
+                  <td valign="top" width="120">E</td>
+                  <td valign="top">Write a tarfile with extended headers.  (Used with               c,  r, or u options; ignored with t or x options.)
+                    When a tarfile is written with  extended  headers, the  modification time is maintained with a
+                    granularity of microseconds  rather  than  seconds.  In addition,  filenames no longer than PATH_MAX
+                    characters that could not be archived without  E,  and               file  sizes greater than 8GB, are supported. The E               flag is required whenever the larger files  and/or               files  with  longer names, or whose UID/GID exceed               2097151, are to be archived, or if time
+                    granularity of microseconds is desired.</td>
+                </tr>
+                <tr>
+                  <td valign="top" width="120">f</td>
+                  <td valign="top">File. Use the tarfile argument as the name of  the               tarfile.  If  f  is specified, /etc/default/tar is<br>
+                   not searched. If f is omitted, tar  will  use  the               device indicated by the TAPE environment variable,
+                    if set; otherwise, it will use the default  values               defined  in  /etc/default/tar.  If the name of the               tarfile is '-', tar  writes to the standard output               or  reads  from  the  standard input, whichever is
+                    appropriate. tar  can be used as the head or  tail               of  a  pipeline.  tar   can  also  be used to move
+                    hierarchies with the command:
+                    <p>example% cd fromdir; tar cf - .| (cd todir; tar xfBp -)</td>
+                </tr>
+                <tr>
+                  <td valign="top" width="120">F</td>
+                  <td valign="top">With one F argument, tar  excludes all directories               named  SCCS  and  RCS  from  the tarfile. With two               arguments, FF, tar  excludes all directories named
+                    SCCS  and  RCS, all files with .o as their suffix, and all files named errs,  core,  and  a.out.  The
+                    SYSV3  environment  variable overrides the default               behavior. (See ENVIRONMENT section below.)</td>
+                </tr>
+                <tr>
+                  <td valign="top" width="120">h</td>
+                  <td valign="top">Follow symbolic links as if they were normal files               or  directories.  Normally,  tar   does not follow
+                    symbolic links.</td>
+                </tr>
+                <tr>
+                  <td valign="top" width="120">i</td>
+                  <td valign="top">Ignore directory checksum errors.</td>
+                </tr>
+                <tr>
+                  <td valign="top" width="120">&nbsp;-j, --bzip2</td>
+                  <td valign="top">filter archive through bzip2, 
+                  use to decompress .bz2 files. WARNING: some previous versions 
+                  of tar used option -I to filter through bzip2. When writing 
+                  scripts, use --bzip2 instead of -j so that both older and 
+                  newer tar versions will work.</td>
+                </tr>
+                <tr>
+                  <td valign="top" width="120">k size</td>
+                  <td valign="top">Requires tar  to use the size argument as the size               of  an  archive  in kilobytes. This is useful when               the archive is intended for a  fixed  size  device
+                    such  as  floppy disks. Large files are then split across volumes if they do not fit in the specified               size.</td>
+                </tr>
+                <tr>
+                  <td valign="top" width="120">l</td>
+                  <td valign="top">Link. Output error message if  unable  to  resolve               all links to the files being archived. If l is not               specified, no error messages are printed.</td>
+                </tr>
+                <tr>
+                  <td valign="top" width="120">m</td>
+                  <td valign="top">Modify. The modification time of the file  is  the               time  of  extraction.  This  function  modifier is<br>
+                   valid only with the x function.</td>
+                </tr>
+                <tr>
+                  <td valign="top" width="120">n</td>
+                  <td valign="top">The file being read is a non-tape device.  Reading               of  the  archive is faster since tar  can randomly
+                    seek around the archive.</td>
+                </tr>
+                <tr>
+                  <td valign="top" width="120">o</td>
+                  <td valign="top">Ownership. Assign to extracted files the user  and               group identifiers of the user running the program,
+                    rather than those on tarfile. This is the  default               behavior for users other than root. If the o
+                    function modifier is not set and the user is root, the               extracted  files  will  take on the group and user               identifiers of the files on tarfile (see
+                    <a href="uchown.htm"><b>chown</b></a>               for  more information). The o function modifier is               only valid with the x function.</td>
+                </tr>
+                <tr>
+                  <td valign="top" width="120">p</td>
+                  <td valign="top">Restore the named files to their  original  modes,               and  ACLs  if  applicable,  ignoring  the  present
+                    <b><a href="uumask.htm">umask</a></b>. This is the default behavior if  invoked
+                    as  super-user  with  the x function letter specified. If super-user, SETUID and sticky information               are  also  extracted,  and files are restored with
+                    their original owners and permissions, rather than               owned by root. When this function modifier is used
+                    with the c function, ACLs are created in the tarfile  along  with  other  information. Errors will               occur when a tarfile with  ACLs  is  extracted  by<br>
+                   previous versions of tar .</td>
+                </tr>
+                <tr>
+                  <td valign="top" width="120">P</td>
+                  <td valign="top">Suppress the addition of a trailing "/" on
+                    directory entries in the archive.</td>
+                </tr>
+                <tr>
+                  <td valign="top" width="120">q</td>
+                  <td valign="top">Stop after extracting the first occurrence of  the               named  file.  tar   will normally continue reading
+                    the archive after finding an occurrence of a file.</td>
+                </tr>
+                <tr>
+                  <td valign="top" width="120">v</td>
+                  <td valign="top">Verbose. Output the name of each file preceded  by               the  function  letter. With the t function, v
+                    provides additional  information  about  the  tarfile entries. The listing is similar to the format
+                    produced by the -l option of the <b><a href="uls.htm">ls</a></b> command.</td>
+                </tr>
+                <tr>
+                  <td valign="top" width="120">w</td>
+                  <td valign="top">What. Output the action to be taken and  the  name               of  the  file, then await the user's confirmation.
+                    If the response is affirmative, the action is performed;  otherwise,  the  action is not performed.               This function modifier cannot be used with  the  t
+                    function.</td>
+                </tr>
+                <tr>
+                  <td valign="top" width="120">X</td>
+                  <td valign="top">Exclude. Use the exclude-file argument as  a  file               containing a list of relative path names for files
+                    (or directories) to be excluded from  the  tarfile when using the functions c, x, or t. Be careful of
+                    trailing white  spaces.  Also  beware  of  leading white spaces, since, for each line in the excluded
+                    file, the entire line  (apart  from  the newline) will  be  used to match against the initial string
+                    of files to exclude. Multiple X arguments  may  be used,  with  one exclude-file per argument. In the
+                    case where included  files  (see  -I  include-file option)  are  also  specified,  the excluded files
+                    take precedence over all included files. If a file is  specified  in  both  the  exclude-file and the               include-file (or on the command line), it will  be               excluded.</td>
+                </tr>
+                <tr>
+                  <td valign="top" width="120">[0-7]</td>
+                  <td valign="top">Select an alternative drive on which the  tape  is               mounted.  The  default  entries  are  specified in               /etc/default/tar. If no digit or f function
+                    modifier  is  specified,  the entry in /etc/default/tar with digit "0" is the default.&nbsp;</td>
+                </tr>
+                <tr>
+                  <td valign="top" width="120">-I include-file</td>
+                  <td valign="top"> Opens include-file containing a list of files, one               per  line,  and treats it as if each file appeared               separately on the  command  line.  Be  careful  of               trailing  white  spaces.  Also  beware  of leading
+                    white spaces, since, for each line in the included file,  the  entire  line  (apart from the
+                    newline) will be used to match against the  initial  string               of  files  to  include. In the case where excluded               files  (see  X   function   modifier)   are   also
+                    specified,  they take precedence over all included               files.  If  a  file  is  specified  in  both   the
+                    exclude-file  and the include-file (or on the command line), it will be excluded.</td>
+                </tr>
+              </table>
+              <p><b>Remainder Syntax</b></p>
+              <table border="0" width="100%" cellspacing="0" cellpadding="0">
+                <tr>
+                  <td valign="top" width="120">-C directory file</td>
+                  <td valign="top">Performs a chdir  (see cd(1)) operation on
+                    directory  and  performs  the c (create) or r (replace)               operation on file . Use short relative path  names               for  file  . If file  is `.', archive all files in               directory. This  option  enables  archiving  files               from  multiple  directories not related by a close               common parent.</td>
+                </tr>
+                <tr>
+                  <td valign="top" width="120">file</td>
+                  <td valign="top">A path name of a regular file or directory  to  be               archived  (when the c, r or u functions are
+                    specified), extracted (x) or listed (t). When file   is               the  path  name of a directory, the action applies               to all of the files  and  (recursively)
+                    subdirectories of that directory.
+                    <p>               When a file is archived, and the E flag (see
+                    Function  Modifiers)  is  not  specified, the filename               cannot exceed 256 characters. In addition, it must               be  possible  to  split  the  name  between parent               directory names so that the prefix  is  no  longer               than 155 characters and the name is no longer than               100 characters. If E is specified, a name of up to               PATH_MAX characters may be specified.&nbsp;</p>
+                    <p>               For example, a file whose basename is longer  than               100 characters could not be archived without using               the E flag. A file whose directory portion is  200               characters  and  whose  basename  is 50 characters               could be archived (without using  E)  if  a  slash               appears in the directory name somewhere in
+                    character positions 151-156.</p>
+                  </td>
+                </tr>
+              </table>
+              <p class="nb"><a name="03"></a>Examples</p>
+              <p><b>Note:</b> A &quot;.tar&quot; file is not a
+              compressed files, it is actually a collection of files within a
+              single file uncompressed. If the file is a .tar.gz (&quot;<a href="../jargon/t/tarball.htm">tarball</a>&quot;)
+              or &quot;.tgz&quot; file it is a collection of files that is
+              compressed. If you are looking to compress a file you would create
+              the tar file then <a href="gzip.htm">gzip</a> the file.</p>
+              <p><b>Creating a tar file:</b></p>
+              <blockquote>
+              <p><b>tar -cvvf file.tar myfile.tx</b>t</p>
+                <p>In the above example the system would create a
+                tar named file.tar in the directory you currently are in. <a href="../jargon/w/wildcard.htm">Wildcards</a>
+                could also be used in this command, for example: tar -cvvf
+                file.tar *.txt would compress all txt files in the current
+                directory.</p>
+              <p><b>tar -cvvf home.tar home/</b></p>
+                <p>In the above example command the system would
+                create a tar file named home.tar in the directory you currently
+                are in of the home directory.</p>
+              </blockquote>
+              <p><b>Extracting the files from a tar file:</b></p>
+              <blockquote>
+                <p><b>tar -xvvf myfile.tar</b></p>
+                <p>In the above example command the system would
+                uncompress (untar) the myfile.tar file in the current directory.</p>
+                <p><b>tar -xvvzf myfile.tar.gz</b></p>
+                <p>In the above example command the system would
+                uncompress (untar) the myfile.tar.gz file in the current directory.</p>
+              <p><i>Note: There is no &quot;untar&quot; linux /
+              unix command.</i></p>
+              </blockquote>
+              <p><b>Creating a tarred file that is compressed with 
+              bzip</b></p>
+            <blockquote>
+              <p><b>tar -cjvf test.tbz home/</b></p>
+              <p>Adding the j option to the tar command enables tar 
+              to compress files and/or directories using bzip. In the above 
+              example the home directory and all its subdirectories are added to 
+              the compressed test.tbz file.</p>
+            </blockquote>
+              <p class="nb"><a name="04"></a>Related commands</p>
+              <p class="tab"><a href="uar.htm">ar</a><br><a href="ubasenam.htm">basename</a><br>
+				<a href="ucd.htm">cd</a><br><a href="uchown.htm">chown</a><br>
+				<a href="ucpio.htm">cpio</a><br><a href="ucsh.htm">csh</a><br>
+				<a href="udirname.htm">dirname</a><br><a href="uls.htm">ls</a><br>
+				<a href="umt.htm">mt<br></a><a href="upack.htm">pack<br></a>
+				<a href="upax.htm">pax</a><br><a href="usetfacl.htm">setfacl</a><br>
+				<a href="uumask.htm">umask<br></a><a href="uzcat.htm">zcat</a></p>
+			<p>&nbsp;</p>
+            </td>
+            <td class="icell"></td>
+            <td valign="top" width="20%"><table border="0" width="100%" cellspacing="0"
+            cellpadding="0">
+              <tr>
+                <td class="tcbl rb">Index</td>
+              </tr>
+
+              <tr>
+                <td width="100%" class="tcg"><table border="0" width="100%" cellspacing="0"
+                cellpadding="0">
+                  <tr>
+                    <td class="icell"></td>
+                    <td><b><br>
+                    Category:</b><br>
+                    <a href="../unix.htm"><small>Linux / Unix</small></a><br>
+                    <b><br>
+                    Companies:</b><br>
+                      <small><a href="../network/unix.htm">Click here</a></small><br>
+                    <b><br>
+                    Related Pages: <br>
+                    </b></td>
+                  </tr>
+                </table>
+                <p>&nbsp;</td>
+              </tr>
+
+            </table>
+            <table border="0" width="100%" cellspacing="0" cellpadding="0"><tr><td class="tcbl rb">Resolved</td></tr><tr><td width="100%" class="tcg icell"><br>Were you able to locate the answer to your questions?<ul><li><a href="http://www.computerhope.com/cgi-bin/feedback.cgi?yes" rel="nofollow">Yes</a></li><li><a href="http://www.computerhope.com/cgi-bin/feedback.cgi?no" rel="nofollow">No</a></li></ul></td></tr></table></td>
+            <td class="icell"></td>
+          </tr>
+        </table>
+        </td>
+      </tr>
+    </table>
+    
+<form class="footer" id="searchbox_003411668307610607965:h4yba8pbdco" action="http://www.computerhope.com/search.htm"><br><input type="hidden" name="cx" value="003411668307610607965:h4yba8pbdco"><input type="hidden" name="cof" value="FORID:9;NB:1"><input name="q" type="text" size="25"><input type="submit" name="sa" value="Search"></form>
+<p class="ce"><a href="http://www.computerhope.com/index.htm">Home</a> - <a href="http://www.computerhope.com/oh.htm">Computer help</a> - <a href="http://www.computerhope.com/cgi-bin/mail.cgi">Contact</a> - <a href="http://www.computerhope.com/jargon.htm">Dictionary</a> - <a href="http://www.computerhope.com/network.htm">Links</a><br><a href="http://www.computerhope.com/hope.htm">Link to Computer Hope</a> - <a href="http://www.computerhope.com/startp.htm">Bookmark Computer Hope</a><br><br><p class="legal"><a href="http://www.computerhope.com/legal.htm">Copyright 1998-2008 by Computer Hope (tm). All rights reserved<br>Legal Disclaimer - ESD Warning - Privacy Statement</a></p>
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript"></script>
+<script type="text/javascript">
+_uacct = "UA-126444-1";
+urchinTracker();
+</script></body></html>

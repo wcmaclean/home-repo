@@ -1,0 +1,57 @@
+<html>
+<head>
+	<title>portfolio home page</title>
+</head>
+
+<script type="text/javascript">
+
+var total = 0;
+
+var request = new XMLHttpRequest();
+request.open("GET","file:portfolio.txt",false);
+request.send(null);
+
+var rawdata = request.responseText;
+var file = rawdata.split("\n");
+
+document.write("<table>");
+document.write("<tr>");
+document.write("<th><b>Name</b></th>");
+document.write("<th><b>Shares</b></th>");
+document.write("<th><b>Price</b></th>");
+document.write("</tr>");
+
+
+for (i=0;i<file.length-1;i++)
+{
+	var fields = file[i].split(" ");
+	document.write("<tr>");
+	document.write("<td>");
+	document.write(fields[0]);
+	document.write("</td>");
+	document.write("<td>");
+	document.write(fields[1]);
+	document.write("</td>");
+	document.write("<td>");
+	document.write(fields[2]);
+	document.write("</td>");
+	document.write("</tr>");
+
+	var shares = parseFloat(fields[1]);
+	var price = parseFloat(fields[2]);
+	total = total + shares * price;
+	
+}
+
+document.write("</table>");
+
+document.write("<br />Total cost: ");
+document.write(total);
+document.write("<br />");
+
+</script>
+
+
+</body>
+</html>
+

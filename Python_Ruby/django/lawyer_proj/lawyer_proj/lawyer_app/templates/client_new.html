@@ -1,0 +1,47 @@
+<h2>New Client</h2>
+
+{% if error_message %}
+    <p><strong>{{ error_message }}</strong></p>
+{% endif %}
+
+<form action="/lawyer_app/client_new/" method="post">
+    {% csrf_token %}
+    First Name:
+    <input type="text" id="first_name" name="first_name" value="" /><br/>
+    Last Name:
+    <input type="text" id="last_name" name="last_name" value="" /><br/>
+    Address 1:
+    <input type="text" id="address_1" name="address_1" value="" /><br/>
+    Address 2:
+    <input type="text" id="address_2" name="address_2" value="" /><br/>
+    City:
+    <input type="text" id="city" name="city" value="" /><br/>
+    State:
+    <input type="text" id="state" name="state" value="" /><br/>
+    Zip:
+    <input type="text" id="zip" name="zip" value="" /><br/>
+    Phone:
+    <input type="text" id="phone_1" name="phone_1" value="" /><br/>
+    Email:
+    <input type="text" id="email" name="email" value="" /><br/>
+    Date of Birth:
+    <input type="text" id="date_of_birth" name="date_of_birth" value="" /><br/>
+    Social Security Number:
+    <input type="text" id="ss_num" name="ss_num" value="" /><br/>
+    Accident Date:
+    <input type="text" id="accident_date" name="accident_date" value="" /><br/>
+    Location:
+    <input type="text" id="location" name="location" value="" /><br/>
+    Injury:
+    <input type="text" id="injury" name="injury" value="" /><br/>
+    Date Signed Up:
+    <input type="text" id="date_signed_up" name="date_signed_up" value="" /><br/>
+    Date Filed:
+    <input type="text" id="date_filed" name="date_filed" value="" /><br/>
+    Statute of Limitation Date:
+    <input type="text" id="statute_of_limit_date" name="statute_of_limit_date" value="" /><br/>
+    Referral Source:
+    <input type="text" id="referral_source" name="referral_source" value="" /><br/>
+    <input type = "submit" value = "Submit">
+</form>
+

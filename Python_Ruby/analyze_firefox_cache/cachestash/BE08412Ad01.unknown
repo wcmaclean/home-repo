@@ -1,0 +1,1879 @@
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+	
+	
+	<title>The Official Site of Major League Baseball: Homepage</title>
+
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+	<meta name="description" content=""/>
+	
+	
+	<link href="/style/global.css" rel="stylesheet" type="text/css"/>
+	<link href="/style/nav.css" rel="stylesheet" type="text/css"/>
+	<link href="/style/mlb.css" rel="stylesheet" type="text/css"/>
+	<!--[if lte IE 6]><style type="text/css">img.png { behavior: url("/scripts/fix_png.htc"); }</style><![endif]-->
+	
+	<link href="/style/homepage/mlb_2007.css" rel="stylesheet" type="text/css"/>
+	  
+		
+	
+	<script type="text/javascript">
+	var club      = "mlb"; 
+	var section   = "homepage";
+	var ctxPath   = "";
+	var page_id   = "index";
+	var pageid    = "index";
+	var dc_keyVal = "";
+	var dc_lang   = "en";
+	</script>
+
+	
+	<script src="/shared/media/mplayer.js" type="text/javascript"></script>
+	<script src="/shared/scripts/flashobject.js" type="text/javascript"></script>
+	<script src="/shared/scripts/util.js" type="text/javascript"></script>
+	<script src="/scripts/global.js" type="text/javascript"></script>
+	
+		
+	<script src="/scripts/util/external_players.js" type="text/javascript"></script>
+	
+	<script src="/scripts/dc_ads.js" type="text/javascript"></script>
+
+	
+	
+		<script src="/scripts/homepage/content_manager.js" type="text/javascript"></script>
+	
+		<script src="/scripts/homepage/media_wall.js" type="text/javascript"></script>
+	
+	
+
+	<script type="text/javascript">
+		function sim_meta_refresh() { document.location.reload(true) }
+		setInterval("sim_meta_refresh()",1800000);
+	</script>
+
+	<script src="/scripts/bw_detect.js" type="text/javascript"></script>
+
+
+	
+</head>
+<body style="background:url(/mlb/images/bg_mlb_tile.gif);">
+<div style="position:absolute; top:-100px; left:-100px; width:100px;">
+
+
+
+
+
+
+
+<script type="text/javascript">
+<!--
+if (typeof urlDecode == "undefined") document.writeln("<scr"+"ipt src='/scripts/util.js' type='text/javascript'></scr"+"ipt>");
+//-->
+</script>
+
+<script type="text/javascript">
+<!--
+if (typeof GetCookie == "undefined") document.writeln("<scr"+"ipt src='/scripts/cookie.js' type='text/javascript'></scr"+"ipt>");
+//-->
+</script>
+
+<!-- SiteCatalyst code version: G.5. Copyright 1997-2003 Omniture, Inc. More info available at http://www.omniture.com -->
+<script type="text/javascript">
+<!--
+function stUtil_rmParam(n,src) {
+	if (typeof src == "undefined") src = document.URL;
+	src = eval("src.replace(/([\?&])("+n+"=)([^&]*)($)|([\?&])("+n+"=)([^&]*)(&)/gi,'$5');");
+	return src;
+}
+
+function stUtil_getParam(n,src) {
+	if (typeof src == "undefined") src = document.location.search;
+	var val = eval("/[\?|&]" + n + "=([^&]+)/gi.exec(src);");
+	if (val) return val[1];
+	else return null;
+}
+
+if (GetCookie("mlbemailcookie")) {
+	SetCookie("stUtil_cookie", GetCookie("mlbemailcookie"), 365, "/", ".mlb.com");
+	DeleteCookie("mlbemailcookie");
+}
+
+var _ns=1, _uidn="", _nd = new Date(), _puidn = "", _suc = GetCookie("stUtil_cookie");
+if (_suc) {
+	_ns = _suc.split("|")[0];
+	_uidn = _suc.split("|")[1];
+	_puidn = _suc.split("|")[2];
+}
+if (GetCookie("mlbunifieddata")) {
+	var T_uidn = GetCookie("mlbunifieddata").split("|")[0];
+	if (_uidn == "") {
+		_uidn = T_uidn;
+	} else if (_uidn != T_uidn) {
+		_uidn = T_uidn;
+		_puidn = Math.floor(Math.random() * 1000000000) + "" + _nd.getTime();
+	}
+}
+if (_puidn == "") _puidn = Math.floor(Math.random() * 1000000000) + "" + _nd.getTime();
+_suc = _ns + "|" + _uidn + "|" + _puidn;
+SetCookie("stUtil_cookie", _suc, 365, "/", ".mlb.com");
+
+var s_prop21 = _puidn, s_eVar10 = _puidn;
+var s_prop22 = _uidn, s_eVar11 = _uidn;
+//var s_prop23 = _ns, s_eVar12 = _ns; //_ns unused until feed cutover
+
+if (stUtil_getParam("partnerId")) {
+	if (!GetCookie("partnerId")) SetCookie("partnerId",stUtil_getParam("partnerId"),null,"/",".mlb.com");
+}
+
+var omDomain = document.location.hostname.toLowerCase();
+var omURL    = document.location.href.toLowerCase();
+
+var isProd    = ( (omDomain.indexOf("beta.") == -1) && (omDomain.indexOf("dev.") == -1) && (omDomain.indexOf("qa.") == -1) && (omDomain.indexOf("qa2.") == -1) ) ? true : false;
+var s_account = (isProd) ? "mlbglobal,mlbcom" : "devmlbglobal";
+
+if (typeof s_pageName == "undefined") {
+	var s_pageName = document.URL.toString();
+		s_pageName = s_pageName.slice(s_pageName.indexOf(document.domain) + document.domain.length);
+		s_pageName = s_pageName.replace(/(^\/)(.*)/gi,"$2");
+		s_pageName = s_pageName.replace(/([^#]+)(#[^\?]*)(\?*)/gi,"$1$3");
+		s_pageName = s_pageName.toLowerCase();
+	if (stUtil_getParam("form_code",s_pageName) || /brick_paver/i.test(s_pageName) || /cws\/ticketing\/information_form/i.test(s_pageName)) s_pageName = s_pageName.replace(/([^\?]+)(\?)([^?]+)/gi,"$1");
+	if (/stats\//i.test(s_pageName) || /stats_historical\//i.test(s_pageName) || /history\//i.test(s_pageName) || /help\//i.test(s_pageName)) s_pageName = (s_pageName.slice(0,s_pageName.indexOf("?")) + ((stUtil_getParam("c_id")) ? ("?c_id=" + stUtil_getParam("c_id")) : ""));
+	if (typeof s_prop19 == "undefined" && (stUtil_getParam("partnerId") || stUtil_getParam("affiliateID"))) var s_prop19 = s_pageName;
+	var omBL = new Array();
+		//General
+		//omBL[omBL.length] = "partnerId";
+		//omBL[omBL.length] = "affiliateID";
+		omBL[omBL.length] = "r";
+		omBL[omBL.length] = "x";
+		omBL[omBL.length] = "y";
+		omBL[omBL.length] = "email";
+		omBL[omBL.length] = "serial_letters";
+		omBL[omBL.length] = "serial_digits";
+		omBL[omBL.length] = "serial_number";
+		//Team / Player / Umpire
+		omBL[omBL.length] = "playerId";
+		omBL[omBL.length] = "player_id";
+		omBL[omBL.length] = "coachorstaffid";
+		omBL[omBL.length] = "spsid";
+		omBL[omBL.length] = "db_oem_id";
+		omBL[omBL.length] = "id";
+		//Search
+		omBL[omBL.length] = "query";
+		omBL[omBL.length] = "query_text1";
+		//Schedule
+		omBL[omBL.length] = "puid";
+		//Media Player
+		omBL[omBL.length] = "url";
+		omBL[omBL.length] = "mediaId";
+		omBL[omBL.length] = "ovraw";
+		omBL[omBL.length] = "e";
+		omBL[omBL.length] = "f";
+		omBL[omBL.length] = "archive_month";
+		omBL[omBL.length] = "archive_day";
+		//Fantsy - BTS
+		omBL[omBL.length] = "team";
+		omBL[omBL.length] = "lockteam";
+		omBL[omBL.length] = "mlbunifieddata";
+		//Ticketing
+		omBL[omBL.length] = "view";
+		omBL[omBL.length] = "account_num";
+		//News - Articles
+		omBL[omBL.length] = "story_page";
+		omBL[omBL.length] = "content";
+		omBL[omBL.length] = "story";
+		omBL[omBL.length] = "article_id";
+		omBL[omBL.length] = "content_id";
+		omBL[omBL.length] = "fext";
+		omBL[omBL.length] = "vkey";
+		omBL[omBL.length] = "ymd";
+		omBL[omBL.length] = "ym";
+		omBL[omBL.length] = "month";
+		omBL[omBL.length] = "m";
+		omBL[omBL.length] = "year";
+		omBL[omBL.length] = "y";
+		omBL[omBL.length] = "date";
+		omBL[omBL.length] = "gid";
+		omBL[omBL.length] = "gameid";
+		omBL[omBL.length] = "pg";
+		omBL[omBL.length] = "vu";
+		for (var i = 0; i < omBL.length; i++) s_pageName = stUtil_rmParam(omBL[i],s_pageName);
+}
+
+var s_server = "";
+var s_channel = section;
+if (typeof s_pageType == "undefined") var s_pageType = "";
+var s_prop1 = pageid = page_id;
+if (typeof s_prop20 == "undefined" && (stUtil_getParam("content_id") || stUtil_getParam("article_id") || stUtil_getParam("story") || stUtil_getParam("content") || stUtil_getParam("story_page"))) {
+	if (stUtil_getParam("content_id")) var s_prop20 = stUtil_getParam("content_id").toLowerCase();
+	else if (stUtil_getParam("article_id")) s_prop20 = stUtil_getParam("article_id").toLowerCase();
+	else if (stUtil_getParam("story")) s_prop20 = stUtil_getParam("story").toLowerCase();
+	else if (stUtil_getParam("content")) s_prop20 = stUtil_getParam("content").toLowerCase();
+	else if (stUtil_getParam("story_page")) s_prop20 = stUtil_getParam("story_page").toLowerCase();
+}
+if (typeof s_prop6 == "undefined" && stUtil_getParam("content_id")) var s_prop6 = stUtil_getParam("content_id");
+if (typeof s_prop25 == "undefined") var s_prop25 = stUtil_getParam("playerID");
+
+// e-commerce variables
+if (typeof s_campaign == "undefined") var s_campaign = "";
+if (typeof s_state == "undefined") var s_state = "";
+if (typeof s_zip == "undefined") var s_zip = "";
+if (typeof s_events == "undefined") var s_events = "";
+if (typeof s_products == "undefined") var s_products = "";
+if (typeof s_purchaseID == "undefined") var s_purchaseID = "";
+else if (s_purchaseID != "") { 
+	if (s_events.length > 0) s_events += ",";
+	s_events += "purchase";
+	s_purchaseID = "mlbcom_" + s_purchaseID;
+} 
+if (typeof s_eVar1 == "undefined") var s_eVar1 = "";
+var s_linkInternalFilters="javascript:,mlb";
+//-->
+</script>
+<script type="text/javascript" src="/scripts/s_code_remote.js"></script>
+<!-- End SiteCatalyst code version: G.5. -->
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- begin mlb header -->
+
+	<script src="/scripts/headernav/nav_multi.js" type="text/javascript"></script>
+<div id="head">
+
+	
+
+
+
+
+
+<map name="account_logout">
+	<area alt="My Account" coords="0,0,61,6" href="https://secure.mlb.com/enterworkflow.do?flowId=registration.wizard&c_id=mlb">
+	<area alt="Logout" coords="104,0,69,6" href="https://secure.mlb.com/enterworkflow.do?flowId=registration.logout&c_id=mlb">
+</map>
+<script>
+var fprt = GetCookie("fprt"),
+	accountLink = "";
+if(fprt!=null && fprt!=""){
+	accountLink = "<img src='/images/masthead/y2007/mlb_account_logout.gif' alt='Logout' width='104' height='6' style='padding-top:3px;padding-left:6px;' border='0' usemap='#account_logout'>";
+}
+else{
+	accountLink = "<a id='account' class='login' href='https://secure.mlb.com/enterworkflow.do?flowId=registration.wizard&c_id=mlb'><img src='/images/masthead/y2007/mlb_register_login.gif' width='78' height='13' border='0' alt='Register | Login' title='Register | Login' /></a>";;
+}
+</script>
+<style type="text/css">
+/* Separator Pipe*/
+.navItem, .altNavItem, .navItemOn, .altNavItemOn {background-image:none;}
+.collapsed div, .expanded div {background-image:none;}
+</style>
+<table cellpadding="0" cellspacing="0" border="0" width="100%" height="90" style="background:url(/images/masthead/y2007/mlb_hdr_bg.gif) repeat-x;">
+<tr valign="top">
+	<td id="navTopCell">
+		<div id="bookmark"><a href="http://mlb.mlb.com/components/global/bookmark.jsp" onclick="popWin(this,'bookmark','420','300');return false;"><img src="/images/masthead/y2007/mlb_bookmark.gif" width="53" height="17" alt="Bookmark" border="0" /></a><a href="http://www.major2.tw" target="_blank"><img src="/images/masthead/y2007/mlb_chinese.gif" width="47" height="17" border="0" /></a><a href="http://www.major.jp" target="_blank"><img src="/images/masthead/y2007/mlb_japanese.gif" width="42" height="17" border="0" /></a><a href="http://www.major2.co.kr/" target="_blank"><img src="/images/masthead/y2007/mlb_korean.gif" width="34" height="17" border="0" /></a><a href="http://espanol.mlb.com" target="_blank"><img src="/images/masthead/y2007/mlb_spanish.gif" width="47" height="17" alt="Espa&ntilde;ol.MLB.com" title="Espa&ntilde;ol.MLB.com" border="0" /></a></div>
+		<a href="http://www.mlb.com"><img id="logo_mlb" src="/images/trans.gif" width="198" height="52" border="0" alt="MLB.com" title="MLB.com"/></a><div id="loginDiv"><table cellpadding="0" cellspacing="0" border="0"><tr valign="top">
+				<td><span id="cart_icon"><a href="http://www.mlb.com/enterworkflow.do?flowId=commerce.cart.view"><img src="/images/icons/cart.gif" width="17" height="17" border="0" alt="Cart" title="Cart" style="margin-top:-3px"/><span id="cart_quantity"></span></a>&nbsp; &nbsp;</span></td>
+				<td><script>document.write(accountLink);</script></td>
+			</tr></table></div>
+	</td>
+</tr>
+<tr valign="top">
+	<td id="navMenus">
+
+
+
+		<div id="searchDiv">
+			<form id="hdr_search" method="get" name="hdr_search" action="http://mlb.mlb.com/searchGlobalSearchServlet" onsubmit="return validateSearchText()">
+				<input type="hidden" name="club" value="mlb"/>
+				<input type="hidden" name="search_mode" value="1"/>
+				<input type="hidden" name="searchtypeid" id="searchtypeid" value="-1">
+				<input type="hidden" name="page_number" value="1"/>
+				<input type="text" size="20" id="query_text1" name="query_text1" class="textXs" value="Search" onfocus="this.value=''"/>&nbsp;<input type="image" src="/images/masthead/mlb_go_rnd.gif" align="absmiddle"/>
+			</form>
+		</div>	
+		<div id="sunDiv"><a href="http://mlb.mlb.com/components/global/click_through.html?jumpTo=http%3A//www.sun.com&contentGroup=http%3A//www.sun.com"><img src="/images/masthead/y2007/mlb_sun_logo.gif" width="145" height="35" border="0" alt="Powered by Sun Microsystems" title="Powered by Sun Microsystems"/></a></div>
+		
+		
+
+		<div id="leftMenu" class="mainMenu">
+			<!-- Teams -->
+			<div class="collapsed" id="item0Menu"><a href="http://mlb.mlb.com/team/index.jsp"><img src="/images/masthead/y2007/mlb_sel_btn.gif" width="115" height="20" border="0" alt="Team Sites" title="Team Sites" style="vertical-align:top"/></a>
+			<div class="menuContainer" style="margin:0px" class="textSm">
+			<div style="clear:both; width:214px; border:1px solid #003399; background:#fff; position:absolute; z-index:11000;">
+			<table width="100%" cellpadding="0" cellspacing="0" border="0" class="textSm">
+			<tr><td colspan="2"><img src="/images/masthead/y2007/mlb_select_top.gif" border="0"/></td></tr>
+			<tr valign="top">
+				<td id="al_teams" width="49%" style="padding-left:13px"><div class="pad7tb">
+					<a href="http://orioles.mlb.com">Baltimore</a><br />
+					<a href="http://redsox.mlb.com">Boston</a><br />
+					<a href="http://whitesox.mlb.com">Chi. White Sox</a><br />
+					<a href="http://indians.mlb.com">Cleveland</a><br />
+					<a href="http://tigers.mlb.com">Detroit</a><br />
+					<a href="http://royals.mlb.com">Kansas City</a><br />
+					<a href="http://angels.mlb.com">LA Angels</a><br />
+					<a href="http://twins.mlb.com">Minnesota</a><br />
+					<a href="http://yankees.mlb.com">NY Yankees</a><br />
+					<a href="http://athletics.mlb.com">Oakland</a><br />
+					<a href="http://mariners.mlb.com">Seattle</a><br />
+					<a href="http://rays.mlb.com">Tampa Bay</a><br />
+					<a href="http://rangers.mlb.com">Texas</a><br />
+					<a href="http://bluejays.mlb.com">Toronto</a><br />
+				</div></td>
+				<td id="nl_teams" width="51%" style="border-left:1px solid #999; padding-left:13px"><div class="pad7tb">
+					<a href="http://diamondbacks.mlb.com">Arizona</a><br />
+					<a href="http://braves.mlb.com">Atlanta</a><br />
+					<a href="http://cubs.mlb.com">Chi. Cubs</a><br />
+					<a href="http://reds.mlb.com">Cincinnati</a><br />
+					<a href="http://rockies.mlb.com">Colorado</a><br />
+					<a href="http://marlins.mlb.com">Florida</a><br />
+					<a href="http://astros.mlb.com">Houston</a><br />
+					<a href="http://dodgers.mlb.com">LA Dodgers</a><br />
+					<a href="http://brewers.mlb.com">Milwaukee</a><br />
+					<a href="http://mets.mlb.com">NY Mets</a><br />
+					<a href="http://phillies.mlb.com">Philadelphia</a><br />
+					<a href="http://pirates.mlb.com">Pittsburgh</a><br />
+					<a href="http://cardinals.mlb.com">St. Louis</a><br />
+					<a href="http://padres.mlb.com">San Diego</a><br />
+					<a href="http://giants.mlb.com">San Francisco</a><br />
+					<a href="http://nationals.mlb.com">Washington</a>
+				</div></td>
+			</tr>
+		</table></div>
+		</div>
+			</div>
+
+			<!-- Scoreboard -->
+			<div class="collapsed" id="item1Menu"><div id="scoreboard" class="navItem" onclick="openLink('http://mlb.mlb.com/mlb/scoreboard/index.jsp');" style="background-image:none;">Scoreboard</div><!--<div class="menuContainer"><ul class="menuList" id="item1">
+				<li class="menuItem"><a href="http://mlb.mlb.com/mlb/scoreboard/index.jsp">Scoreboard</a></li>
+			</ul>
+		</div>-->
+
+			</div>
+		
+
+			<!-- Standings -->    
+			<div class="collapsed" id="item2Menu"><div id="standings" class="navItem" onclick="openLink('http://mlb.mlb.com/mlb/standings/exhibition.jsp');"><img src="/images/masthead/mlb_pipe2.gif"/>Standings</div><div class="menuContainer"><ul class="menuList" id="item2">
+				<li class="menuItem"><a href="http://mlb.mlb.com/mlb/standings/index.jsp">Regular Season</a></li>
+				<li class="menuItem"><a href="http://mlb.mlb.com/mlb/standings/wildcard.jsp">Wild Card</a></li>
+				<li class="menuItem"><a href="http://mlb.mlb.com/mlb/standings/exhibition.jsp">Spring Training</a></li>
+				<li class="rule"></li> 
+				<!-- <li class="menuItem"><a href="http://mlb.mlb.com/mlb/standings/index.jsp?ymd=20081001">2008 Final Standings</a></li> -->
+				<li class="menuItem"><a href="http://mlb.mlb.com/mlb/standings/index.jsp?ymd=20071001">2007 Final Standings</a></li>
+				<li class="menuItem"><a href="http://mlb.mlb.com/mlb/standings/index.jsp?ymd=20061001">2006 Final Standings</a></li>
+				<li class="menuItem"><a href="http://mlb.mlb.com/mlb/standings/index.jsp?ymd=20051002">2005 Final Standings</a></li>
+				<li class="menuItem"><a href="http://mlb.mlb.com/mlb/standings/index.jsp?ymd=20041003">2004 Final Standings</a></li>
+				<li class="menuItem"><a href="http://mlb.mlb.com/mlb/standings/index.jsp?ymd=20030928">2003 Final Standings</a></li>
+				<li class="menuItem"><a href="http://mlb.mlb.com/mlb/standings/index.jsp?ymd=20020929">2002 Final Standings</a></li>
+				<li class="menuItem"><a href="http://mlb.mlb.com/mlb/standings/index.jsp?ymd=20011007">2001 Final Standings</a></li>
+			</ul>
+		</div>
+
+			</div>
+
+		
+			<!-- Stats -->
+			<div class="collapsed" id="item3Menu"><div id="stats" class="navItem" onclick="openLink('http://mlb.mlb.com/mlb/stats/index.jsp');"><img src="/images/masthead/mlb_pipe2.gif"/>Stats</div><div class="menuContainer"><ul class="menuList" id="item3">
+				
+				<li class="menuItem"><a href="http://mlb.mlb.com/spring_training/index.jsp?c_id=mlb">Spring Training</a></li>
+				<li class="menuItem"><a href="http://mlb.mlb.com/mlb/stats/index.jsp">League Leaders</a></li>
+				<li class="menuItem"><a href="http://mlb.mlb.com/stats/sortable_player_stats.jsp">Sortable Player Stats</a></li>
+				<li class="menuItem"><a href="http://mlb.mlb.com/stats/interleague_and_events.jsp">Postseason &amp; Interleague</a></li>
+ 				<li class="menuItem"><a href="/milb/stats/">Winter Leagues</a></li>
+				<li class="menuItem"><a href="http://mlb.mlb.com/stats/milestones.jsp">Milestone Tracker</a></li>
+				<li class="menuItem"><a href="http://mlb.mlb.com/stats/batter_vs_pitcher.jsp">Batter vs. Pitcher</a></li>
+				<li class="menuItem"><a href="http://mlb.mlb.com/stats/sortable_team_stats.jsp">Sortable Team Stats</a></li>
+				<li class="menuItem"><a href="http://mlb.mlb.com/stats/historical/player_stats.jsp">Historical</a></li>
+				
+			</ul>
+		</div>
+
+			</div>
+
+		
+			<!-- Schedule -->
+			<div class="collapsed" id="item4Menu"><div id="schedule" class="navItem" onclick="openLink('http://mlb.mlb.com/mlb/schedule/index.jsp');"><img src="/images/masthead/mlb_pipe2.gif"/>Schedule</div><div class="menuContainer"><ul class="menuList" id="item4">
+		
+				<li class="menuItem"><a href="http://mlb.mlb.com/mlb/schedule/index.jsp">2008 Regular Season</a></li>
+				<li class="menuItem"><a href="http://mlb.mlb.com/mlb/schedule/glance.jsp">3-Day Glance</a></li>
+				<li class="menuItem"><a href="http://mlb.mlb.com/mlb/schedule/team_by_team.jsp">Team-by-Team Schedule</a></li>
+				<li class="menuItem"><a href="http://mlb.mlb.com/mlb/schedule/important_dates.jsp">Important Dates</a></li>
+				<li class="menuItem"><a href="http://mlb.mlb.com/mlb/schedule/ps_07.jsp">2007 Postseason</a></li>
+			</ul>
+		</div>
+
+			</div>
+
+		
+
+			<!-- Players -->
+			<div class="collapsed" id="item5Menu"><div id="players" class="navItem" onclick="openLink('http://mlb.mlb.com/mlb/players/index.jsp');"><img src="/images/masthead/mlb_pipe2.gif"/>Players</div><div class="menuContainer"><ul class="menuList" id="item5">
+				<li class="menuItem"><a href="http://mlb.mlb.com/mlb/players/index.jsp">Player Search</a></li>
+				<li class="menuItem"><a href="http://mlb.mlb.com/mlb/transactions/index.jsp">Transactions</a></li>
+				<li class="menuItem"><a href="http://mlb.mlb.com/mobile/text.jsp">Mobile Player Alerts</a></li>
+				<li class="menuItem"><a href="http://mlb.mlb.com/mlb/events/nbbcd/index.jsp">Baseball Cards</a></li>
+				<li class="menuItem"><a href="http://www.mlbplayers.com/" target="players">MLBPLAYERS.com</a></li>
+			</ul>
+		</div>
+
+			</div>
+
+		
+			<!-- News -->
+			<div class="collapsed" id="item6Menu"><div id="news" class="navItem" onclick="openLink('http://mlb.mlb.com/news/index.jsp');"><img src="/images/masthead/mlb_pipe2.gif"/>News</div><div class="menuContainer"><ul class="menuList" id="item6">
+				<li class="menuItem"><a href="http://mlb.mlb.com/news/index.jsp">News Homepage</a></li>
+				<li class="menuItem"><a href="http://mlb.mlb.com/es/index.jsp?c_id=mlb">Noticias en espa&ntilde;ol</a></li>
+				<li class="menuItem"><a href="http://mlb.mlb.com/mlb/news/entertainment/index.jsp">Entertainment</a></li>
+				<li class="menuItem"><a href="http://mlb.mlb.com/mlb/news/perspectives.jsp">Perspectives</a></li>
+				<li class="menuItem"><a href="http://mlb.mlb.com/news/search_archive.jsp">News Archive</a></li>
+				
+				<li class="menuItem"><a href="http://mlb.mlb.com/mlb/transactions/index.jsp">Transactions</a></li>
+				<li class="menuItem"><a href="http://mlb.mlb.com/mlb/events/index.jsp">Events</a></li>
+				<li class="menuItem"><a href="http://mlb.mlb.com/mlb/history/index.jsp">History</a></li>
+				<li class="menuItem"><a href="http://mlb.mlb.com/mlb/presspass/index.jsp">Press Pass</a></li>
+			</ul>
+		</div>
+
+			</div>
+		</div>
+
+
+
+
+
+
+		<div id="rightMenu" class="mainMenu">
+			<!-- Multimedia -->
+			<div class="collapsed" id="item7Menu"><div id="multimedia" class="navItem" style="background-image: none;" onclick="openLink('http://mlb.mlb.com/mlb/subscriptions/index.jsp?c_id=mlb');">Audio &amp; Video</div><div class="menuContainer"><ul class="menuList"  id="item7" style="margin-left:0px">
+				<li class="menuItem"><a href="http://mlb.mlb.com/mediacenter/index.jsp">Multimedia Guide</a></li>
+
+				<li class="menuItem"><a href="http://mlb.mlb.com/mlb/subscriptions/index.jsp?c_id=mlb">MLB.TV Overview</a></li>
+				<li class="menuItem"><a href="http://mlb.mlb.com/mlb/subscriptions/premium.jsp?c_id=mlb">MLB.TV Premium</a></li>
+				<li class="menuItem"><a href="http://mlb.mlb.com/mlb/subscriptions/mlbtv.jsp?c_id=mlb?c_id=mlb">MLB.TV</a></li>
+				<li class="menuItem"><a href="http://mlb.mlb.com/mlb/subscriptions/gameday_audio.jsp?c_id=mlb">Gameday Audio</a></li>
+				<li class="menuItem"><a href="http://mlb.mlb.com/mlb/subscriptions/compare.jsp?c_id=mlb">Compare Products</a></li>			
+
+				
+				<li class="menuItem"><a href="http://mlb.mlb.com/mlb/help/faq_mosaic.jsp">MLB.TV Mosaic Help</a></li>
+				<li class="menuItem"><a href="http://mlb.mlb.com/mlb/baseballs_best/index.jsp">Baseball's Best</a></li>
+				<li class="menuItem"><a href="http://mlb.mlb.com/downloads/index.jsp">MLB.com/Downloads</a></li>
+				<li class="menuItem"><a href="http://mlb.mlb.com/mlb/help/faq_subscriptions.jsp">FAQs</a></li>
+				
+				<li class="rule"></li>
+				<li class="menuItem"><a href="http://mlb.mlb.com/mlb/radio/index.jsp">BaseballChannel.TV</a></li>
+				<li class="menuItem"><a href="http://mlb.mlb.com/mlb/audio/podcast/index.jsp">Podcasts</a></li>
+				<li class="menuItem"><a href="http://mlb.mlb.com/mlb/gallery/index.jsp">Photo Galleries</a></li>
+				<li class="menuItem"><a href="http://mlb.mlb.com/mlb/hotcorner/index.jsp">TBS Hot Corner</a></li>
+				<li class="menuItem"><a href="http://mlb.mlb.com/media/video.jsp">Latest Video</a></li>
+			</ul>
+		</div>
+
+			</div>
+
+		
+			<!-- Fantasy -->
+			<div class="collapsed" id="item8Menu"><div id="fantasy" class="navItem" onclick="openLink('http://mlb.mlb.com/mlb/fantasy/index.jsp');"><img src="/images/masthead/mlb_pipe2.gif"/>Fantasy</div><div class="menuContainer"><ul class="menuList" id="item8">
+					<li class="menuItem"><a href="http://mlb.mlb.com/mlb/fantasy/index.jsp" target="fantasy">Fantasy Homepage</a></li>
+					<li class="menuItem"><a href="http://mlb.mlb.com/mlb/fantasy/wsfb_c/info/index.jsp" target="fantasy">MLB.com 2008 Open</a></li>
+					<li class="menuItem"><a href="javascript:popWin('/mlb/fantasy/preview/y2008/index.jsp','FantasyPreview2008',800,602);">2008 Fantasy Preview</a></li>
+					<li class="menuItem"><a href="http://www.mlb.com/mlb/fantasy/y2008/draft_kit/index.jsp" target="fantasy">AutoZone 2008 Draft Kit</a></li>
+					<li class="menuItem"><a href="http://www.mlb.com/mlb/fantasy/wsfb/news/index.jsp" target="fantasy">Fantasy News and Notes</a></li>
+			</ul>
+		</div>
+
+			</div>
+
+
+			<!-- Tickets -->
+			<div class="collapsed" id="item9Menu"><div id="tickets" class="navItem" onclick="openLink('http://mlb.mlb.com/mlb/tickets/index.jsp');"><img src="/images/masthead/mlb_pipe2.gif"/>Tickets</div><div class="menuContainer"><ul class="menuList" id="item9">
+				<li class="menuItem"><a href="http://www.stubhub.com/mlb-tickets/" onclick=this.href=this.href+'?gcid=C12289x387' title="StubHub" target="_new">StubHub.com</a></li>
+			</ul>
+		</div>
+
+			</div>
+		
+
+			<!-- Shop -->
+			<div class="collapsed" id="item10Menu"><div id="shop" class="navItem" onclick="openLink('http://shop.mlb.com/entry.point?target=Z&source=MLC_homepage');"><img src="/images/masthead/mlb_pipe2.gif"/>Shop</div><div class="menuContainer"><ul class="menuList" id="item10" style="left: -20px;">
+				<li class="menuItem"><a href="http://shop.mlb.com/entry.point?target=Z&source=MLC_homepage">Shop Homepage</a></li>
+				<li class="menuItem"><a href="http://shop.mlb.com/category/index.jsp?categoryId=1452620&clickid=topnav_subnav_txt">Jerseys</a></li>
+				<li class="menuItem"><a href="http://shop.mlb.com/category/index.jsp?categoryId=1452621&clickid=topnav_subnav_txt">Caps</a></li>
+				<li class="menuItem"><a href="http://shop.mlb.com/category/index.jsp?categoryId=1452622&clickid=topnav_subnav_txt">Men's</a></li>
+				<li class="menuItem"><a href="http://shop.mlb.com/category/index.jsp?categoryId=1452623&clickid=topnav_subnav_txt">Women's</a></li>
+				<li class="menuItem"><a href="http://shop.mlb.com/category/index.jsp?categoryId=1452624&clickid=topnav_subnav_txt">Kids</a></li>
+				<li class="menuItem"><a href="http://shop.mlb.com/category/index.jsp?categoryId=1452625&clickid=topnav_subnav_txt">Collectibles</a></li>
+				<li class="menuItem"><a href="http://shop.mlb.com/category/index.jsp?categoryId=1452626&clickid=topnav_subnav_txt">Memorabilia</a></li>
+				<li class="menuItem"><a href="http://shop.mlb.com/category/index.jsp?categoryId=1452627&clickid=topnav_subnav_txt">Baseball Cards</a></li>
+				<li class="menuItem"><a href="http://shop.mlb.com/shop/index.jsp?categoryId=1503844&clickid=topnav_outletTab_img">Outlet</a></li>
+				<li class="menuItem"><a href="http://shop.mlb.com/category/index.jsp?categoryId=1452629&clickid=topnav_subnav_txt">Home &amp; Office</a></li>
+				<li class="menuItem"><a href="http://shop.mlb.com/category/index.jsp?categoryId=2184751&clickid=topnav_subnav_txt">Books &amp; DVDs</a></li>
+				<li class="menuItem"><a href="http://photostore.mlb.com/">Photo Store</a></li>
+				<!--<li class="menuItem"><a href="http://arcade.mlb.com/">MLB Arcade</a></li>-->
+				<li class="menuItem"><a href="http://shop.mlb.com/shop/index.jsp?categoryId=1998124&clickid=topnav_subnav_txt">Minor Leagues</a></li>
+				<li class="menuItem"><a href="http://shop.mlb.com/shop/index.jsp?categoryId=2588656&clickid=topnav_subnav_txt">Hall of Fame</a></li>
+				<li class="menuItem"><a href="http://shop.mlb.com/giftCertificates/index.jsp">MLB.com Gift Card</a></li>
+			</ul>
+		</div>
+
+			</div>
+
+		
+			<!-- Mobile -->
+			<div class="collapsed" id="item11Menu"><div id="mobile" class="navItem" onclick="openLink('http://mlb.mlb.com/mobile/index.jsp');"><img src="/images/masthead/mlb_pipe2.gif"/>Mobile</div><div class="menuContainer"><ul class="menuList" id="item11"  style="width:190px;">
+					<li class="menuItem"><a href="http://mlb.mlb.com/mobile/index.jsp?c_id=mlb">Mobile Home</a></li>
+					<li class="menuItem"><a href="http://mlb.mlb.com/mobile/text.jsp?c_id=mlb">Text Messaging – Alerts &amp; More</a></li>
+					<li class="menuItem"><a href="http://mlb.mlb.com/mdash">Manage Services – Mobile Dashboard</a></li>
+					<li class="menuItem"><a href="http://mlb.mlb.com/mobile/gameday.jsp?c_id=mlb">Gameday Mobile</a></li>
+					<li class="menuItem"><a href="http://mlb.mlb.com/mobile/mlb2007.jsp?c_id=mlb">MLB 2007 Mobile Game</a></li>
+					<li class="menuItem"><a href="http://mshop.mlb.com/mlb/index.jsp">Wallpapers and Ringtones</a></li>
+					<li class="menuItem"><a href="http://mlb.mlb.com/mobile/mobileweb.jsp?c_id=mlb">Mobile Web</a></li>
+					<li class="menuItem"><a href="http://mlb.mlb.com/mobile/audio.jsp?c_id=mlb">Live Audio</a></li>
+					<li class="menuItem"><a href="http://mlb.mlb.com/mobile/video.jsp?c_id=mlb">Video</a></li>
+			</ul>
+		</div>
+
+			</div>
+
+
+			<!-- Auction -->
+			<div class="collapsed" id="item12Menu"><div id="auction" class="altNavItem" onclick="openLink('http://auction.mlb.com');"><img src="/images/masthead/mlb_pipe2.gif"/>Auction</div><div class="menuContainer"><ul class="menuList" id="item12" style="left: -45px;">
+			<li class="menuItem"><a href="http://auction.mlb.com">Auction Homepage</a></li>
+			<li class="menuItem"><a href="http://auction.mlb.com/cgi-bin/ncommerce3/CategoryDisplay?cgrfnbr=22789&cgmenbr=33072944&noMoreSubs=N">Baseball Cards</a></li>
+			<li class="menuItem"><a href="http://auction.mlb.com/cgi-bin/ncommerce3/CategoryDisplay?cgrfnbr=22813&cgmenbr=33072944&noMoreSubs=Y">Baseballs</a></li>
+			<li class="menuItem"><a href="http://auction.mlb.com/cgi-bin/ncommerce3/CategoryDisplay?cgrfnbr=22763&cgmenbr=33072944&noMoreSubs=Y">Bats</a></li>
+			<li class="menuItem"><a href="http://auction.mlb.com/cgi-bin/ncommerce3/CategoryDisplay?cgrfnbr=22665&cgmenbr=33072944&noMoreSubs=Y">Experiences</a></li>
+			<li class="menuItem"><a href="http://auction.mlb.com/cgi-bin/ncommerce3/CategoryDisplay?cgrfnbr=22814&cgmenbr=33072944&noMoreSubs=Y">Jerseys</a></li>
+			<li class="menuItem"><a href="http://auction.mlb.com/cgi-bin/ncommerce3/CategoryDisplay?cgrfnbr=35841&cgmenbr=33072944&noMoreSubs=Y">Photos</a></li>
+			<li class="rule"></li>
+			<li class="menuItem"><a href="http://mlb.mlb.com/mlb/authentication/mlb_authentication_index.jsp">MLB Authentication</a></li>
+			</ul>
+		</div>
+			</div>
+
+
+			<!-- More... -->
+			<div class="collapsed" id="item13Menu"><div id="more" class="navItem" style="cursor:default;"><img src="/images/masthead/mlb_pipe2.gif"/>More...</div><div class="menuContainer"><ul class="menuList" id="item13" style="left:-110px;">
+				<li class="menuItem"><a href="http://mlb.mlb.com/mlb/events/winterleagues/?league=cs">2008 Caribbean Series</a></li>
+				<li class="menuItem"><a href="http://www.actober.com/Home.aspx">actober.com</a></li>
+				<li class="menuItem"><a href="http://mlb.mlb.com/mlb/video/the_final_season/index.jsp">The Final Season Movie</a></li>				
+				<li class="menuItem"><a href="http://mlb.mlb.com/fan_forum/index.jsp?c_id=mlb">Fan Forum</a></li>
+				<li class="menuItem"><a href="http://mlb.mlb.com/mlb/news/blogs/index.jsp">MLBlogs.com</a></li>
+				
+				<li class="menuItem"><a href="http://mlb.mlb.com/mlb/spanish/mlb_spanish.jsp">Espa&ntilde;ol</a></li>
+				<li class="menuItem"><a href="http://mlb.mlb.com/mlb/international/index.jsp">International</a></li>
+				<li class="menuItem"><a href="http://www.major2.co.kr/">Korean</a></li>
+				<li class="menuItem"><a href="http://www.major.jp/">Japanese</a></li>
+				<li class="menuItem"><a href="http://www.mlb.com/taiwan/">Chinese (Traditional)</a></li>
+				<li class="menuItem"><a href="http://mlb.mlb.com/mlb/kids/index.jsp">Kids</a></li>
+				<li class="menuItem"><a href="http://arcade.mlb.com/">MLB Arcade</a></li>
+				<li class="menuItem"><a href="http://mlb.mlb.com/mlb/official_info/broadcasts/extra_innings.jsp">DirecTV</a></li>
+				<li class="menuItem"><a href="http://mlb.mlb.com/mlb/homepage/narrowband.jsp">Low Bandwidth Site</a></li>
+				<li class="menuItem"><a href="http://www.minorleaguebaseball.com">MinorLeagueBaseball.com</a></li>
+				<li class="menuItem"><a href="http://www.baseballhalloffame.org/">Baseball Hall of Fame</a></li>
+				<li class="menuItem"><a href="http://mlb.mlb.com/mlb/features/alumni/index.jsp">Baseball Alumni</a></li>
+				
+				
+				<li class="menuItem"><a href="http://mlb.mlb.com/mlb/video/mlb_productions/index.jsp">MLBProductions.com</a></li>
+				<li class="menuItem"><a href="http://mlb.mlb.com/mlb/events/winterleagues/">Winter Leagues Baseball</a></li>
+				<li class="menuItem"><a href="http://www.worldbaseballclassic.com">World Baseball Classic</a></li>
+				<li class="menuItem"><a href="http://mlb.mlb.com/usa_baseball/index.jsp">USA Baseball</a></li>
+				<li class="menuItem"><a href="http://mlb.mlb.com/mlb/fan_forum/cisco/">Ballparks of the Future</a></li>
+			</ul>
+		</div>
+
+	</div>
+</div>
+<script>
+	initNav("leftMenu");
+	initNav("rightMenu");
+</script>
+
+
+
+
+<script type="text/javascript">enableNavOpacity()</script>
+
+	</td>
+</tr>
+</table>
+
+	<div id="hdrDivider"><img src="/images/trans.gif" width="1" height="5" border="0"/></div>
+</div>
+
+<script type="text/javascript">
+	var elem = isDOM ? document.getElementById(section) : ((document.all) ? document.all[section] : null);
+	if (elem) {
+		if ( document.getElementById(section).className=='hdrTop' ) document.getElementById(section).className = 'hdrTopOn';
+		else if ( document.getElementById(section).className=='hdrBtm' ) document.getElementById(section).className = 'hdrBtmOn';
+		else if ( document.getElementById(section).className=='hdrCom' ) document.getElementById(section).className = 'hdrComOn';
+	}
+</script>
+<!-- end mlb header -->
+
+
+
+
+
+
+
+
+<div id="container">
+
+	<div id="columnA" class="column">
+
+		<div class="sectionOuter">
+			<div class="sectionInner">
+			
+				  			
+			
+				<div id="miniscoreboard">
+					<style>
+#springcountdown{
+color:#fff;
+width:179px;
+border-top:3px solid #666;
+padding:5px 0 25px 0;
+margin-bottom:3px;
+background:url(/mlb/images/homepage/y2007/bg_mini_offseason.gif) bottom left no-repeat;
+background-color:#0D2D66;
+}
+</style>
+<div id="springcountdown">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div align="center"><a href="/spring_training/y2008/index.jsp?c_id=mlb"><img src="/images/spring_training/y2008/hdr_st_165x44.png" width="165" height="44" border="0" alt="countdown to spring training" class="png" /></a></div>
+	<div class="textSm" style="text-align:center;">
+	<strong>First Spring Training Game</strong><br/>
+	<span id="rDays" class="white"></span> 
+	<span id="rHours" class="white"></span> 
+	<span id="rMinutes" class="white"></span>  
+	<span id="rSeconds" class="white"></span>
+	</div>
+
+
+
+
+
+<script type="text/javascript">
+var rDays=0; var rYears=0; var rYDays=0; var rHours=15; var rMinutes=6; var rSeconds=0; var rMSeconds=54360445;
+function countDown() {
+	if ( rSeconds < 0 ) { rSeconds = 59; rMinutes--; }
+	if ( rMinutes < 0 ) { rMinutes = 59; rHours--; }
+	if ( rHours < 0 ) window.location.reload();
+	if ( rDays != 0 && document.getElementById("rDays") != null ) document.getElementById("rDays").innerHTML = rDays == 1 ? rDays + ' day ' : rDays + ' days ';	// total days only
+	else {	// years and days
+		if ( rYears != 0  && document.getElementById("rYears") != null ) document.getElementById("rYears").innerHTML = rYears == 1 ? rYears + ' year ' : rYears + ' years ';
+		if ( rYDays != 0  && document.getElementById("rYDays") != null ) document.getElementById("rYDays").innerHTML = rYDays == 1 ? rYDays + ' day ' : rYDays + ' days ';
+	}
+	if ( document.getElementById("rHours") != null ) {
+		if ( rHours != 0 ) document.getElementById("rHours").innerHTML = rHours == 1 ? rHours + ' hr ': rHours + ' hr ';
+		if ( document.getElementById("rMinutes") != null ) {
+			if ( rMinutes != 0 ) {document.getElementById("rMinutes").innerHTML = rMinutes == 1 ? rMinutes + ' min ' : rMinutes + ' min ';  } else {document.getElementById("rMinutes").innerHTML = ' '};
+			if ( document.getElementById("rSeconds") != null ) {
+				document.getElementById("rSeconds").innerHTML = rSeconds == 1 ? rSeconds + ' sec' : rSeconds + ' sec ';
+			}
+		} else document.getElementById("rHours").innerHTML = rHours == 1 ? rHours + ' hr' : rHours + ' hr';
+	}
+	rSeconds--;
+	setTimeout('countDown()',1000);
+}
+function nonDOM() {
+	if ( rDays == 0 && rYDays == 0 && rHours == 0 && rMinutes == 0 ) window.location.reload();
+	else {
+		if ( document.rDays != null ) document.write(rDays + ' days, ');
+		else if ( document.rYears != null ) document.write(rYears + ' years, ' + rYDays + ' days, ');
+		if ( document.rHours != null ) document.write(rHours + ' hr, ');
+		if ( document.rMinutes != null ) document.write(rMinutes + ' min');
+	}
+}
+document.getElementById ? countDown() : nonDOM();
+</script>
+
+
+
+
+</div>
+
+					
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="flash_minisb" style="position:relative; width:179px; height:170px; z-index:0"></div>
+
+<script type="text/javascript" language="JavaScript">
+function getDOW(n) {
+	switch(n) {
+		case 1: return "SUNDAY";
+		case 2: return "MONDAY";
+		case 3: return "TUESDAY";
+		case 4: return "WEDNESDAY";
+		case 5: return "THURSDAY";
+		case 6: return "FRIDAY";
+		case 7: return "SATURDAY";
+	}
+	return "";
+}
+
+
+//--- minisb variables  (total games - 0; daystart - 11)
+
+var dow = "Tuesday";
+var mydate = "20080226";
+
+//od date change here also
+dow = getDOW(4);
+mydate = "20080227";
+//---
+
+var daylink = "<a href='http://mlb.mlb.com/mlb/scoreboard/index.jsp?ymd=20080227'>"+getDOW(4)+"'S SCORES</a>";
+daylink = "";
+
+var version = 2;
+var mylogelink = "<a href='/mlb/subscriptions/mlbtv.jsp?partnerId=minisb'>Get MLB.TV</a> | <a href='/mlb/subscriptions/gameday_audio.jsp?partnerId=minisb'>Get Gameday Audio</a>";
+
+var minisbFO = new FlashObject("/flash/scoreboard/y2007/minisb.swf?ver=4", "minisb", "179", "170", "7", "#ffffff" );
+minisbFO.addVariable("mydate", mydate);
+minisbFO.addVariable("baseURL", "http://gdx.mlb.com/components/game/mlb/");
+minisbFO.addVariable("monthBegin", 2);
+minisbFO.addVariable("monthEnd", 9);
+minisbFO.addVariable("dateEnd", 30);
+minisbFO.addVariable("waittime", 90);
+minisbFO.addVariable("v", version);
+minisbFO.addVariable("ruleFile", "/flash/scoreboard/y2008/sb_rules_st.xml");
+minisbFO.addVariable("gameType", "s"); 
+minisbFO.addVariable("footer", "GAMES OF:");
+minisbFO.addVariable("logelink", escape(mylogelink));
+minisbFO.addVariable("dayofweek", dow);
+minisbFO.addVariable("daylink", escape(daylink));
+
+minisbFO.addParam("wmode", "transparent");
+minisbFO.addParam("scale", "noscale");
+minisbFO.addParam("salign", "LT");
+minisbFO.addParam("menu", "false");
+minisbFO.addParam("loop", "false");
+
+minisbFO.write("flash_minisb");
+</script>
+
+					<style type="text/css">
+.minibg {width:179px;padding-bottom:25px;background:url(/mlb/images/homepage/y2007/bg_mini_offseason.gif) bottom left no-repeat;background-color:#0D2D66;}
+.miniHL {border-bottom:1px solid #669;margin-bottom:1px;font-weight:bold;}
+.miniLive, .miniLive a:visited, a:visited.miniLive {color:#fff;font-weight:bold;}
+.miniBlurb {font-size:11px;color:#efefef;padding:7px 7px 12px 3px;}
+.miniIcon {padding:7px 0 0 0;}
+</style>
+<div class="minibg white textSm">
+<img src="/mlb/images/homepage/y2007/txt_mini_title.gif" width="179" height="20" alt="lineup" border="0" />
+<table border="0" cellspacing="0" cellpadding="0" style="margin:8px 0;">
+
+	<tr valign="top">
+		<td class="miniIcon"><a href="/mlb/tickets/spring_training.jsp"><img src="/mlb/images/homepage/y2007/icon_tickets08_55x70.png" width="70" height="55" alt="" border="0" align="absmiddle" class="png" /></a></td>
+		<td class="miniBlurb" align="left">
+		<div class="miniHL"><a href="/mlb/tickets/spring_training.jsp" class="white">Tickets</a></div>
+		Get Spring Training tickets and more. <a href="/mlb/tickets/spring_training.jsp" class="miniLive">Ticket info &gt;</a>
+		</td>
+	</tr>
+	
+	<tr valign="top">
+		<td class="miniIcon"><a href="/mlb/fantasy/wsfb_c/info/index.jsp"><img src="/mlb/images/homepage/y2007/openlogo.png" width="70" height="55" alt="" border="0" align="absmiddle" class="png" /></a></td>
+		<td class="miniBlurb" align="left">
+		<div class="miniHL"><a href="/mlb/fantasy/wsfb_c/info/index.jsp" class="white">2008 Open</a></div>
+		It's fantasy that's free, easy and fun. <a href="/mlb/fantasy/wsfb_c/info/index.jsp" class="miniLive">Sign up now &gt;</a>
+		</td>
+	</tr>
+	
+	
+	
+</table>
+</div>
+
+					
+										
+				</div>
+		
+				
+		
+			</div>	
+		</div>
+		
+		<div class="sectionOuter">
+			<div class="sectionInner">
+		
+				<div class="component" id="leadersComponent">
+					<a href="/mlb/stats/index.jsp"><img src="/mlb/images/homepage/y2007/headers/league_leaders.gif" class="header" alt="League Leaders"/></a><br/>
+					<div class="content">
+						<div class="contentPad">
+								
+
+<script type="text/javascript">
+	var randStatA = getRandArrVal(["avg", "hr", "rbi"]);
+	var randStatB = getRandArrVal(["w", "era", "k"]);
+	
+	function writeLeaders() {
+		var iframeSrc = "/components/stats/mini.jsp?statA=" + randStatA + "&statB=" + randStatB;
+		
+
+		var iframeTag = "<iframe name='iframeLeaders' id='iframeLeaders' class='iframeLeaders' src='" + iframeSrc + "' ";
+		iframeTag    += "style='background-color:#F2EFEF' width='165' height='370' frameborder='0' scrolling='no'></iframe>";
+		document.write(iframeTag);
+	}
+	
+	writeLeaders();
+</script>
+
+						</div>
+					</div>
+					<img src="/mlb/images/homepage/y2007/edge_bottom_dark.gif" class="footer" alt=""/><br/>
+				</div>
+				
+				
+				<!-- total_games:0 -->
+				 
+				<div class="component" id="photosComponent" style="background-image:url(/mlb/images/homepage/y2007/bg_photos.gif)">
+					<a href="/mlb/gallery/index.jsp"><img src="/mlb/images/homepage/y2007/headers/photos.gif" class="header" alt="Photos"/></a><br/>
+					<div class="content">
+						<table border="0" cellpadding="0" cellspacing="0" style="width:174px; padding-top:5px;" align="center">
+<tr>
+	<td><a href="javascript:void(0);" onclick="showPhoto(curIndex-1);" onfocus="this.blur()"><img src="/mlb/images/homepage/y2007/photos_prev.gif" border="0" alt="Previous Photo"/></a></td>
+	<td align="center"><a id="curPhotoLink" href=""><img src="/images/trans.gif" id="curPhoto" style="border:1px solid #333" width="96" height="72" alt=""/></a></td>
+	<td><a href="javascript:void(0);" onclick="showPhoto(curIndex+1);" onfocus="this.blur()"><img src="/mlb/images/homepage/y2007/photos_next.gif" border="0" alt="Next Photo"/></a></td>
+</tr>
+<tr><td colspan="3"><div id="photosLabel" style="text-align:center; margin-top:10px; font-size:10px; background:url(/mlb/images/homepage/y2007/bg_photos_nav.gif) repeat-x;"></div></td></tr>
+</table>
+
+<div style="padding:10px;">
+A look at action from the World Series, plus team galleries, the <a href="http://photostore.mlb.com/">Photo Store</a> and more. <a href="/mlb/gallery/index.jsp">Photos ></a>
+</div>
+
+<script type="text/javascript">
+	var curIndex  = 0;
+	var photoLink; 
+	
+	function showPhoto(index){
+		if (index < 0) curIndex = photos.length-2;
+		else if (index > photos.length-2) curIndex = 0;
+		else curIndex = index;
+		photoLink = document.getElementById("curPhotoLink");
+		photoLink.href = photos[curIndex].url;
+		photoLink.innerHTML = "<img src='" + photos[curIndex].src + "' style='border:1px solid #333;' width='96' height='72' alt=''/>";
+		document.getElementById("photosLabel").innerHTML = (curIndex+1) + " of " + (photos.length-1) + " galleries";
+	}
+
+	var photos = new Array(
+
+
+
+
+				{src:"http://mlb.mlb.com/images/2008/02/26/9Z4sl9dn.jpg",
+url:"javascript:void(popWin('/nym/photogallery/year_2008/month_02/day_26/cf2390766.html','photogallery',690,600));"},
+				{src:"http://mlb.mlb.com/images/2008/02/26/tLVqPDgb.jpg",
+url:"javascript:void(popWin('/cle/photogallery/year_2008/month_02/day_25/cf2389234.html','photogallery',690,600));"},
+				{src:"http://mlb.mlb.com/images/2008/02/26/Q9NUdJM5.jpg",
+url:"javascript:void(popWin('/bos/photogallery/year_2008/month_02/day_26/cf2390374.html','photogallery',690,600));"},
+				{src:"http://mlb.mlb.com/images/2008/02/26/qWDQGOiv.jpg",
+url:"javascript:void(popWin('/mlb/photogallery/year_2008/month_02/day_26/cf2390148.html','photogallery',690,600));"},
+				{src:"http://mlb.mlb.com/images/2008/02/26/3JawVwrJ.jpg",
+url:"javascript:void(popWin('/mlb/photogallery/year_2008/month_02/day_26/cf2390574.html','photogallery',690,600));"},
+				{src:"http://mlb.mlb.com/images//2008/02/25/g79OPsHt.jpg",
+url:"javascript:void(popWin('/fla/photogallery/year_2008/month_02/day_26/cf2390127.html','photogallery',690,600));"},
+				{src:"http://mlb.mlb.com/images/2008/02/26/v5TeONDC.jpg",
+url:"javascript:void(popWin('/kc/photogallery/year_2008/month_02/day_25/cf2389308.html','photogallery',690,600));"},
+
+
+
+
+
+
+				
+								
+
+	
+		{}
+	);
+	
+	showPhoto(0);
+</script>
+
+					</div>
+					<img src="/mlb/images/homepage/y2007/bottom.png" class="footer" alt=""/><br/>
+				</div>
+				
+						
+			</div>
+		</div>
+	
+	</div> <!-- end of columnA -->
+	
+	
+	<div id="columnB" class="column">
+
+		<div id="mediawall">
+			
+
+<div id="mediaWallPanel"       style="float:left; width:490px; height:388px; overflow:hidden; z-index:1"></div>
+<div id="mediaWallWidget"      style="float:left; width:309px; height:132px; overflow:hidden; z-index:1"></div>
+<div id="mediawallAdContainer" style="float:left; width:309px; height:254px; overflow:hidden; z-index:1">
+
+	<iframe id="mediaWallAd" src="" style="width:300px; height:250px; margin-top:4px; margin-left:3px; display:block;" frameborder="0" scrolling="no"></iframe>
+</div>
+<div id="mediaWallNav"         style="clear:both; width:800px; height:93px;  overflow:hidden;"></div>
+
+<script src="/shared/scripts/AC_OETags.js" language="javascript"></script>
+<script>
+	function doTheEmbed() {
+		/* MEDIAWALL PANEL */
+		var version = 3;
+		var fa = new SWFObject("/flash/mediawall/y2007/mediawall_panel.swf?v="+version, refObj.panel, "490", "388", "8", "#666666");
+		fa.addParam("wmode", "transparent");
+		fa.addParam("allowScriptAccess", "always");
+		fa.addVariable("r_time",15);
+		fa.addVariable("data_file", "/gen/mlb/components/mediawall/v3/main.xml");
+		fa.addVariable("base_url","");
+		fa.addVariable("s_account",s_account);
+		//fa.addVariable("external", true);
+		//fa.addVariable("tci_url","http://mlb.mlb.com/flash/teamcodes.xml");
+		//fa.addVariable("ad_rule_url","/gen/mlb/components/mediawall/mediawall_ad.xml");
+		//fa.addVariable("rule_url","http://mlb.mlb.com/flash/scoreboard/y2007/sb_rules.xml");
+		//fa.addVariable("lsc_url","/flash/mediawall/y2007/mediawall_linescore.swf");
+		fa.write("mediaWallPanel");
+	
+		/* MEDIAWALL WIDGET */
+		var fc = new SWFObject("/flash/mediawall/y2007/mediawall_widget.swf?v="+version, refObj.widget, "316", "132", "8", "#333333");
+		fc.addParam("wmode", "transparent");
+		fc.addParam("allowScriptAccess", "always");
+		fc.addVariable("base_url","/gen/mlb/components/mediawall/v3/");
+		fc.addVariable("s_account",s_account);
+		//fc.addVariable("external", true);
+		fc.write("mediaWallWidget");
+		
+		/* MEDIAWALL NAV */
+		var fb = new SWFObject("/flash/mediawall/y2007/mediawall_nav.swf?v="+version, refObj.nav, "800", "93", "8", "#999999");
+		fb.addParam("wmode", "transparent");
+		fb.addParam("allowScriptAccess", "always");
+		fb.addVariable("base_url","");
+		fb.addVariable("ad_url", "/flash/mediawall/y2007/mosaic_ad.swf");
+		fb.addVariable("s_account",s_account);
+		//fb.addVariable("external", true);
+		fb.write("mediaWallNav");
+	}
+
+	/* MEDIA WALL AD */
+	function getAdIframeUrl(w,h,p) {
+		var dc_size = w + "x" + h;
+		var dc_site = c_domain[club] + ".mlb";
+
+		if (typeof p != "undefined") dc_tiles[dc_size] = p;
+		else {
+			if ( dc_tiles[dc_size] == "undefined" || dc_tiles[dc_size] == null ) dc_tiles[dc_size] = 1;
+			else dc_tiles[dc_size]++;	
+		}
+
+		dc_numads++;
+		var dc_page = ( section == "undefined" || section == null ) ? "empty" : section;  // section is defined in page wrapper
+		var dc_keyValPairs = ( dc_keyVal != "" ) ? dc_keyVal : "";	
+
+		var ad_url = top.location.protocol + "//ad.doubleclick.net/adi/" + dc_site + "/" + dc_page + ";" + dc_keyValPairs + ";";
+		ad_url += "pos="  + dc_tiles[dc_size] + ";";
+		ad_url += "sz="   + dc_size + ";";
+		ad_url += "tile=" + dc_tiles[dc_size] + ";";
+		ad_url += "ord="  + ran_number + "";
+
+		return ad_url;
+	}
+	
+	function showMWAd(position){
+		var adFrame = document.getElementById("mediaWallAd");
+		adFrame.src = getAdIframeUrl(300,250,position);
+	}
+
+//** detect version and do embed
+var hasProductInstall = DetectFlashVer(6, 0, 65);
+var hasReqestedVersion = DetectFlashVer(8, 0, 0);
+if ( hasProductInstall && !hasReqestedVersion ) {
+	var MMPlayerType = (isIE == true) ? "ActiveX" : "PlugIn";
+	var MMredirectURL = window.location;
+	document.title = document.title.slice(0, 47) + " - Flash Player Installation";
+	var MMdoctitle = document.title;
+	document.write('<div id="upgrade" style="position:absolute; top: 130px; left: 300px; z-index: 2;">');
+	AC_FL_RunContent(
+		"src", "/shared/flash/express_install/playerProductInstall",
+		"FlashVars", "MMredirectURL="+MMredirectURL+'&MMplayerType='+MMPlayerType+'&MMdoctitle='+MMdoctitle+"",
+		"width", "550",
+		"height", "300",
+		"align", "middle",
+		"id", "detectionExample",
+		"quality", "high",
+		"bgcolor", "#3A6EA5",
+		"wmode", "transparent",
+		"name", "detectionExample",
+		"allowScriptAccess","sameDomain",
+		"type", "application/x-shockwave-flash",
+		"pluginspage", "http://www.adobe.com/shockwave/download/download.cgi?P1_Prod_Version=ShockwaveFlash"
+	);
+	document.write("</div>");
+
+} else if (hasReqestedVersion) {
+	doTheEmbed();
+	
+
+} else {  // flash is too old or we can't detect the plugin
+	var alternateContent = 'This content requires Flash Player 8 or above. It is a one-time free download. Get it <a href="http://www.adobe.com/shockwave/download/download.cgi?P1_Prod_Version=ShockwaveFlash">here.</a>';
+	alternateContent += ' <br />If you do not wish to upgrade, please <a href="/mlb/homepage/narrowband.jsp">click here</a> for our low-bandwidth homepage.'; 
+	document.write('<div id="upgrade" style="position:absolute; top: 130px; left: 300px; z-index: 2;">');
+	document.write(alternateContent);  // insert non-flash content
+	document.write("</div>");
+}
+</script>
+		</div>
+		
+		<div id="mainSubColumn">
+		
+			<div id="subA">
+			
+				<div class="component">					
+					<a href="/mediacenter/index.jsp"><img src="/mlb/images/homepage/y2007/headers/programming.gif" class="header" alt="Programming"/></a><br/>
+					<div class="content">
+						<style>
+	#programming_bbchtv {height:156px;}
+	#programming_bbchtv ul.related {margin:0;}
+	#programming_bbchtv ul.related li.header {display:block;font-weight:bold;text-align:center;margin: 0 5px 10px 0;}
+	#programming_bbchtv ul.related li.header .subheader {display:inline;}
+	#programming_bbchtv ul.related li.header .blurb {font-weight:normal;display:block;padding:0 15px;border-bottom:1px solid #ccc;}
+	#programming_bbchtv ul.related li.header .blurb a b {font-weight:normal;}
+	#programming_bbchtv ul.related li {list-style-type:none;}
+	#programming_bbchtv ul.related li a {margin-left:4px;}
+</style>
+<div align="center"><a href="/mlb/radio/index.jsp"><img src="/images/homepage/y2007/172x44_bbctv.gif" border="0" width="172" height="44" alt="BaseballChannel.TV"></a></div>
+
+<div id="programming_bbchtv">
+<ul class="related">
+<li class="header"><a href="javascript:void(launchPsPlayer());">Watch Now <div class="subheader"> <img src="/images/live.gif" alt="LIVE" class="on" /> </div></a><div class="blurb"><a href="javascript:void(launchPsPlayer());"> We cover Wednesday's Congressional Hearings starting at 9 am ET.</a></div>
+</li>
+<li>&#149;<a href="javascript:void(playMedia2({w:'2008/open/bbchtv/shows/archive02/022608_mlb_spring_pm_400.wmv',pid:'gen_video',vid:'7759',cid:'mlb',v:'2'}));">2/26:  <i>2008 Spring Training Show</i> <img src="/images/icons/video.gif" width="15" height="12" alt="" border="0" align="absmiddle" /></a></li>
+<li>&#149;<a href="javascript:void(playMedia2({w:'2008/open/bbchtv/shows/archive02/022608_fantasy_411_400.wmv',pid:'gen_video',vid:'7759',cid:'mlb',v:'2'}));">2/26:  <i>MLB.com Fantasy 411</i> <img src="/images/icons/video.gif" width="15" height="12" alt="" border="0" align="absmiddle" /></a></li>
+<li>&#149;<a href="javascript:void(playMedia2({w:'2008/open/bbchtv/interviews/archive02/022508_stern_casey_400.wmv',pid:'gen_video',vid:'7759',cid:'mlb',v:'2'}));">2/25: Stern on Mets <img src="/images/icons/video.gif" width="15" height="12" alt="" border="0" align="absmiddle" /></a></li>
+<li>&#149;<a href="javascript:void(playMedia2({w:'2008/open/bbchtv/interviews/archive02/022108_niehaus_dave_400.wmv',pid:'gen_video',vid:'7759',cid:'mlb',v:'2'}));">2/22: M's Broadcaster Niehaus<img src="/images/icons/video.gif" width="15" height="12" alt="" border="0" align="absmiddle" /></a></li>
+<li>&#149;<a href="javascript:void(playMedia2({w:'2008/open/teams08/was/video/021508_nationals_park_400.wmv',pid:'gen_video',vid:'7759',cid:'mlb',v:'2'}));">2/15:  Tour of Nationals Park <img src="/images/icons/video.gif" width="15" height="12" alt="" border="0" align="absmiddle" /></a></li>
+</ul>
+
+</div>
+   
+
+
+
+					</div>
+					<img src="/mlb/images/homepage/y2007/bottom.png" class="footer" alt=""/><br/>
+				</div>
+			
+				
+
+								
+				
+				<div class="component" id="headlinesComponent">
+					<a href="/news/index.jsp"><img src="/mlb/images/homepage/y2007/headers/more_headlines.gif" class="header" alt="Standings"/></a><br/>				
+					<div class="content">
+						
+						<div class="contentPad">
+						
+								
+								
+								<ul class="related">
+<li>
+<a href="/news/article.jsp?ymd=20080226&content_id=2390020&vkey=spt2008news&fext=.jsp&c_id=mlb" class="" style="">Clemens talks to reporters at Astros camp</a>
+</li>
+<li>
+<a href="/news/article.jsp?ymd=20080226&content_id=2390767&vkey=spt2008news&fext=.jsp&c_id=mlb" class="" style="">Halladay makes child's wish come true</a>
+</li>
+<li>
+<a href="/news/article.jsp?ymd=20080226&content_id=2390706&vkey=spt2008news&fext=.jsp&c_id=mlb" class="" style="">Adjusted Dice-K focusing only on game</a>
+</li>
+<li>
+<a href="/news/article.jsp?ymd=20080226&content_id=2390573&vkey=spt2008news&fext=.jsp&c_id=mlb" class="" style="">Peavy eyeing a change for the better</a>
+</li>
+<li>
+<a href="/news/article.jsp?ymd=20080226&content_id=2391032&vkey=spt2008news&fext=.jsp&c_id=mlb" class="" style="">Myers to make Phils' Opening Day start</a>
+</li>
+<li>
+<a href="/news/article.jsp?ymd=20080226&content_id=2390979&vkey=spt2008news&fext=.jsp&c_id=mlb" class="" style="">Sox expect much from White House trip</a>
+</li>
+</ul>
+
+						
+						
+						</div>
+						<img src="/mlb/images/homepage/y2007/headers/sub_perspectives.gif" alt="Perspectives"/>
+						<div class="contentPad" id="perspectives">
+						
+								
+								
+								<ul class="related">
+<li>
+<a href="/news/article_perspectives.jsp?ymd=20080226&content_id=2390502&vkey=perspectives&fext=.jsp" class="" style="">Bauman: Santana lets Mets look ahead</a>
+</li>
+<li>
+<a href="/news/article_perspectives.jsp?ymd=20080225&content_id=2388666&vkey=perspectives&fext=.jsp" class="" style="">Bauman: Cardinals won't change approach</a>
+</li>
+</ul>
+
+						
+						
+						
+						</div><div id="moreNewsLinks"><a href="/news/index.jsp">More MLB.com News</a> | <a href="/mlb/news/perspectives.jsp">Perspectives</a> | <a href="/mlb/news/blogs/index.jsp">Blogs</a><br>
+<a href="/es/index.jsp?c_id=mlb">Noticias MLB en espa&ntilde;ol: LasMayores.com</a></div>
+					</div>
+					<img src="/mlb/images/homepage/y2007/bottom.png" class="footer" alt=""/><br/>
+				</div>				
+				
+				
+				 
+				
+				<div class="component" id="officialComponent">
+					<a href="/mlb/official_info/index.jsp"><img src="/mlb/images/homepage/y2007/headers/official.gif" class="header" alt="Official Info"/></a><br/>
+					<div class="content">	
+						<div class="contentPad">
+							
+
+<div style="display:none">
+<div id="O_f1">
+
+	
+<div id="blurb"></div>	
+
+<div id="photo_mediumThumb">
+<div id="path"></div>
+<div id="caption"></div>
+<div id="credit"></div>
+</div>
+
+<div id="photo_article">
+<div id="path"></div>
+<div id="caption"></div>
+<div id="credit"></div>
+</div>
+
+<div id="photo_squareThumb">
+<div id="path"></div>
+<div id="caption"></div>
+<div id="credit"></div>
+</div>
+
+<div id="photo_spotlight">
+<div id="path"></div>
+<div id="caption"></div>
+<div id="credit"></div>
+</div>
+
+
+
+
+
+
+
+<div id="topStoryLinks">
+</div>
+<div id="relatedLinks">
+</div>
+<div id="media_type">links</div>
+<div id="altHeadline"></div>	
+<div id="headline">Press Releases</a> | <a href="http://mlbam.mlblogs.com">MLB.com Visitor's Guide</a></div>	
+<div id="kicker"></div>
+<div id="date">2006-05-04T19:31:45-0400</div>	
+<div id="url">/NASApp/mlb/news/press_releases/intro.jsp</div>
+</div>
+<div id="O_f2">
+
+	
+<div id="blurb"></div>	
+
+<div id="photo_mediumThumb">
+<div id="path"></div>
+<div id="caption"></div>
+<div id="credit"></div>
+</div>
+
+<div id="photo_article">
+<div id="path"></div>
+<div id="caption"></div>
+<div id="credit"></div>
+</div>
+
+<div id="photo_squareThumb">
+<div id="path"></div>
+<div id="caption"></div>
+<div id="credit"></div>
+</div>
+
+<div id="photo_spotlight">
+<div id="path"></div>
+<div id="caption"></div>
+<div id="credit"></div>
+</div>
+
+
+
+
+
+
+
+<div id="topStoryLinks">
+</div>
+<div id="relatedLinks">
+</div>
+<div id="media_type">links</div>
+<div id="altHeadline"></div>	
+<div id="headline">International</a> | <a href="/NASApp/mlb/mlb/video/mlb_productions/index.jsp">MLB Productions</a></div>	
+<div id="kicker"></div>
+<div id="date">2006-06-23T12:31:52-0400</div>	
+<div id="url">/NASApp/mlb/mlb/international/index.jsp</div>
+</div>
+<div id="O_f3">
+
+	
+<div id="blurb"></div>	
+
+<div id="photo_mediumThumb">
+<div id="path"></div>
+<div id="caption"></div>
+<div id="credit"></div>
+</div>
+
+<div id="photo_article">
+<div id="path"></div>
+<div id="caption"></div>
+<div id="credit"></div>
+</div>
+
+<div id="photo_squareThumb">
+<div id="path"></div>
+<div id="caption"></div>
+<div id="credit"></div>
+</div>
+
+<div id="photo_spotlight">
+<div id="path"></div>
+<div id="caption"></div>
+<div id="credit"></div>
+</div>
+
+
+
+
+
+
+
+<div id="topStoryLinks">
+</div>
+<div id="relatedLinks">
+</div>
+<div id="media_type">links</div>
+<div id="altHeadline"></div>	
+<div id="headline">Umpires</a> | <a href="/NASApp/mlb/mlb/official_info/umpires/camp/index.jsp">Umpire Camps</a> | <a href="/NASApp/mlb/mlb/official_info/official_rules/foreword.jsp">Official Rules</a></div>	
+<div id="kicker"></div>
+<div id="date">2006-05-31T17:31:13-0400</div>	
+<div id="url">/NASApp/mlb/mlb/official_info/umpires/index.jsp</div>
+</div>
+<div id="O_f4">
+
+	
+<div id="blurb"></div>	
+
+<div id="photo_mediumThumb">
+<div id="path"></div>
+<div id="caption"></div>
+<div id="credit"></div>
+</div>
+
+<div id="photo_article">
+<div id="path"></div>
+<div id="caption"></div>
+<div id="credit"></div>
+</div>
+
+<div id="photo_squareThumb">
+<div id="path"></div>
+<div id="caption"></div>
+<div id="credit"></div>
+</div>
+
+<div id="photo_spotlight">
+<div id="path"></div>
+<div id="caption"></div>
+<div id="credit"></div>
+</div>
+
+
+
+
+
+
+
+<div id="topStoryLinks">
+</div>
+<div id="relatedLinks">
+</div>
+<div id="media_type">links</div>
+<div id="altHeadline"></div>	
+<div id="headline">Diverse Business Partners</a> | <a href="/NASApp/mlb/mlb/official_info/community/index.jsp">Community</a></div>	
+<div id="kicker"></div>
+<div id="date">2006-04-07T23:37:13-0400</div>	
+<div id="url">/NASApp/mlb/mlb/official_info/mlb_official_info_diverse.jsp</div>
+</div>
+<div id="O_f5">
+
+	
+<div id="blurb"></div>	
+
+<div id="photo_mediumThumb">
+<div id="path"></div>
+<div id="caption"></div>
+<div id="credit"></div>
+</div>
+
+<div id="photo_article">
+<div id="path"></div>
+<div id="caption"></div>
+<div id="credit"></div>
+</div>
+
+<div id="photo_squareThumb">
+<div id="path"></div>
+<div id="caption"></div>
+<div id="credit"></div>
+</div>
+
+<div id="photo_spotlight">
+<div id="path"></div>
+<div id="caption"></div>
+<div id="credit"></div>
+</div>
+
+
+
+
+
+
+
+<div id="topStoryLinks">
+</div>
+<div id="relatedLinks">
+</div>
+<div id="media_type">content_short</div>
+<div id="altHeadline"></div>	
+<div id="headline">Youth Academy</a> | <a href="http://www.mlb.com/mlb/events/winterleagues/?league=afl">Arizona Fall League</a></div>	
+<div id="kicker"></div>
+<div id="date">2007-09-30T02:52:39-0400</div>	
+<div id="url">/NASApp/mlb/mlb/official_info/community/urban_youth.jsp</div>
+</div>
+</div>
+<ul class="related">
+	<li id="official_f1"></li>
+	<li id="official_f2"></li>
+	<li id="official_f3"></li>
+	<li id="official_f4"></li>
+	<li id="official_f5"></li>
+</ul>
+
+
+
+						</div>
+					</div>
+					<img src="/mlb/images/homepage/y2007/bottom.png" class="footer" alt=""/><br/>
+				</div>
+				
+			</div>
+			
+			<div id="subB">
+							<div class="component" id="videoComponent">
+					<a href="/media/video.jsp"><img src="/mlb/images/homepage/y2007/headers/video.gif" class="header" alt="Video"/></a><br/>
+					<div class="content">
+						<div class="contentPad">
+							
+
+
+	
+	
+		
+		
+		<div class="leadvideo">
+<a href="/media/video.jsp?video=200802262390484" title="Chastain on Kazmir injury"><img src="/images/2008/02/26/ucbzLXKG.jpg" alt="Chastain on Kazmir injury"></a>
+<h4>
+<a href="/media/video.jsp?video=200802262390484" title="Chastain on Kazmir injury">Chastain on Kazmir injury</a><span class="speed">400K</span>
+</h4>
+<p>Rays reporter Bill Chastain discusses Scott Kazmir's elbow injury.</p>
+</div><ul class="videolisting">
+<li>
+<a href="/media/video.jsp?video=200802262390974" title="Braun: It's unbelievable">Braun: It's unbelievable</a><span class="speed">400K</span>
+</li>
+<li>
+<a href="/media/video.jsp?video=200802262390921" title="McRae on Harden's spring">McRae on Harden's spring</a><span class="speed">400K</span>
+</li>
+<li>
+<a href="/media/video.jsp?video=200802262391061" title="Gordon on hopes for 2008">Gordon on hopes for 2008</a><span class="speed">400K</span>
+</li>
+<li>
+<a href="/media/video.jsp?video=200802262391204" title="MLB.com FastCast, Feb. 26">MLB.com FastCast, Feb. 26</a><span class="speed">400K</span>
+</li>
+</ul>
+
+		
+
+<div>BaseballChannel.TV is live 24/7: <a href="javascript:void(playMedia2({w:'reflector:32070',vid:'7759',pid:'gen_video',cid:'mlb',v:'2'}));">Watch <img src="/images/live.gif" width="18" height="9" alt="Live" border="0" align="absmiddle"/></a></div>
+						</div>
+					</div>
+					<div class="slfooter"><a href="/media/video.jsp" class="slfooter"><img src="/mlb/images/homepage/y2007/sl_footer.gif" alt=""></a><br></div>
+				</div>
+				
+				
+				
+				<div class="component" id="tyibComponent">
+					<a href="/mlb/fantasy/index.jsp"><img src="/mlb/images/homepage/y2007/headers/fantasy.gif" class="header" alt="Fantasy"/></a><br/>
+					<div class="content">
+						<div class="contentPad">
+							
+<div class="fantasyColumnA">
+	<a href="/mlb/fantasy/wsfb_c/info/index.jsp"><img src="/mlb/images/fantasy/y2008/64x48_Open.jpg" width="64" height="48" class="thumb"/></a><br/>
+	<strong><a href="/mlb/fantasy/wsfb_c/info/index.jsp">2008 Open</a></strong><br/>
+	Free and easy head-to-head fantasy, compete for $10,000 in cash.
+</div>
+<div class="fantasyColumnB">
+	<a href="javascript:popWin('/mlb/fantasy/preview/y2008/index.jsp', 'FantasyPreview2008', 800,602);"><img src="/mlb/images/fantasy/y2008/64x48_Preview.jpg" width="64" height="48" class="thumb"/></a><br/>
+	<a href="javascript:popWin('/mlb/fantasy/preview/y2008/index.jsp', 'FantasyPreview2008', 800,602);"><strong>Fantasy Preview</a></strong><br/>
+	Get ready for your fantasy draft with more than 800 player bios.
+</div>
+<div class="fantasyBottom" style="height:62px;"><ul class="related">
+	<li><a href="/mlb/fantasy/y2008/draft_kit/index.jsp">AutoZone 2008 Fantasy Draft Kit</a></li>
+	<li><a href="/mlb/fantasy/wsfb/news/index.jsp">Daily player news and analysis</a></li>
+	
+	
+	<li><a href="/mlb/fantasy/easy_report/index.jsp">Staples Easy Fantasy Report</a></li>
+	<li><a href="/mlb/fantasy/index.jsp">Complete MLB.com Fantasy coverage</a></li>
+</ul>
+</div>
+   
+						</div>
+					</div>
+					<img src="/mlb/images/homepage/y2007/bottom.png" class="footer" alt=""/><br/>
+				</div>
+				
+				<div class="component" id="affiliatesComponent">
+					<img src="/mlb/images/homepage/y2007/headers/affiliates.gif" class="header" alt="Affiliates"/><br/>
+					<div class="content">
+						<div class="contentPad">
+							
+<ul class="related">
+<li><a href="http://www.milb.com">Minor League Baseball</a> | <a href="http://mlb.mlb.com/usa_baseball/index.jsp">USA Baseball</a></li>
+<li><a href="http://www.mlbplayers.com">MLB Players</a> | <a href="http://www.baseball-legends.com">Alumni</a> | <a href="http://www.baseballhalloffame.com">Hall of Fame</a></li>
+<li><a href="http://www.avp.com">AVP.com</a> | <a href="http://www.icenetwork.com">icenetwork.com</a></li>
+<li><a href="http://www.yesnetwork.com">YESNetwork.com</a> | <a href="http://www.sny.tv">SNY.tv</a></li>
+<li><a href="http://www.wcsn.com">World Championship Sports Network</a></li>
+</ul>
+
+ 
+						</div>
+					</div>
+					<img src="/mlb/images/homepage/y2007/bottom.png" class="footer" alt=""/><br/>
+				</div>
+				
+			</div>
+			
+		</div> <!-- end of mainSubColumn -->
+		
+		<div id="subC">
+
+			<div class="component" id="shopComponent">
+				<script>dc_tiles["300x250"]=1;// counts MW 300x250 ad</script>
+				
+<script type="text/javascript">writeAd(300,250,1)</script>
+				
+			</div>  
+				
+			<div class="component" id="auctionComponent">
+				<a href="http://auction.mlb.com?partnerId=MLCAuction-Tab&affiliateID=MLCAuction-Tab"><img src="/mlb/images/homepage/y2007/headers/auction.gif" class="header" alt="Auction"/></a><br/>
+				<div class="content altA"><table cellpadding="10" cellspacing="0" border="0" width="295">
+	<tr>
+		<td align="center"><a href="http://auction.mlb.com/cgi-bin/ncommerce3/ProductDisplay?prrfnbr=91462868&prmenbr=33072944&aunbr=91809578&partnerId=MLCAuctionHP&affiliateID=MLCAuctionHP"><img src="http://akamai.edeal.com/images/catalog1001/folder85032/img5778509thmb.jpg" width="100" height="100" border="0"></a></td>
+		<td><a href="http://auction.mlb.com/cgi-bin/ncommerce3/ProductDisplay?prrfnbr=91462868&prmenbr=33072944&aunbr=91809578&partnerId=MLCAuctionHP&affiliateID=MLCAuctionHP"><strong>Autographed Ichiro Limited-Edition All-Star Game MVP Honors Jersey</strong></a><br><img src="/images/trans.gif" alt="" width="1" height="3" border="0"><br>Price: $1,200.00<br><img src="/images/trans.gif" alt="" width="1" height="10" border="0"><br><a href="http://auction.mlb.com/cgi-bin/ncommerce3/ProductDisplay?prrfnbr=91462868&prmenbr=33072944&aunbr=91809578&partnerId=MLCAuctionHP&affiliateID=MLCAuctionHP"><img src="/mlb/images/auction/bid_btn.gif" alt="" width="91" height="14" border="0"></a></td>
+	</tr>
+</table></div>
+			</div>
+		
+			<div class="component" id="ticketsComponent">			
+				<a href="/mlb/tickets/index.jsp"><img src="/mlb/images/homepage/y2007/headers/tickets.gif" class="header" alt="Tickets"/></a><br/>
+				<div class="content altA">
+					<div class="contentPad">
+						<form>
+	<div style="padding-right:4px;">MLB.com is your one-stop shop for purchasing MLB tickets.<br />  Select the team you'd like to see: </div>
+	<div style="float:right; background:#c00 url(/mlb/images/homepage/y2007/dropdown_tab.gif) no-repeat; padding:2px 0 0 40px;">
+		<select onchange="window.parent.location.href = '/ticketing/index.jsp?c_id=' + this.options[this.selectedIndex].value ">
+			<option value="mlb" selected>MLB Teams</option>					
+			<option value="ana">Angels</option>
+			<option value="hou">Astros</option>
+			<option value="oak">Athletics</option>
+			<option value="tor">Blue Jays</option>
+			<option value="atl">Braves</option>
+			<option value="mil">Brewers</option>
+			<option value="stl">Cardinals</option>
+			<option value="chc">Cubs</option>
+			<option value="tb">Devil Rays</option>
+			<option value="ari">Diamondbacks</option>
+			<option value="la">Dodgers</option>
+			<option value="sf">Giants</option>
+			<option value="cle">Indians</option>
+			<option value="sea">Mariners</option>
+			<option value="fla">Marlins</option>
+			<option value="nym">Mets</option>
+			<option value="was">Nationals</option>
+			<option value="bal">Orioles</option>
+			<option value="sd">Padres</option>
+			<option value="phi">Phillies</option>
+			<option value="pit">Pirates</option>
+			<option value="tex">Rangers</option>
+			<option value="bos">Red Sox</option>
+			<option value="cin">Reds</option>
+			<option value="col">Rockies</option>
+			<option value="kc">Royals</option>
+			<option value="det">Tigers</option>
+			<option value="min">Twins</option>
+			<option value="cws">White Sox</option>
+			<option value="nyy">Yankees</option>
+		</select>
+	</div>
+	<div style="clear:both;"></div>
+</form>
+
+					</div>
+				</div>			
+				
+			</div>
+				
+			<div class="component" id="mobileComponent">
+				<a href="/mobile/index.jsp"><img src="/mlb/images/homepage/y2007/headers/mlb_mobile.gif" class="header" alt="Mobile"/></a><br/>
+				<div class="content altB">
+					<div class="contentPad">
+Mobile news alerts, ringtones, wallpaper, video highlights and more. <a href="/mobile/index.jsp">Learn more &gt;</a>
+</div>
+				</div>
+			</div>
+		
+		</div>
+	
+	</div> <!-- end of columnB -->
+	
+	<div class="clearHome">&nbsp;</div>
+
+</div>
+
+<script type="text/javascript">
+	affiliatesManager = new ContentManager();
+	newsManager       = new ContentManager();
+	videoManager      = new ContentManager();
+	officialManager   = new ContentManager();
+
+	
+		
+	// news
+	newsManager.loadLink("N_f1", "altHeadline", "news_f1");
+	newsManager.loadLink("N_f2", "altHeadline", "news_f2");
+	newsManager.loadLink("N_f3", "altHeadline", "news_f3");
+	newsManager.loadLink("N_f4", "altHeadline", "news_f4");	
+	newsManager.loadLink("N_f5", "altHeadline", "news_f5");
+	newsManager.loadLink("N_f6", "altHeadline", "news_f6");
+	newsManager.loadLink("N_f7", "altHeadline", "news_f7");
+	
+	// video  
+	videoManager.loadPhoto("V_f1", "photo_mediumThumb", "video_f1_photo");
+	videoManager.loadLink("V_f1", "headline", "video_f1_headline");
+	videoManager.loadChildValue("V_f1", "blurb", "video_f1_blurb");
+	videoManager.loadLink("V_f2", "headline", "video_f2");
+	videoManager.loadLink("V_f3", "headline", "video_f3");
+	videoManager.loadLink("V_f4", "headline", "video_f4");	
+	videoManager.loadLink("V_f5", "headline", "video_f5");
+	
+	// official
+	officialManager.loadLink("O_f1", "headline", "official_f1");
+	officialManager.loadLink("O_f2", "headline", "official_f2");
+	officialManager.loadLink("O_f3", "headline", "official_f3");
+	officialManager.loadLink("O_f4", "headline", "official_f4");	
+	officialManager.loadLink("O_f5", "headline", "official_f5");
+</script>
+<div id="ftr">
+
+
+
+
+<!-- popunder -->
+
+<!--section=null-->
+
+<!-- /popunder -->
+
+
+
+
+
+
+ 
+		
+
+
+
+
+
+
+<script type="text/javascript">
+	var club = "mlb";
+	function validateQueryText() {
+		if ( document.frm_footer_search.query_text1.value == "" || document.frm_footer_search.query_text1.value == "Enter keyword" ) { 
+			alert('Please enter search keyword'); 
+			return false; 
+		} 
+		else document.frm_footer_search.submit();
+	}
+</script>
+
+<style type="text/css">
+	.footerBackground {width:100%;min-width:990px;height:73px;color:#fff;font-size:11px;font-weight:bold;background: #052055 url(/images/footer/y2007/bg_mlb.jpg) no-repeat;}
+	*html .footerContent {width:990px;}
+	.footerBackground img {border:0;}
+	.footerBackground select, .footerBackground input {margin:0 5px;} 
+	.footerLogo {padding:25px 20px 0 20px; width:116px; position:relative; float:left;}
+	.footerLeft {padding:30px 0 0 0;width:200px; position:relative;float:left;}
+	.footerCenter {padding:30px 0 0 0;width:400px; position:relative;float:left;}
+	.footerCenter a {color:#FFFFFF;}
+	.footerRight {margin:20px 0 0 0;text-align:right; position:relative;float:left;}
+	.footerRight img {margin:0 10px 0 0;}
+	.footerLegal {background-color:#000;color:#999;font:normal 10px Tahoma,Arial,sans-serif;padding:15px;}
+	.footerLegal p {width:960px; margin:7px 0 0 0;}
+	.footerLegal a, .footerBackground a {color:#ccc;}
+	
+	.footerLinks {width:100%;min-width:960px;background:url(/images/footer/y2007/background_links.gif) repeat-x;clear:both;}
+	.footerLinks ul {width:960px;height:19px;margin:0;padding:0;list-style-type:none;}
+	.footerLinks ul li {float:left;padding:2px 2px 0 30px;font-size:11px;}
+</style>
+	
+<div class="footerBackground">
+	<div class="footerContent">
+		<div class="footerLogo"><img src="/images/trans.gif"/></div>
+		
+		<div class="footerLeft">
+			<form id="frm_footer_search" method="get" name="frm_footer_search" action="http://mlb.mlb.com/searchGlobalSearchServlet">
+				<input type="hidden" name="club" value="mlb"/>
+				<input type="hidden" name="search_mode" value="1"/>
+				<input type="hidden" name="page_number" value="1"/>
+				Jump to 
+				<select onchange="window.parent.location.href = 'http://' + this.options[this.selectedIndex].value + '.com'">
+					<option value="#">MLB Sites</option>
+					<option value="mlb">MLB.com</option>
+					<option value="angels.mlb">Angels</option>
+					<option value="astros.mlb">Astros</option>
+					<option value="athletics.mlb">Athletics</option>
+					<option value="bluejays.mlb">Blue Jays</option>
+					<option value="braves.mlb">Braves</option>
+					<option value="brewers.mlb">Brewers</option>
+					<option value="cardinals.mlb">Cardinals</option>
+					<option value="cubs.mlb">Cubs</option>
+					<option value="diamondbacks.mlb">Diamondbacks</option>
+					<option value="dodgers.mlb">Dodgers</option>
+					<option value="giants.mlb">Giants</option>
+					<option value="indians.mlb">Indians</option>
+					<option value="mariners.mlb">Mariners</option>
+					<option value="marlins.mlb">Marlins</option>
+					<option value="mets.mlb">Mets</option>
+					<option value="nationals.mlb">Nationals</option>
+					<option value="orioles.mlb">Orioles</option>
+					<option value="padres.mlb">Padres</option>
+					<option value="phillies.mlb">Phillies</option>
+					<option value="pirates.mlb">Pirates</option>
+					<option value="rangers.mlb">Rangers</option>
+					<option value="rays.mlb">Rays</option>
+					<option value="redsox.mlb">Red Sox</option>
+					<option value="reds.mlb">Reds</option>
+					<option value="rockies.mlb">Rockies</option>
+					<option value="royals.mlb">Royals</option>
+					<option value="tigers.mlb">Tigers</option>
+					<option value="twins.mlb">Twins</option>
+					<option value="whitesox.mlb">White Sox</option>
+					<option value="yankees.mlb">Yankees</option>
+				</select>
+		</div>
+			
+		<div class="footerCenter">
+				Search
+				<select name="searchtypeid" id="searchtypeid">
+					<option value="-1" selected>Entire Site</option>
+					<option value="0">News 2008</option>
+					<option value="1">News 2007</option>
+					<option value="2">News 2006</option>
+					
+					<option value="3">Mobile</option>
+					<option value="4">Shop</option>
+					<option value="5">Team</option>
+					<option value="6">Ballpark</option>
+					<option value="7">Official Info</option>
+				</select> 
+				for
+				<input type="text" name="query_text1" id="query_text1" size="15" value="Enter keyword" onfocus="this.value=''"/>
+				<input type="button" value="Go" onclick="validateQueryText()"/>
+				<a href="http://mlb.mlb.com/mlb/help/search_tips.jsp?c_id=mlb">Search Tips</a>
+			</form>
+		</div>
+		
+		<div class="footerRight">
+			<a href="http://mlb.mlb.com/mlb/official_info/community/bgca.jsp"><img src="/images/homepage/logo_bgca_mlb.gif" class="promoBGCA" border="0" alt="Boys and Girls Club of America"/></a>
+		</div>
+	
+	</div>
+		
+</div>
+		
+<div class="footerLinks">
+	<ul>
+		<li><a href="https://secure.mlb.com/enterworkflow.do?flowId=registration.vanityemail&c_id=mlb" target="_parent">E-mail</a></li>
+		<li><a href="https://secure.mlb.com/enterworkflow.do?flowId=registration.wizard&wfClub=mlb" target="_parent">Register | Log In</a></li>
+		<li><a href="http://mlb.mlb.com/mlb/help/faq_index.jsp" target="_parent">Help | Contact Us</a></li>
+		<li><a href="http://mlb.mlb.com/mlb/official_info/index.jsp" target="_parent">Official Info</a></li>
+		
+		<li><a href="http://mlb.mlb.com/sponsorship/mediakit/about_us.jsp" target="_parent">Advertising</a></li>
+		<li><a href="http://mlb.mlb.com/mlb/shop/affiliates_pop.html" onclick="popWin(this,'affiliates','516','575','scrollbars,resizable'); return false;">Affiliates</a></li>
+		<li><a href="http://mlb.mlb.com/mlb/help/jobs.jsp?c_id=mlb" target="_parent">Job Opportunities</a></li>
+		<li><a href="http://mlb.mlb.com/mlb/tickets/index.jsp?c_id=mlb" target="_parent">MLB Tickets</a></li>
+	</ul>
+</div>	
+		
+	
+<div class="footerLegal">
+	
+		&copy; 2001-<script type="text/javascript">var footer_date = new Date(); document.write(footer_date.getFullYear());</script> MLB Advanced Media, L.P. All rights reserved.
+		<p/>
+		The following are trademarks or service marks of Major League Baseball entities and may be used only with permission of Major League Baseball Properties, Inc. or the relevant Major League Baseball entity: Major League, Major League Baseball, MLB, the silhouetted batter logo, World Series, National League, American League, Division Series, League Championship Series, All-Star Game, and the names, nicknames, logos, uniform designs, color combinations, and slogans designating the Major League Baseball clubs and entities, and their respective mascots, events and exhibitions.
+		<p/>
+	
+		Use of the Website signifies your agreement to the <a href="/mlb/help/mlb_help_about_terms.jsp" target="_parent">Terms of Use</a> and <a href="/mlb/help/mlb_help_about_privacy.jsp" target="_parent">Privacy Policy (updated 03.22.05)</a>.
+</div>
+
+	</div>
+
+
+
+
+
+
+
+
+	<script type="text/javascript">
+		function bwcancel(){
+			//window.status = "loaded";
+			clearTimeout(bwdetect);
+			homeLoaded = true;
+		}
+		bwcancel();
+	</script>
+
+
+
+</body>
+</html>
+

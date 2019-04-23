@@ -1,0 +1,39 @@
+<h2>New Employer</h2>
+
+{% if error_message %}
+    <p><strong>{{ error_message }}</strong></p>
+{% endif %}
+
+<form action="/lawyer_app/employer_new/" method="post">
+    {% csrf_token %}
+    Employer Name:
+    <input type="text" id="employer_name" name="employer_name" value="" /><br/>
+    Address 1:
+    <input type="text" id="address_1" name="address_1" value="" /><br/>
+    Address 2:
+    <input type="text" id="address_2" name="address_2" value="" /><br/>
+    City:
+    <input type="text" id="city" name="city" value="" /><br/>
+    State:
+    <input type="text" id="state" name="state" value="" /><br/>
+    Zip:
+    <input type="text" id="zip" name="zip" value="" /><br/>
+    avg_wkly_wg_ttd_rate:
+    <input type="text" id="avg_wkly_wg_ttd_rate" name="avg_wkly_wg_ttd_rate" value="" /><br/>
+    avg_wkly_wg_ppd_rate:
+    <input type="text" id="avg_wkly_wg_ppd_rate" name="avg_wkly_wg_ppd_rate" value="" /><br/>
+    Position:
+    <input type="text" id="position" name="position" value="" /><br/>
+    Start Date:
+    <input type="text" id="start_date" name="start_date" value="" /><br/>
+    End Date:
+    <input type="text" id="end_date" name="end_date" value="" /><br/>
+    Contact Name:
+    <input type="text" id="contact_name" name="contact_name" value="" /><br/>
+    Contact Phone:
+    <input type="text" id="contact_phone" name="contact_phone" value="" /><br/>
+    Contact Email:
+    <input type="text" id="contact_email" name="contact_email" value="" /><br/>
+    <input type = "submit" value = "Submit">
+</form>
+

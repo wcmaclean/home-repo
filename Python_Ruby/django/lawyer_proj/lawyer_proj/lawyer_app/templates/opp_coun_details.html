@@ -1,0 +1,37 @@
+<h2>Opposing Counel Details</h2>
+
+{% if error_message %}
+    <p><strong>{{ error_message }}</strong></p>
+{% endif %}
+
+<form action="/lawyer_app/opp_coun_edit/{{ opp_coun.opp_coun_id }}/" method="post">
+    {% csrf_token %}
+    Firm Id:
+    <input type="text" id=opp_coun_id" name="opp_coun_id" value="{{ opp_coun.opp_coun_id }}" readonly /><br/>
+    Firm Name
+    <input type="text" id="firm_name" name="firm_name" value="{{ opp_coun.firm_name }}" /><br/>
+    Attorney First Name:
+    <input type="text" id="att_first_name" name="att_first_name" value="{{ opp_coun.att_first_name }}" /><br/>
+    Attorney Last Name:
+    <input type="text" id="att_last_name" name="att_last_name" value="{{ opp_coun.att_last_name }}" /><br/>
+    Address 1:
+    <input type="text" id="address_1" name="address_1" value="{{ opp_coun.address_1 }}" /><br/>
+    Address 2:
+    <input type="text" id="address_2" name="address_2" value="{{ opp_coun.address_2 }}" /><br/>
+    City:
+    <input type="text" id="city" name="city" value="{{ opp_coun.city }}" /><br/>
+    State:
+    <input type="text" id="state" name="state" value="{{ opp_coun.state }}" /><br/>
+    Zip:
+    <input type="text" id="zip" name="zip" value="{{ opp_coun.zip }}" /><br/>
+    Phone 1:
+    <input type="text" id="phone_1" name="phone_1" value="{{ opp_coun.phone_1 }}" /><br/>
+    Phone 2:
+    <input type="text" id="phone_2" name="phone_2" value="{{ opp_coun.phone_2 }}" /><br/>
+    Fax:
+    <input type="text" id="fax" name="fax" value="{{ opp_coun.fax }}" /><br/>
+    Email:
+    <input type="text" id="email" name="email" value="{{ opp_coun.email }}" /><br/>
+    <input type = "submit" value = "opp_coun_edit">
+</form>
+

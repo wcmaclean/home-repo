@@ -1,0 +1,14 @@
+<h1>Opposing Counsel</h1>
+<table border = 1px cellpadding="3" style="font-family:Arial">
+<tr>
+<th>Firm ID</th>
+<th>Firm Name Name</th>
+</tr>
+{% for opp_coun in ldb_opp_coun %}
+<tr>
+<td>{{opp_coun.firm_id}}</td>
+<td>{{opp_coun.firm_name}}</td>
+<td><a href="/lawyer_app/opp_coun_details/{{ opp_coun.opp_coun_id  }}/">{{ opp_coun.firm_name }} {{ client.last_name }}</a></td>
+</tr>
+{% endfor %}
+</table>

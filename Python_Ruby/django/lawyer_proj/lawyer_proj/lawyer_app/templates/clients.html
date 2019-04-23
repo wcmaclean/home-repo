@@ -1,0 +1,16 @@
+<h1>Clients</h1>
+<table border = 1px cellpadding="3" style="font-family:Arial">
+<tr>
+<th>client id</th>
+<th>first name</th>
+<th>last name</th>
+</tr>
+{% for client in ldb_client %}
+<tr>
+<td>{{client.client_id}}</td>
+<td>{{client.first_name}}</td>
+<td>{{client.last_name}}</td>
+<td><a href="/lawyer_app/client_details/{{ client.client_id  }}/">{{ client.first_name }} {{ client.last_name }}</a></td>
+</tr>
+{% endfor %}
+</table>

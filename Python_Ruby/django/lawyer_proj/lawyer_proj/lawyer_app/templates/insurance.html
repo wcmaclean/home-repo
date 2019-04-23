@@ -1,0 +1,14 @@
+<h1>Insurance</h1>
+<table border = 1px cellpadding="3" style="font-family:Arial">
+<tr>
+<th>Insurance Co Id</th>
+<th>Insurance Co Name</th>
+</tr>
+{% for insurance in ldb_insurance %}
+<tr>
+<td>{{insurance.ins_co_id}}</td>
+<td>{{insurance.ins_co_name}}</td>
+<td><a href="/lawyer_app/insurance_details/{{ insurance.ins_co_id  }}/">{{ insurance.ins_co_name }} {{ client.last_name }}</a></td>
+</tr>
+{% endfor %}
+</table>

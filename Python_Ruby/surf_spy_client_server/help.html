@@ -1,0 +1,65 @@
+<html>
+<head><title>Cache Contents Web Services - Help</title><head>
+<body>
+<h1>Final Project Web Help</h1>
+<p>This'll help understand Will MacLean's final project for CSPP 51060.</p>
+
+<h2>Storage Jars / Cache Stash Web Service</h2>
+<p>Finds all cache directories and creates web pages showing all requests, and enabling you to view cached files through a browser. Runs a web server to enable browsing.</p>
+
+<p>To run the Storage Jars / Cache Stash Web Service:</p>
+
+<ol>
+	<li> Open a command shell
+	<li> Navigate to <b>[Install_directory]/final_project</b>
+	<li> Execute <b>python storage_jars.py</b>
+	<li> Open a browser
+	<li> In the browser, access <b>http://localhost:56565/</b>
+	<li> From <b>Cache Contents Web Service</b>, browse to:
+	<ul>
+		<li> <b>Storage Jars</b> is a page listing _CACHE_ file contents, by absolute filepath of each _CACHE_ file. For each request, it lists:
+		<ul>
+        		<li> <b>key:</b> link to the online resource
+        		<li> <b>fetch count:</b> number of times the request was made
+        		<li> <b>last fetched:</b> date and time of last request
+        		<li> <b>last modified:</b> date and time of last modification
+        		<li> <b>data size:</b> memory used by request data
+		</ul>
+		<li> <b>Cache Stash</b> is a list of links to unzipped versions of cached files, so you can see what they are.
+		<li> <b>Help</b> takes you to this help page.
+	</ul>
+</ol>
+
+<h2>Surf Spy Client-Server</h2>
+<p>The server monitors the first _CACHE_001_ file it finds, and reports on every new url request. The client allows you to remotely monitor which websites are being requested - so'ze you'ze can spy on people, see?!</p>
+
+<p>The server has a generator which trails the first _CACHE_001_ file it finds, filtering out all but the domain name, which it sends over a socket to a remote client. The client listens on the socket, and simply reports any domains sent from the server. </p>
+
+<p>To run Surf Spy Client-Server:
+
+<ol>
+	<li> Open a command shell
+	<li> Navigate to <b>[Install_directory]/final_project</b>
+	<li> Execute <b>python surf_spy_server.py</b>
+	<li> Open a second command shell
+	<li> Navigate to <b>[Install_directory]/final_project</b>
+	<li> Execute <b>python surf_spy_client.py</b>
+	<li> Open a browser and surf, to see it work
+
+</ol>
+
+<h2>Payment Plan</h2>
+<p>To ensure payment from reluctant customers, you may use the "Payment Plan" to help "convince" them to pay up, by replacing all websites in the report to potentially embrassaring names. This will help ensure that your multi-billion dollar forensics company makes you at least a multi-hundredaire.</p>
+
+<p>This one is going for purely evil, and is not really very interesting.</p>
+
+<ol>
+	<li> Run <b>storage_jars.py</b>, as in <b>Cache Contents Web Service</b>, above.
+	<li> Execute <b>python payment_plan.py</b>.
+	<li> Using the Storage Jars / Cache Stash We Service as shown above, show the results to the customer and exclaim, "Uh - is your significant other aware of this?!". 
+
+</ol>
+
+</body>
+</html>
+

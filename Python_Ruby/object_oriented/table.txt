@@ -1,0 +1,1 @@
+Name\tShares\tPrice\tChange\t\nIBM\t40\t114.57\t0.0\t\nMSFT\t100\t28.59\t0.0\t\nPG\t125\t56.22\t0.0\t\nCAT\t75\t70.13\t0.0\t\nBA\t75\t96.9\t0.0\t\nMSFT\t50\t28.59\t0.0\t\nHPQ\t80\t37.42\t0.0\t\nMSFT\t50\t28.59\t0.0\t\nGM\t200\t30.59\t0.0\t\nAA\t25\t36.39\t0.0\t\nAIG\t40\t66.13\t0.0\t\nIBM\t50\t114.57\t0.0\t\n

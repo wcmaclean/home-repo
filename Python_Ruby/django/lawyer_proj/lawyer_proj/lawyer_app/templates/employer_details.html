@@ -1,0 +1,41 @@
+<h2>Employer Details</h2>
+
+{% if error_message %}
+    <p><strong>{{ error_message }}</strong></p>
+{% endif %}
+
+<form action="/lawyer_app/employer_edit/{{ employer.emp_id }}/" method="post">
+    {% csrf_token %}
+    Employer Id:
+    <input type="text" id="emp_id" name="emp_id" value="{{ employer.emp_id }}" readonly /><br/>
+    Employer Name
+    <input type="text" id="employer_name" name="employer_name" value="{{ employer.employer_name }}" /><br/>
+    Address 1:
+    <input type="text" id="address_1" name="address_1" value="{{ employer.address_1 }}" /><br/>
+    Address 2:
+    <input type="text" id="address_2" name="address_2" value="{{ employer.address_2 }}" /><br/>
+    City:
+    <input type="text" id="city" name="city" value="{{ employer.city }}" /><br/>
+    State:
+    <input type="text" id="state" name="state" value="{{ employer.state }}" /><br/>
+    Zip:
+    <input type="text" id="zip" name="zip" value="{{ employer.zip }}" /><br/>
+    Avg Weekly Wage TTD Rate:
+    <input type="text" id="avg_wkly_wg_ttd_rate" name="avg_wkly_wg_ttd_rate" value="{{ employer.avg_wkly_wg_ttd_rate }}" /><br/>
+    Avg Weekly Wage PPD Rate:
+    <input type="text" id="avg_wkly_wg_ppd_rate" name="avg_wkly_wg_ppd_rate" value="{{ employer.avg_wkly_wg_ppd_rate }}" /><br/>
+    Position:
+    <input type="text" id="position" name="position" value="{{ employer.position }}" /><br/>
+    Start Date:
+    <input type="text" id="start_date" name="start_date" value="{{ employer.start_date }}" /><br/>
+    End Date:
+    <input type="text" id="end_date" name="end_date" value="{{ employer.end_date }}" /><br/>
+    Contact Name:
+    <input type="text" id="contact_name" name="contact_name" value="{{ employer.contact_name }}" /><br/>
+    Contact Phone:
+    <input type="text" id="contact_phone" name="contact_phone" value="{{ employer.contact_phone }}" /><br/>
+    Contact Email:
+    <input type="text" id="contact_email" name="contact_email" value="{{ employer.contact_email }}" /><br/>
+    <input type = "submit" value = "employer_edit">
+</form>
+

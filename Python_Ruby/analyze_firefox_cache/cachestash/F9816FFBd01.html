@@ -1,0 +1,282 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>allmovie</title>
+<!--DEBUG-->
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<meta name="msvalidate.01" content="EB05575396C947FE8194AC83BE498AC5" />
+<link rel="shortcut icon" href="/img/favicon.ico" />
+<script type="text/javascript" language="javascript" src="/js/common.js"></script>
+<script type="text/javascript" language="javascript">var expandedRow = new Object();</script>
+<script type="text/javascript" language="javascript">var CM8Server = "web.checkm8.com";</script>
+<script type="text/javascript" language="javascript">var CM8Cat = "vnu_AMG_allmovie.Homepage";</script>
+<script type="text/javascript">
+<!--//MENU BAR SCRIPT
+function initMenu() {
+	var oMenuItems = document.getElementById("header_menu").getElementsByTagName("a");
+	for (var i=0;i<oMenuItems.length;i++) {
+		var oItem = oMenuItems[i];
+		oItem.style.backgroundImage='url(/img/menu_bar/'+oItem.id+'.gif)';
+		oItem.onmouseover = function () {this.style.backgroundPosition='top center';}
+		oItem.onmouseout = function () {this.style.backgroundPosition='0px -100px';}
+
+		if (navigator.userAgent.indexOf("Opera")>=0) {
+			if (oItem.id.indexOf("sub_menu")>=0) {
+				oItem.onmouseover = function () {this.style.backgroundPosition='center -5px';}
+			} else {
+				oItem.onmouseover = function () {this.style.backgroundPosition='top center';}
+			}
+		}
+
+		if (navigator.userAgent.indexOf("Safari")>=0) {
+			oItem.style.backgroundImage=''
+			oItem.style.backgroundPosition='0px 0px'
+			oItem.onmouseover = function () {this.style.backgroundImage='url(/img/menu_bar/'+this.id+'.gif)'}
+			oItem.onmouseout = function () {this.style.backgroundImage=''}
+		}
+	}
+}
+
+function toggleSub() {
+	var oSub = document.getElementById('header_sub_menu');
+	if (oSub.style.display=='block') {
+		oSub.style.display = 'none';
+	} else {
+		oSub.style.display = 'block';
+	}
+}
+//-->
+</script>
+<link rel="stylesheet" href="/css/new_home.css" type="text/css" media="all" />
+<script type="text/javascript">
+<!--
+if (document.images) {
+img1= new Image(200,150);
+img1.src="http://www.videodetective.com/photos/628/026410_28.jpg";
+img2= new Image(200,150);
+img2.src="http://www.videodetective.com/photos/865/036349_8.jpg";
+img3= new Image(200,150);
+img3.src="http://www.videodetective.com/photos/577/024245_13.jpg";
+img4= new Image(200,150);
+img4.src="http://www.videodetective.com/photos/913/038380_14.jpg";
+img5= new Image(200,150);
+img5.src="http://www.videodetective.com/photos/702/002951_32.jpg";
+}
+var interval = 5;
+var timerID = 0;
+var cnt = 5;
+var currentImg = 0;
+var counter = 5;
+videos = new Array(cnt)
+videos[0] = new Array(5)	//video id
+videos[1] = new Array(5)	//image
+videos[2] = new Array(5)	//title
+videos[3] = new Array(5)	//artist
+videos[4] = new Array(5)	//artist page
+videos[0][0] = "832954";
+videos[0][1] = "http://www.videodetective.com/photos/628/026410_28.jpg";
+videos[0][2] = "Secretary";
+videos[1][0] = "661984";
+videos[1][1] = "http://www.videodetective.com/photos/865/036349_8.jpg";
+videos[1][2] = "Lucky Number Slevin";
+videos[2][0] = "64018";
+videos[2][1] = "http://www.videodetective.com/photos/577/024245_13.jpg";
+videos[2][2] = "Blade II";
+videos[3][0] = "632711";
+videos[3][1] = "http://www.videodetective.com/photos/913/038380_14.jpg";
+videos[3][2] = "Leonard Cohen: I'm Your Man";
+videos[4][0] = "107174";
+videos[4][1] = "http://www.videodetective.com/photos/702/002951_32.jpg";
+videos[4][2] = "The Polar Express";
+function loadVideo() {
+currentImg = counter % cnt
+document.getElementById("video_link").onclick = function(){mv("/cg/avg.dll?p=avg&sql=56:*publishedID="+videos[currentImg][0])}
+document.getElementById("video_screen").src = videos[currentImg][1];
+document.getElementById("video_title").onclick = function(){mv("/cg/avg.dll?p=avg&sql=56:*publishedID="+videos[currentImg][0])}
+document.getElementById("video_title").innerHTML = videos[currentImg][2];
+}
+function switchVideo(mode) {
+    switch (mode) {
+    case 1:
+	    clearInterval(timerID)
+	    counter = counter + 1
+	    loadVideo()
+	    timerID = setInterval("switchVideo(0);resumeSlide();", 60 * 1000)
+	    break
+    case -1:
+	    clearInterval(timerID)
+	    counter = counter - 1
+	    loadVideo();
+	    timerID = setInterval("switchVideo(0);resumeSlide();", 60 * 1000)
+	    break
+    case 0:
+	    counter = counter + 1
+	    loadVideo()
+	break
+}
+}
+function resumeSlide() {
+    clearInterval(timerID);
+    timerID = setInterval("switchVideo(0)", interval * 1000)
+}
+//-->
+</script>
+<!--AMGCAW06-->
+</head>
+<body>
+<script type="text/javascript" language="javascript" src="http://web.checkM8.com/adam/cm8adam_1_call.js"></script>
+<div id="container"> 
+	<!-- <div style="height:20px;width:970px;background-color:#FF9900;margin: -10px auto 0px auto;color:#000;border-width:0px 1px 0px 1px;border-style:solid;border-color:#aaa;text-align:center;">We are experiencing technical issues, we appreciate your patience.</div> -->
+  <div id="header"> 
+		<div class="head_wrapper">
+			<div id="leaderboard"><script type="text/javascript" language="javascript">CM8ShowAd("Top");</script></div>
+      <div id="header_body"> 
+
+      	<div id="header_logo"><a href="/cg/avg.dll?p=avg&amp;sql=30:" title="allmovie"><img src="/img/logo_main.gif" alt="allmovie" width="220px" height="60px" /></a><br /> <a href="http://www.allmusic.com/" title="allmovie"><img src="/img/logo_sub1.gif" alt="allmusic" width="71px" height="20px" /></a><img src="/img/logo_sub2.gif" alt="allmovie" width="75px" height="20px" /><a href="http://www.allgame.com/" title="allgame"><img src="/img/logo_sub3.gif" alt="allgame" width="74px" height="20px" /></a></div> 
+
+        	<a href="http://www.allmediaguide.com/" title="all media guide"><img src="/img/amg_logo.gif" class="amg_logo" alt="data provided by AMG" width="138px" height="76px" /></a> 
+        <div id="search"> 
+        	<form name="search" action="/cg/avg.dll" method="post"> 
+			<input type="hidden" name="p" value="avg" /> 
+			<input type="hidden" name="opt1" value="12">			
+			<p><img src="/img/search_title.gif" id="search_title" alt="enter a title or name" height="12px" /></p>
+            		<p><input type="text" name="sql" id="search_txt" onKeyPress="if(event.keyCode==13)search.submit()" /> 
+              		   <input src="/img/go.gif" id="search_button" type="image" /></p> 
+          	</form>
+		<div class="clearer"></div>
+        </div>
+      </div> 
+			<div id="header_menu">
+				<div id="header_main_menu">
+					<a href="/cg/avg.dll?p=avg&sql=24:D|||649" id="menu_01"></a>
+					<a href="/cg/avg.dll?p=avg&sql=24:D|||648" id="menu_02"></a>
+					<a href="/cg/avg.dll?p=avg&sql=24:D|||654" id="menu_03"></a>
+					<a href="/cg/avg.dll?p=avg&sql=24:D|||942" id="menu_04"></a>
+					<a href="/cg/avg.dll?p=avg&sql=24:D|||652" id="menu_05"></a>
+					<a href="/cg/avg.dll?p=avg&sql=24:D|||655" id="menu_06"></a>
+					<a href="/cg/avg.dll?p=avg&sql=24:D|||646" id="menu_07"></a>
+					<a href="#" id="menu_08" onClick="toggleSub();"></a>
+				</div>
+				<div id="header_sub_menu">
+					<a href="/cg/avg.dll?p=avg&sql=24:D|||656" id="sub_menu_01"></a>
+					<a href="/cg/avg.dll?p=avg&sql=24:D|||948" id="sub_menu_02"></a>
+					<a href="/cg/avg.dll?p=avg&sql=24:D|||651" id="sub_menu_03"></a>
+					<a href="/cg/avg.dll?p=avg&sql=24:D|||660" id="sub_menu_04"></a>
+					<a href="/cg/avg.dll?p=avg&sql=24:D|||685" id="sub_menu_05"></a>
+				</div>
+				<script type="text/javascript">initMenu();</script>
+			</div>
+    </div> 
+    	<div id="header_side">	
+			<div id="site_menu" class="content_win">
+				<div class="content_header"></div>
+				<a href="/cg/avg.dll?p=avg&amp;sql=27:" title="In Theaters" class="left">&raquo; In Theaters</a>
+				<a href="/cg/avg.dll?p=avg&amp;sql=21:avg/info_pages/avg_qbrowse.html" title="Quick Browse!" class="right shaded">&raquo; <span class="feat_menu_item">Quick Browse</span></a><br />
+				
+				<a href="/cg/avg.dll?p=avg&amp;sql=22:" title="Essays" class="left shaded" >&raquo; <span class="feat_menu_item">Essays</span></a>
+				<!--<a href="/cg/avg.dll?p=avg&amp;sql=36:" title="Best of 2006" class="left shaded" style="color:#379558;font-weight:bold;">&raquo; Best of 2006</a>-->
+				<a href="/cg/avg.dll?p=avg&amp;sql=21:avg/info_pages/avg_glossary.html" title="Glossary" class="right">&raquo; Glossary</a><br />
+				
+				<a href="/cg/avg.dll?p=avg&amp;sql=34:" title="New Releases" class="left">&raquo; New Releases</a>				
+				<a href="/cg/avg.dll?p=avg&amp;sql=21:avg/info_pages/a_video_main.html" class="right shaded" title="Trailers">&raquo; <span class="feat_menu_item">Movie Trailers</span></a><br />
+				
+				<a href="/cg/avg.dll?p=avg&amp;sql=61:" title="the final take" class="left shaded">&raquo; <span class="feat_menu_item">The Final Take</span></a>
+				<a href="/cg/avg.dll?p=avg&amp;sql=66:" title="Spotlight" class="right">&raquo; Spotlight Archive</a><br />
+												
+				<div class="clearer">&nbsp;</div>
+			</div>       
+			<div id="bd" class="content_win">
+				<div class="content_header"><img src="/img/bday.gif" alt="factoid" width="120px" height="20px" /></div> 
+				<div class="article"><!--BDAY--><a href="/cg/avg.dll?p=avg&sql=2:11741">Joan Castle (02/26/1914)</a><br/><a href="/cg/avg.dll?p=avg&sql=2:96540">Antonín Kachlík (02/26/1923)</a><br/><a href="/cg/avg.dll?p=avg&sql=2:10386">Godfrey Cambridge (02/26/1933)</a><br/><a href="/cg/avg.dll?p=avg&sql=2:83830">Jonathan Cain (02/26/1950)</a><br/><!--/BDAY--></div>
+			</div>
+			
+	</div>
+  </div><div id="left_col"><div id="ad300_250"><script type="text/javascript" language="javascript">CM8ShowAd("Middle");</script></div><div id="in_theaters" class="content_win"><div class="content_header"><a href="/cg/avg.dll?p=avg&amp;sql=27:" title="more"><img src="/img/theaters_more.gif" class="archive" alt="more" width="59px" height="20px" /></a><img src="/img/theaters.gif" alt="in theaters" width="150px" height="20px" /></div><ul>
+<li><a href="javascript:void(0);" onclick="mv('/cg/avg.dll?p=avg&sql=56:*publishedID=771450')"><img src="/img/trailer_icon.gif" width="13px" height="12px" alt="Watch Trailer!" title="Watch Trailer!" class="trailer" /></a><a href="/cg/avg.dll?p=avg&sql=1:358988">Vince Vaughn's Wild West Comedy Show: 30 Days &amp; 30 Nights - Hollywood to the Heartland</a></li>
+<li><a href="javascript:void(0);" onclick="mv('/cg/avg.dll?p=avg&sql=56:*publishedID=804847')"><img src="/img/trailer_icon.gif" width="13px" height="12px" alt="Watch Trailer!" title="Watch Trailer!" class="trailer" /></a><a href="/cg/avg.dll?p=avg&sql=1:381513">Welcome Home Roscoe Jenkins</a></li>
+<li><a href="/cg/avg.dll?p=avg&sql=1:405751">How to Rob a Bank</a></li>
+<li><a href="javascript:void(0);" onclick="mv('/cg/avg.dll?p=avg&sql=56:*publishedID=834766')"><img src="/img/trailer_icon.gif" width="13px" height="12px" alt="Watch Trailer!" title="Watch Trailer!" class="trailer" /></a><a href="/cg/avg.dll?p=avg&sql=1:392104">The Year My Parents Went on Vacation</a></li>
+<li><a href="/cg/avg.dll?p=avg&sql=1:360035">Possession</a></li>
+<li><a href="javascript:void(0);" onclick="mv('/cg/avg.dll?p=avg&sql=56:*publishedID=244881')"><img src="/img/trailer_icon.gif" width="13px" height="12px" alt="Watch Trailer!" title="Watch Trailer!" class="trailer" /></a><a href="/cg/avg.dll?p=avg&sql=1:353424">The Other Boleyn Girl</a></li>
+<li><a href="/cg/avg.dll?p=avg&sql=1:393648">The Fox &amp; the Child</a></li>
+<li><a href="javascript:void(0);" onclick="mv('/cg/avg.dll?p=avg&sql=56:*publishedID=728765')"><img src="/img/trailer_icon.gif" width="13px" height="12px" alt="Watch Trailer!" title="Watch Trailer!" class="trailer" /></a><a href="/cg/avg.dll?p=avg&sql=1:374440">Snow Angels</a></li>
+</ul>
+</div><div id="tv" class="content_win"><div class="content_header"><img src="/img/tv.gif" alt="new tv releases" width="150px" height="20px" /></div><div class="article_title"><a href="/cg/avg.dll?p=avg&amp;sql=16:181124">Cops: 20th Anniversary Edition [2 Discs]</a></div><div class="cover"><a href="/cg/avg.dll?p=avg&amp;sql=16:181124"><img src="http://image.allmusic.com/00/adg/cov75/dru500/u505/u50525kqnhj.jpg" alt="Cops: 20th Anniversary Edition [2 Discs]" title="Cops: 20th Anniversary Edition [2 Discs]" width="75px" /></a><div class="buttons"></div></div><div class="article"><ul><li>Closed Caption</li><li> Disc 1:  </li><li> Cops 20th season televsion special </li><li> Original pilot episode with optional commentary by executive producer John Langley and special guests </li><li> Las Vegas Heat episode with optional commentary by executive producer John Langley and special guests </li><li> Parodies and tributes featurette </li></ul></div><div class="divider">&nbsp;</div><div class="article_title"><a href="/cg/avg.dll?p=avg&amp;sql=16:177185">Big Love: The Complete Second Season [4 Discs]</a></div><div class="cover"><a href="/cg/avg.dll?p=avg&amp;sql=16:177185"><img src="http://image.allmusic.com/00/adg/cov75/dru400/u467/u46752v9e1q.jpg" alt="Big Love: The Complete Second Season [4 Discs]" title="Big Love: The Complete Second Season [4 Discs]" width="75px" /></a><div class="buttons"></div></div><div class="article"><ul><li>Three prequels explore life before Big Love: "Post-Partum" (set 5 years before season one starts) - Nicki suffers an emotional meltdown in the hospital after giving birth to her first child, Wayne. </li><li> "Meet the Baby-Sitter" (set 3 years before season one starts) - Bill introduces Nicki to Margene, the family's new baby-sitter </li><li> "Moving Day" (set 1 year before season one starts) - The three wives see a move to a sandy suburb as the possible solution to a household bursting at the seams</li></ul></div><div class="clearer">&nbsp;</div></div></div><div id="center_col"><div id="newmod" style="background-image:url(http://image.allmusic.com/00/adg/cov150/drt100/t111/t1110376zk6.jpg);"><img src="/img/mod.gif" alt="movie of the day" height="22px" width="150px"><a href="/cg/avg.dll?p=avg&amp;sql=1:214082~T1"id="mod_anchor" title="Unbreakable""></a></div><div id="bboat_ad" align="center" style="font-size:11px;"><div id="bb_ads_frame_1"><img src="/i/bboat_bg.jpg" width="200px" height="200px" alt="Ads by BiggerBoat" /></div>advertisement</div><script type="text/javascript">
+<!--
+var bb_ad_user = "AMG00001"; 
+var bb_ad_token = "0c8e3ca9-4bc5-4727-9054-48c972f4ed48";
+var bb_ad_category  = "movies"; 
+var bb_ad_size = "200x200"; 
+var bb_ad_color = "light_grey"; 
+var bb_ad_slots = "1"; 
+var bb_ad_output_format = "html_div"; 
+//-->
+</script>
+<script language="JavaScript" type="text/javascript" src="http://svc.biggerboat.com/api/show_ads.js"></script><div class="clearer"></div><div id="topblog" class="content_win"><div class="content_header"><a href="http://blog.allmovie.com"><img src="/img/blog_main.gif" alt="most recent blog" width="416px" height="50px"/></a></div>		<div class="article_title"><a href="http://blog.allmovie.com/2008/2/26/cannes-it-be-true/" title="Cannes It Be True?" target="_allmovie_blog">Cannes It Be True?</a></div>
+	<div class="article_author">February 26th, 2008 | 11:51 am | Tracie Cooper</div>
+	<div class="hr">&nbsp;</div>
+	<div class="article">
+	
+		<img src="http://image.allmusic.com/00/adg/cov120/drt300/t332/t33208e4bqi.jpg" alt="indy" width="120px" class="alignleft" />According to “sources”, mysterious though they may be, Indiana Jones and the Kingdom as the Crystal Skull is being prepped for a worldwide premiere at the celebrated Cannes Film Festival.  The premiere – if it happens – will precede the film’s official release date of May 22, 2008.  
+ 
+If these sources are not, in fact, cruelly mucking about with our dreams, all of Indy 4’s major players, from Steven Spielberg  and George Lucas, to Karen Allen and Harrison Ford, will make their first Jones-related red carpet appearance since the 1989 release of Indiana Jones and the Last Crusade.  There will be no Nazis on the premises.		
+		<p><a href="http://blog.allmovie.com/2008/2/26/cannes-it-be-true/" title="Cannes It Be True?" target="_allmovie_blog">Read the rest of this entry »</a></p>
+		
+	</div>	
+	
+	<div id="more_posts">
+	
+				<h3>Recent Posts:</h3>
+		<ul class="blog_list">
+			<li><a href="http://blog.allmovie.com/2008/2/25/academy-award-recap/" title="Academy Award Recap" target="_allmovie_blog">Academy Award Recap</a></li>
+			<li><a href="http://blog.allmovie.com/2008/2/22/the-2007-amg-awards/" title="The 2007 AMG Awards" target="_allmovie_blog">The 2007 AMG Awards</a></li>
+			<li><a href="http://blog.allmovie.com/2008/2/21/convention-preview-fangoria%e2%80%99s-weekend-of-horrors-%e2%80%93-chicago-il-feb-22-24/" title="Convention Preview: Fangoria’s Weekend of Horror&hellip;" target="_allmovie_blog">Convention Preview: Fangoria’s Weekend of Horror&hellip;</a></li>
+		</ul>
+		
+	</div>		
+	
+	<a href="http://blog.allmovie.com"  target="_allmovie_blog" title="click to visit the almusic blog" id="blog_bottom"><img src="/img/blog_bottom.gif" width="416px" height="18px" alt="click to visit the almusic blog" /></a>
+</div><div id="videos" class="content_win"><div class="content_header"><img src="/img/videos.gif" alt="music videos" width="150px" height="20px" /></div><a href="javascript:void(0);" onclick="" id="video_link" title="launch video"><img src="http://www.videodetective.com/photos/628/026410_28.jpg" id="video_screen" alt="movie trailer" width="200px" height="150px" /></a><div id="video_switch"><a href="javascript:void(0);" onclick="switchVideo(-1)" id="previous">« previous</a><a href="javascript:void(0);" onclick="switchVideo(1)" id="next">next »</a></div><div id="video_box"><img src="/img/video_sub.gif" alt="watch the trailer for:" height="9" width="112" /><div class="video_title"><a href="javascript:void(0);" onclick="" id="video_title" title="video page">Secretary</a></div></div><a href="/cg/avg.dll?p=avg&amp;sql=21:avg/info_pages/a_video_main.html" title="more videos"><img src="/img/video_more.gif" id="video_button" alt="more videos:" width="122px" height="27px" /></a><a href="http://www.videodetective.com" title="videodetective.com"><img src="/img/vid_detective.gif" alt="powered by video detective" class="singingfool" width="45px" height="36px" /></a><div class="clearer"></div><script type="text/javascript">loadVideo();</script></div><div id="spotlight" class="content_win"><div class="content_header"><a href="http://blog.allmovie.com/category/in-the-spotlight/"><img src="/img/spotlight.gif" alt="spotlight" width="150px" height="20px" /></a></div>		<div class="article_title"><a href="http://blog.allmovie.com/2008/2/20/diary-of-the-dead-the-amg-review/" title="Diary of the Dead: The AMG Review" target="_allmovie_blog">Diary of the Dead: The AMG Review</a></div>
+	<div class="article_author">February 20th, 2008 | 10:47 am | Jason Buchanan</div>
+	<div class="hr">&nbsp;</div>
+	<div class="article">
+	
+		<img src="http://webextras.allmusic.com/200802/d3646529a611212a.jpg" alt="poster"class="alignright"/>Many would agree that George Romero is the king of the zombies. With the franchise affectionately known as the “Dead” series, Romero combined blood and guts with biting social commentary, and his new addition to the now quintilogy, Diary of the Dead, certainly looks to be no exception. But can it live up to the legacy laid out by his previous works? AllMovie’s own Jason Buchanan answers this question and more, in his full review of Romero’s latest undead effort.		
+		<p><a href="http://blog.allmovie.com/2008/2/20/diary-of-the-dead-the-amg-review/" title="Diary of the Dead: The AMG Review" target="_allmovie_blog">Read the full entry »</a></p>
+		
+	</div>	
+</div></div><div id="right_col"><div id="new_releases" class="content_win"><div class="content_header"><img src="/img/new_releases.gif" alt="new releases" width="150px" height="20px" /></div><a href="/cg/avg.dll?p=avg&amp;sql=34:" title="click for full list"><img src="/img/nr_sub.gif" class="nr_sub" alt="click for full list" width="232px" height="20px" /></a><div class="list_item"><a href="/cg/avg.dll?p=avg&amp;sql=16:181915"><img src="http://image.allmusic.com/00/adg/cov75/dru500/u525/u52539kqi05.jpg" alt="Tootsie [25th Anniversary Edition]" title="Tootsie [25th Anniversary Edition]" width="75px" class="dvd_cover" /></a><div class="movie_title"><a href="/cg/avg.dll?p=avg&amp;sql=16:181915">Tootsie [25th Anniversary Edition]</a></div><div class="dvd_rating"><img src="/img/st_r9.gif" alt="5 Stars" title="5 Stars" /></div><div class="buttons"><a href="javascript:void(0);" onclick="mv('/cg/avg.dll?p=avg&sql=56:*publishedID=219886')"><img src="/img/trailer_icon.gif" width="13px" height="12px" alt="Watch Trailer!" title="Watch Trailer!" class="trailer" /></a><a href="/cg/avg.dll?p=avg&amp;sql=1:50420~T5"><img src="/img/buy_icon.gif" alt="Buy Now!" title="Buy Now!" width="13px" height="11px" /></a></div></div><div class="divider">&nbsp;</div><div class="list_item"><a href="/cg/avg.dll?p=avg&amp;sql=16:181921"><img src="http://image.allmusic.com/00/adg/cov75/dru500/u525/u52547xqequ.jpg" alt="Groundhog Day [15th Anniversary Edition]" title="Groundhog Day [15th Anniversary Edition]" width="75px" class="dvd_cover" /></a><div class="movie_title"><a href="/cg/avg.dll?p=avg&amp;sql=16:181921">Groundhog Day [15th Anniversary Edition]</a></div><div class="dvd_rating"><img src="/img/st_r8.gif" alt="4.5 Stars" title="4.5 Stars" /></div><div class="buttons"><a href="javascript:void(0);" onclick="mv('/cg/avg.dll?p=avg&sql=56:*publishedID=4401')"><img src="/img/trailer_icon.gif" width="13px" height="12px" alt="Watch Trailer!" title="Watch Trailer!" class="trailer" /></a><a href="/cg/avg.dll?p=avg&amp;sql=1:20982~T5"><img src="/img/buy_icon.gif" alt="Buy Now!" title="Buy Now!" width="13px" height="11px" /></a></div></div><div class="divider">&nbsp;</div><div class="list_item"><a href="/cg/avg.dll?p=avg&amp;sql=16:181644"><img src="http://image.allmusic.com/00/adg/cov75/dru500/u505/u50535bohub.jpg" alt="Newhart: The Complete First Season [4 Discs]" title="Newhart: The Complete First Season [4 Discs]" width="75px" class="dvd_cover" /></a><div class="movie_title"><a href="/cg/avg.dll?p=avg&amp;sql=16:181644">Newhart: The Complete First Season [4 Discs]</a></div><div class="buttons"></div></div><div class="divider">&nbsp;</div><div class="list_item"><a href="/cg/avg.dll?p=avg&amp;sql=16:183448"><img src="http://image.allmusic.com/00/adg/cov75/dru500/u517/u51796bnch3.jpg" alt="Gone Baby Gone [WS]" title="Gone Baby Gone [WS]" width="75px" class="dvd_cover" /></a><div class="movie_title"><a href="/cg/avg.dll?p=avg&amp;sql=16:183448">Gone Baby Gone [WS]</a></div><div class="dvd_rating"><img src="/img/st_r6.gif" alt="3.5 Stars" title="3.5 Stars" /></div><div class="buttons"><a href="javascript:void(0);" onclick="mv('/cg/avg.dll?p=avg&sql=56:*publishedID=436718')"><img src="/img/trailer_icon.gif" width="13px" height="12px" alt="Watch Trailer!" title="Watch Trailer!" class="trailer" /></a><a href="/cg/avg.dll?p=avg&amp;sql=1:348172~T5"><img src="/img/buy_icon.gif" alt="Buy Now!" title="Buy Now!" width="13px" height="11px" /></a></div></div><div class="divider">&nbsp;</div><div class="list_item"><a href="/cg/avg.dll?p=avg&amp;sql=16:181583"><img src="http://image.allmusic.com/00/adg/cov75/dru500/u517/u51731yifh0.jpg" alt="Daddy Day Camp [WS]" title="Daddy Day Camp [WS]" width="75px" class="dvd_cover" /></a><div class="movie_title"><a href="/cg/avg.dll?p=avg&amp;sql=16:181583">Daddy Day Camp [WS]</a></div><div class="dvd_rating"><img src="/img/st_r2.gif" alt="1.5 Star" title="1.5 Star" /></div><div class="buttons"><a href="javascript:void(0);" onclick="mv('/cg/avg.dll?p=avg&sql=56:*publishedID=815699')"><img src="/img/trailer_icon.gif" width="13px" height="12px" alt="Watch Trailer!" title="Watch Trailer!" class="trailer" /></a><a href="/cg/avg.dll?p=avg&amp;sql=1:389224~T5"><img src="/img/buy_icon.gif" alt="Buy Now!" title="Buy Now!" width="13px" height="11px" /></a></div></div><div class="divider">&nbsp;</div><div class="list_item"><a href="/cg/avg.dll?p=avg&amp;sql=16:182356"><img src="http://image.allmusic.com/00/adg/cov75/dru500/u507/u50792etgtw.jpg" alt="Brave One [WS]" title="Brave One [WS]" width="75px" class="dvd_cover" /></a><div class="movie_title"><a href="/cg/avg.dll?p=avg&amp;sql=16:182356">Brave One [WS]</a></div><div class="dvd_rating"><img src="/img/st_r6.gif" alt="3.5 Stars" title="3.5 Stars" /></div><div class="buttons"><a href="javascript:void(0);" onclick="mv('/cg/avg.dll?p=avg&sql=56:*publishedID=22438')"><img src="/img/trailer_icon.gif" width="13px" height="12px" alt="Watch Trailer!" title="Watch Trailer!" class="trailer" /></a><a href="/cg/avg.dll?p=avg&amp;sql=1:346872~T5"><img src="/img/buy_icon.gif" alt="Buy Now!" title="Buy Now!" width="13px" height="11px" /></a></div></div><div class="divider">&nbsp;</div><div class="list_item"><a href="/cg/avg.dll?p=avg&amp;sql=16:181593"><img src="http://image.allmusic.com/00/adg/cov75/dru500/u517/u51738tdk6d.jpg" alt="Feel the Noise" title="Feel the Noise" width="75px" class="dvd_cover" /></a><div class="movie_title"><a href="/cg/avg.dll?p=avg&amp;sql=16:181593">Feel the Noise</a></div><div class="dvd_rating"><img src="/img/st_r4.gif" alt="2.5 Stars" title="2.5 Stars" /></div><div class="buttons"><a href="javascript:void(0);" onclick="mv('/cg/avg.dll?p=avg&sql=56:*publishedID=115429')"><img src="/img/trailer_icon.gif" width="13px" height="12px" alt="Watch Trailer!" title="Watch Trailer!" class="trailer" /></a><a href="/cg/avg.dll?p=avg&amp;sql=1:389372~T5"><img src="/img/buy_icon.gif" alt="Buy Now!" title="Buy Now!" width="13px" height="11px" /></a></div></div><div class="bottom_tab"><a href="/cg/avg.dll?p=avg&amp;sql=34: title="click for full list"><img src="/img/nr_tab.gif" alt="full article" width="74" height="20px" /></a></div></div></div>
+	<div id="footer">
+		<a href="http://www.allmediaguide.com" title="All Media Guide"><img src="http://www.allmusic.com/i/pages/site/icons/footer_logo.gif" alt="avg" title="avg" id="footer_logo" /></a>
+		<a href="/cg/avg.dll?p=avg&amp;sql=21:avg/info_pages/a_about.html" title="about" class="link">About Us</a> | 
+		<a href="/cg/avg.dll?p=avg&amp;sql=21:avg/info_pages/a_contact.html "title="contact" class="link">Contact</a> | 
+		<a href="http://www.allmediaguide.com/jobs.html" title="Employment" class="link">Employment</a> |
+		<a href="/cg/avg.dll?p=avg&amp;sql=21:avg/info_pages/a_product_submissions.html" title="product submissions" class="link">Product Submissions</a> | 
+		<a href="/cg/avg.dll?p=avg&amp;sql=21:avg/info_pages/a_about_advert.html" title="advertise" class="link">Advertise</a> | 
+		<a href="/cg/avg.dll?p=avg&amp;sql=21:avg/info_pages/a_privacy_policy.html" title="privacy policy" class="link">Privacy Policy</a> | 
+		<a href="/cg/avg.dll?p=avg&amp;sql=21:avg/info_pages/a_terms_of_service.html" title="terms of service" class="link">Terms of Service</a> |
+		<a href="/cg/avg.dll?p=avg&amp;sql=21:avg/info_pages/a_copyright.html" title="Copyright Policy" class="link">Copyright Policy</a>
+		<br />
+		&copy; 2008 Macrovision Corporation.  All Rights Reserved.
+	</div>
+</div>
+<!-- START Nielsen//NetRatings SiteCensus V5.2 -->
+<!-- COPYRIGHT 2005 Nielsen//NetRatings --> 
+<script type="text/javascript">
+	var _rsCI="us-emediatop";  
+	var _rsCG="allmovie";  
+	var _rsDN="//secure-us.imrworldwide.com/";
+	var _rsSE=1;
+	var _rsSM=1.0;
+</script>
+<script type="text/javascript" src="//secure-us.imrworldwide.com/v52.js"></script>
+<noscript>
+ <img src="//secure-us.imrworldwide.com/cgi-bin/m?ci=us-emediatop&amp;cg=allmovie" alt=""/> </noscript>
+<!-- END Nielsen//NetRatings SiteCensus V5.2 -->
+<script type="text/javascript">
+<!--
+timerID = setInterval("switchVideo(0)", 5 * 1000);
+//-->
+</script>
+</body>
+</html>

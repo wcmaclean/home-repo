@@ -1,0 +1,75 @@
+Will MacLean
+CSPP 51060
+Assignment 4
+Readme
+
+-----------
+stocksob.py
+-----------
+Run as:
+prompt> python stocksobj.py
+
+This version uses portreader.py to read a *.rec file to create
+a dictionary of instances of the Stock class, accessing instance
+variables directly, without any accessors and mutators.
+
+Modified to use tableformatter classes at the end.
+
+------------
+stocksacc.py
+------------
+Run as:
+prompt> python stocksacc.py
+
+This version uses portreader.py to read a *.csv file to create 
+a dictionary of Stock objects, accessing instance variables with
+mutators and accessors.
+
+Modified to use tableformatter classes at the end.
+
+------------
+stocksobj.rb
+------------
+Run as:
+prompt> ruby stocksobj.rb
+
+Because accessing instance variables directly in Ruby is 
+impossible, this version has accessors and mutators - but
+done long-hand. It uses portreader.rb to read a *.csv file
+to create Stock objects.
+
+Modified to use tableformatter classes at the end.
+
+------------
+stocksacc.rb
+------------
+Run as:
+prompt> ruby stocksacc.rb
+
+This version uses the shorthand to declare accessors and 
+mutators for the Stocks objects. It uses portreader.rb 
+to read an *.rec files into Stock objects.
+
+Modified to use tableformatter classes at the end.
+
+-------------------------------
+portreader.py and portreader.rb
+-------------------------------
+These files can read *.csv or *.rec files, and parse them into 
+lists of lists - with all data in columns. It knows nothing
+of the Stocks data, returning only rows and columns, which
+are generic enough to be used anywhere.
+
+---------------------------------------
+tableformatter.py and tableformatter.rb
+---------------------------------------
+These have several classes, inheriting methods from the base class, 
+to format tables into several format (.txt, .html, .csv). Each one
+also prints out a copy of the formatted table to a file.
+
+----------
+testmod.py
+----------
+This is a python module I wrote to test if a value is in int or
+a float. I didn't end up needing it, so I didn't use it.
+

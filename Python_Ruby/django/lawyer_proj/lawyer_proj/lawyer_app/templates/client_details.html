@@ -1,0 +1,49 @@
+<h2>Client Details</h2>
+
+{% if error_message %}
+    <p><strong>{{ error_message }}</strong></p>
+{% endif %}
+
+<form action="/lawyer_app/client_edit/{{ client.client_id }}/" method="post">
+    {% csrf_token %}
+    <h3>Client ID</h3>
+    <input type="text" id="client_id" name="client_id" value="{{ client.client_id }}" readonly /><br/>
+    <h3>First Name</h3>
+    <input type="text" id="first_name" name="first_name" value="{{ client.first_name }}" /><br/>
+    <h3>Last Name</h3>
+    <input type="text" id="last_name" name="last_name" value="{{ client.last_name }}" /><br/>
+    <h3>Address 1</h3>
+    <input type="text" id="address_1" name="address_1" value="{{ client.address_1 }}" /><br/>
+    <h3>Address 2</h3>
+    <input type="text" id="address_2" name="address_2" value="{{ client.address_2 }}" /><br/>
+    <h3>City</h3>
+    <input type="text" id="city" name="city" value="{{ client.city }}" /><br/>
+    <h3>State</h3>
+    <input type="text" id="state" name="state" value="{{ client.state }}" /><br/>
+    <h3>Zip</h3>
+    <input type="text" id="zip" name="zip" value="{{ client.zip }}" /><br/>
+    <h3>Phone</h3>
+    <input type="text" id="phone_1" name="phone_1" value="{{ client.phone_1 }}" /><br/>
+    <h3>Email</h3>
+    <input type="text" id="email" name="email" value="{{ client.email }}" /><br/>
+    <h3>Date of Birth</h3>
+    <input type="text" id="date_of_birth" name="date_of_birth" value="{{ client.date_of_birth }}" /><br/>
+    <h3>Social Security Number</h3>
+    <input type="text" id="ss_num" name="ss_num" value="{{ client.ss_num }}" /><br/>
+    <h3>Accident Date</h3>
+    <input type="text" id="accident_date" name="accident_date" value="{{ client.accident_date }}" /><br/>
+    <h3>Location</h3>
+    <input type="text" id="location" name="location" value="{{ client.location }}" /><br/>
+    <h3>Injury</h3>
+    <input type="text" id="injury" name="injury" value="{{ client.injury }}" /><br/>
+    <h3>Date Signed Up</h3>
+    <input type="text" id="date_signed_up" name="date_signed_up" value="{{ client.date_signed_up }}" /><br/>
+    <h3>Date Filed</h3>
+    <input type="text" id="date_filed" name="date_filed" value="{{ client.date_filed }}" /><br/>
+    <h3>Statute of Limitation Date</h3>
+    <input type="text" id="statute_of_limit_date" name="statute_of_limit_date" value="{{ client.statue_of_limit_date }}" /><br/>
+    <h3>Referral Source</h3>
+    <input type="text" id="referral_source" name="referral_source" value="{{ client.referral_source }}" /><br/>
+    <input type = "submit" value = "client_edit">
+</form>
+

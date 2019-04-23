@@ -1,0 +1,1621 @@
+
+if(!window.ARMRedirLib) ARMRedirLib = {};
+if(!ARMRedirLib.AdParms) {
+ARMRedirLib.AdParms = function(parms) {
+for(var name in parms) {
+var value = parms[name];
+switch(name) {
+case 'blContent':
+case 'a4euserclicks':
+if(typeof(value) == "string" && !value.match(/!~!/)) {
+this[name] = [];
+eval(value);
+} else {
+this[name] = value;
+}
+break;
+case 'childmovies':
+if(typeof(value) == "string" && !value.match(/!~!/)) {
+this.childmovies = [{}];
+eval(value);
+} else {
+this.childmovies = value;
+}
+break;
+case 'locationdatafirefox':
+if(typeof(value) == "string" && !value.match(/!~!/)) {
+this.locationdata = [];	
+eval(value);
+} else {
+this.locationdata = value;
+}
+break;
+case 'idTag':
+this.paid = value;
+break;
+default:
+this[name] = value;
+break;
+}
+}
+}
+}
+if(!window.__atlas_ad_info) __atlas_ad_info = {};
+if(!window.ARM_rtc) ARM_rtc = {};
+if(!ARM_rtc.RmAdParms) ARM_rtc.RmAdParms = [];
+if(!ARM_rtc.AddRmAdParms) {
+ARM_rtc.AddRmAdParms = function(ad)
+{
+for (var i = 0; i < ARM_rtc.RmAdParms.length; i++)
+{
+if (ARM_rtc.RmAdParms[i].paid == ad.paid)
+{
+if(typeof(ARM_onunloadIframe) != 'undefined')
+{
+ARM_onunloadIframe(ad.paid);
+break; 
+}
+else
+return; 
+}
+}
+ad.mods = [];
+var modules = ad.modules.split(",");
+for (var j = 0; j < modules.length; j++)
+{
+ad.mods[ad.mods.length] = {moduleId:modules[j], moduleObject:null, moduleInitialized:false};
+}
+ARM_rtc.RmAdParms[ARM_rtc.RmAdParms.length] = ad;
+}
+}
+if(!ARM_rtc.getByPaid) {
+ARM_rtc.getByPaid = function(paid)
+{
+for (var i = 0; i < ARM_rtc.RmAdParms.length; i++)
+{
+if (ARM_rtc.RmAdParms[i].paid == paid) return ARM_rtc.RmAdParms[i];
+}
+return null;
+}
+}
+(function() {
+if(!window.ARM_TestMode) {
+var adParms = new ARMRedirLib.AdParms({
+a4euserclicks:"this.a4euserclicks[0]= new Array();",
+blContent:"this.blContent[0]= new Array('NMGBLUMUSMUC/MSNN_GEN_firstdate30_012008_300x250.swf',true,'214efb0fd6-e9a9-4f82-81c5-e1e589368377',0,0,0,0,0,7,1,-1,-1,-1,'NMGBLUMUSMUC/MSNN_GEN_companiongif_012008_300x250.gif',false,'21517449a3-007d-47b3-acb3-4a07aeba32d3',-1,false,'',1,0);",
+cap:"100000",
+childmovies:" this.childmovies[0]['movie1'] = 'MSNN_GEN_firstdate30_012008_333x225_lo.flv'; this.childmovies[0]['movie2'] = 'MSNN_GEN_firstdate30_012008_333x225_med.flv'; this.childmovies[0]['movie3'] = 'MSNN_GEN_firstdate30_012008_333x225_hi.flv';",
+clickTrackingURL1:"",
+clickTrackingURL2:"",
+clickTrackingVar1:"",
+clickTrackingVar2:"",
+endDate:"-1",
+filesDir:"rmd.atdmt.com/tl/6ec162060d6b4bbf8027f13238fd13c8/",
+firefoxEnabled:"true",
+freq:"-1",
+idCampaign:"6ec162060d6b4bbf8027f13238fd13c8",
+idCat2Camp:"7c2af4100c114d8a815fd544edaceb8d",
+idMpgMovie:"",
+idTag:"2bae074742d1460c96154cd857e4729c6ec162060d6b4bbf8027f13238fd13c8",
+idWeb:"001aa24f0412475590ad0e904ee3ede2",
+idWebCat:"5571528c58994380bfd2c07904bde66a",
+impoliteDownload:"true",
+impressionTrackingURL2:"",
+impressionTrackingVar1:"",
+impressionTrackingVar2:"",
+locationdata:"this.locationdata[0] = new Array(0,0,250,300,1,2,'Alternate',0,0,250,300,1,2,'Alternate',0,0,250,300,1,2,'Alternate');",
+locationdatafirefox:"this.locationdata[0] = new Array(0,0,250,300,1,2,1,'Alternate',0,0,250,300,1,2,1,'Alternate',0,0,250,300,1,2,0,'Alternate');",
+minBrowserVersion5:"false",
+modules:"ARMRedirLib_c1,ARMPreLib_c1",
+paramadserver:"false",
+paramdynamic:"false",
+paramdynamiclogicmain1:"",
+paramdynamiclogicmain2:"",
+paramdynamiclogicmain3:"",
+paramdynamiclogicmain4:"",
+paramdynamiclogicreminder1:"",
+paramdynamiclogicreminder2:"",
+paramdynamiclogicreminder3:"",
+paramdynamiclogicreminder4:"",
+paramdynamiclogicteaser1:"",
+paramdynamiclogicteaser2:"",
+paramdynamiclogicteaser3:"",
+paramdynamiclogicteaser4:"",
+paramhideselectmain:"true",
+paramhideselectreminder:"false",
+paramhideselectteaser:"false",
+parammain:"false",
+paramnoframesmain:"true",
+paramnoframesreminder:"false",
+paramnoframesteaser:"false",
+paramonload:"false",
+paramonscroll:"true",
+paramreminder:"false",
+paramres_1024x768:"false",
+paramres_1152x864:"false",
+paramres_1280x1024:"false",
+paramres_1600x1200:"false",
+paramres_640x480:"false",
+paramres_800x600:"false",
+showAnyResolution:"true",
+startDate:"6576583656323795712",
+TopLayerVersion:"v2o", 
+useAkamai:"false",
+version:"6"
+});
+ARM_rtc.AddRmAdParms(adParms);
+}
+})();
+if(!window.ARMRedirLib) ARMRedirLib = {};
+if(!ARMRedirLib.client) {
+ARMRedirLib.client = {
+isGenerallySupported: function() {
+if(this.userAgent.isInternetExplorer() && this.platform.isOSX()) return false;
+return (this.userAgent.isSupported() && this.platform.isSupported());
+},
+setPlatformString: function(str) {
+this.platform.setString(str);
+},
+setUserAgentString: function(str) {
+this.userAgent.setString(str);
+}
+};
+ARMRedirLib.client.userAgent = {
+name: null,
+version: {
+major: null,
+minor: null
+},
+getVersion: function() {
+return this.version;
+},
+isFirefox: function()
+{
+return this.name == "Firefox";
+},
+isInternetExplorer: function()
+{
+return this.name == "Internet Explorer";
+},
+isOpera: function()
+{
+return this.name == "Opera";
+},
+isSafari: function()
+{
+return this.name == "Safari";
+},
+isSupported: function() {
+if(this.isFirefox()) {
+var version = this.getVersion();
+if((version.major == 1 && version.minor >= 5) || version.major > 1) return true;
+return false;
+}
+if(this.isInternetExplorer()) {
+var version = this.getVersion();
+if((version.major >= 5 && version.minor >= 5) || version.major > 5) return true;
+return false;
+}
+return false;
+},
+setString: function(str) {
+this.name = null;
+this.version = {major: null, minor: null};
+var matches = {
+"Avant Browser":/.*(Advanced\sBrowser|Avant\sBrowser).*/i,
+"Netscape":/.*(Netscape)[^\/]*\/([0-9]+)\.([0-9]+)/i,
+"Opera":/.*(Opera)\s*\/*\s*([0-9]+)\.([0-9]+)/i,
+"Safari":/.*(Safari)\s*\/*\s*([0-9]+)\.?([0-9]*)/i,
+"Firefox":/.*(Firefox|BonEcho|Minefield)[\s|\/]*([0-9]+)\.([0-9]+)[\.]*([^\s]*)/i,
+"Internet Explorer":/.*(MSIE|Microsoft\sInternet\sExplorer)[\s\/]([0-9]+)\.([0-9]+)/i
+};
+for(browserName in matches) {
+var match = str.match(matches[browserName]);
+if (match) {
+this.name = browserName;
+if (match[2])
+this.version.major = parseInt(match[2]);
+if (match[3])
+this.version.minor = parseInt(match[3]);
+return;
+}
+}
+}
+}
+ARMRedirLib.client.platform = {
+os: null,
+isSupported: function() {
+return (this.isWindows() || this.isOSX());
+},
+isOSX: function() {
+return this.os == "OSX";
+},
+isWindows: function() {
+return this.os == "Windows";
+},
+setString: function(str) {
+this.os = null;
+if(str.match(/^win/i)) this.os = "Windows"; 
+if(str.match(/^mac/i)) this.os = "OSX"; 
+}
+}
+if(navigator) {
+ARMRedirLib.client.setUserAgentString(navigator.userAgent);
+ARMRedirLib.client.setPlatformString(navigator.platform);
+}
+}
+if(ARMRedirLib.client.userAgent.isFirefox()) {
+if (typeof(bFirefoxGlobalVarsLoaded) == 'undefined')
+{
+if (typeof(toplayer_debug_mode) == 'undefined')
+{
+var innerDebugMode = false;
+}
+else
+{
+var innerDebugMode = toplayer_debug_mode;
+}
+var VBEngineEnabled = true;
+var HTTP_CONST = "http://";
+var MOVIE_NAME_PLACE = 0, IS_FROM_DEFAULT_DIR = 1, ID_ADVERTISEMENT_PLACE = 2, IMPRESSION = 3, CLICK = 4, INTERACT = 5, OPEN_FORM = 6, ACTION = 7, MOVIE_FLASH_VERSION = 8, IS_AUTO_CONVERTED = 9, ALTERNATE_MOVIE_NAME = 13,IS_ALT_FROM_DEFAULT_DIR = 14, ALTERNATE_CONTENTS_FLASH_VERSION = 16, IS_ALTERNATE_CONTENTS_EXTERNAL = 17, ALTERNATE_MOVIE_URL = 18, STOP_COMMAND_EXISTS = 19, INDEX_LOCATIONARRAY_ARRAY = 20;
+var AtlasPageLoaded = false;
+var pageLoadDetectorInstance = null;
+var bFirefoxGlobalVarsLoaded = true;
+}
+} else {
+var busterIframeHtml = "";
+if (typeof(ALTERNATE_MOVIE_NAME) == 'undefined')
+{
+if (typeof(toplayer_debug_mode) == 'undefined')
+var innerDebugMode = false;
+else
+var innerDebugMode = toplayer_debug_mode;
+var nonCompliantClient = false;
+var VBEngineEnabled = true;
+var httpConst = "http://";
+var MOVIE_NAME_PLACE = 0, IS_FROM_DEFAULT_DIR = 1, ID_ADVERTISEMENT_PLACE = 2, IMPRESSION = 3, CLICK = 4, INTERACT = 5, OPEN_FORM = 6, ACTION = 7, MOVIE_FLASH_VERSION = 8, IS_AUTO_CONVERTED = 9, ALTERNATE_MOVIE_NAME = 13,IS_ALT_FROM_DEFAULT_DIR = 14, ALTERNATE_CONTENTS_FLASH_VERSION = 16, IS_ALTERNATE_CONTENTS_EXTERNAL = 17, ALTERNATE_MOVIE_URL = 18, STOP_COMMAND_EXISTS = 19, INDEX_LOCATIONARRAY_ARRAY = 20;
+var EXPLORER_MIN_VERSION=5;
+}
+}
+if(!ARMRedirLib.reportA4EBannerActivity) {
+ARMRedirLib.reportA4EBannerActivity = function(externalPubClickURL, A4EReportIMGName , callURLstring , A4EBannerShowTimeStamp)
+{
+var oNewWindow;
+if (callURLstring != '')
+{
+if (innerDebugMode == false)
+{
+if ((callURLstring.indexOf("http://") != 0) && (callURLstring.indexOf('https') != 0))
+oNewWindow = ARMRedirLib.reportA4EBannerActivity.openWindow("http://" + callURLstring);
+else
+oNewWindow = ARMRedirLib.reportA4EBannerActivity.openWindow(callURLstring);
+if (oNewWindow != null)
+{
+if (document.layers)
+{
+document["AtlasPubReportImage"].src=externalPubClickURL;
+}
+else
+{
+ARMRedirLib.reportA4EBannerActivity.sendImageRequest(externalPubClickURL);
+}
+}
+}
+else
+{
+var eventObj = document.createEventObject();
+eventObj.expando = 'exit=1&[No data Available]';
+document.all.TopLayerDebugObject.fireEvent("onchange",eventObj);
+event.cancelBubble = false;
+}
+}
+elapsedShowtime = (new Date()).getTime() - A4EBannerShowTimeStamp;
+}
+ARMRedirLib.reportA4EBannerActivity.openWindow = function(url)
+{
+return window.open(url);
+}
+ARMRedirLib.reportA4EBannerActivity.sendImageRequest = function(url)
+{
+var imageA = new Image();
+imageA.src = url;
+}
+}
+if(!ARMRedirLib.RmAdAlt) {
+ARMRedirLib.RmAdAlt = function(adParms,tplParams)
+{
+this.adParms = adParms;
+adParms.adObjectAlt = this; 
+this.tplParms = this.tplParams = tplParams;
+this.handleAdParamsDefaultValues(this.tplParams); 
+this.bFirefoxEnabled = adParms.firefoxEnabled == "true" ? true : false;
+this.idCampaign = adParms.idCampaign;
+this.paid = adParms.paid;
+this.idWebCat = adParms.idWebCat;
+this.blContent = adParms.blContent;
+this.Version = adParms.version;
+this.blTreeLocation = 0;
+this.uniqueImp = true;
+this.alternateExists = true;
+this.bustingOut = false;
+this.filesDir = adParms.filesDir;
+this.dsPath = "";
+this.impressionTrackingURL1 = '';
+this.clickTrackingURL1 = '';
+this.internalViewReport = "";
+this.internalClickReport = "";
+this.atlasObject = null;
+this.advertiserID = '';
+this.OrigVersion = adParms.version;
+this.TopLayerAdURL = "";
+this.dynamicIframe = false;
+this.unloadableIframe = false;
+this.A4ERecordNumber = -1;
+this.oIframeTag = false;
+this.playWindow = this.loadWindow = new ARMRedirLib.RmAdAlt.WindowWrap(window);
+}
+ARMRedirLib.RmAdAlt.prototype.handleAdParamsDefaultValues = function(tplParams)
+{
+if(tplParams != null) {
+if (tplParams.pub_click_url != null && (tplParams.pub_click_url).indexOf('pub_click_url') != -1)
+tplParams.pub_click_url = '';
+if (tplParams.pub_view_url != null && (tplParams.pub_view_url).indexOf ('pub_view_url') != -1)
+tplParams.pub_view_url = '';
+if (tplParams.buster_url != null && (tplParams.buster_url).indexOf ('buster_url') != -1)
+tplParams.buster_url = '';
+}
+}
+ARMRedirLib.RmAdAlt.prototype.runAlternateAd = function(isCompatibleClient) {
+if (!this.alternateExists) return;
+var alternateTextToWrite = '';
+var tempAlternateMovieName = this.blContent[this.blTreeLocation][ALTERNATE_MOVIE_NAME];
+if (this.blContent[this.blTreeLocation][IS_ALTERNATE_CONTENTS_EXTERNAL])
+{
+tempAlternateMovieName = this.blContent[this.blTreeLocation][ALTERNATE_MOVIE_URL] + tempAlternateMovieName;
+}
+else
+{
+if (this.blContent[this.blTreeLocation][IS_ALT_FROM_DEFAULT_DIR])
+{
+var filesDir = (this.tplParams.TL_files_path ? this.tplParams.TL_files_path : this.filesDir);
+tempAlternateMovieName = filesDir.substring(0, filesDir.indexOf("/tl/")+3) + "/" + tempAlternateMovieName;
+}
+else
+{
+var dsPath = this.dsPath ? this.dsPath : this.tplParams.ds_path;
+dsPath = dsPath.substring(0,dsPath.lastIndexOf("/") + 1);
+tempAlternateMovieName = "http://" + dsPath + tempAlternateMovieName;
+}
+}
+this.A4ERecordNumber = "0";
+var matches = tempAlternateMovieName.match(/\.(gif|jpg|jpeg)/i);
+if(matches && matches[matches.length-1])
+{
+alternateTextToWrite = this.getAlternateAdHtml(tempAlternateMovieName, isCompatibleClient);
+var pub_view_url = (
+this.impressionTrackURL1 ? this.impressionTrackURL1 : (
+this.tplParams.pub_view_url ? this.tplParams.pub_view_url : ''
+)
+);
+if (pub_view_url != '')
+{
+alternateTextToWrite = alternateTextToWrite + "<div style='visibility:hidden;position:absolute;height:0;width:0;top:0;left:0;'><IMG alt='' style='visibility:hidden;position:absolute;top:0;left:0;' name='AtlasPubReportImage' id='AtlasPubReportImage' border=0 width=1 height=1 src='" + pub_view_url + "'></div>";
+}
+document.write(
+alternateTextToWrite + 
+(
+(document.domain.indexOf("ultimateavmag.com") > 0 && document.domain.indexOf("ultimateavmag.com") < 10) ||
+(document.domain.indexOf("weather.com") > 0 && document.domain.indexOf("weather.com") < 10) ? "<BR>" : ""
+)
+);
+}
+}
+ARMRedirLib.RmAdAlt.prototype.documentIsReady = function(w)
+{
+return w.document.readyState == "complete";
+}
+ARMRedirLib.RmAdAlt.prototype.insertAdHtmlInBody = function(w,h)
+{
+w.document.body.insertAdjacentHTML('beforeEnd',h);
+}
+ARMRedirLib.RmAdAlt.prototype.insertAdElementsInBody = function()
+{
+if (this.documentIsReady(this.adPlayWindow))
+{
+this.insertAdHtmlInBody(this.adPlayWindow, this.adFormHtml);
+this.insertAdHtmlInBody(this.adPlayWindow, this.adScriptHtml);
+}
+else
+{
+var obj = this;
+window.setTimeout(function(){obj.insertAdElementsInBody()}, 250);
+}
+}
+ARMRedirLib.RmAdAlt.prototype.getAlternateAdHtml = function(tempAlternateMovieName, isCompatibleClient)
+{
+var timeStamp = (new Date()).getTime();
+var isFirefox = ARMRedirLib.client.userAgent.isFirefox();
+var visibility = (!isCompatibleClient || innerDebugMode == true ? "visible" : "hidden");
+var rmAdAlt = this;
+var getReportCall = function()
+{
+return "ARMRedirLib.reportA4EBannerActivity(\"" +
+rmAdAlt.tplParams.pub_click_url +
+"\",\"orange_alternate_" +
+rmAdAlt.paid +
+"_rep\", \"" +
+rmAdAlt.tplParams.click_url_t +
+"1\", " +
+timeStamp +
+")";
+}
+return "" +
+"<a href='javascript:" +
+getReportCall() +
+"'><img alt='' " +
+(isFirefox && isCompatibleClient ? "onload='handleAlternateOnload(c6ec162060d6b4bbf8027f13238fd13c8_5571528c58994380bfd2c07904bde66a_alt_obj)'" : "") +
+" onclick='" +
+getReportCall() +
+"' usemap=\"#AtlasAltMap" +
+(isFirefox ? "" : "_" + this.paid) +
+"\" style='visibility:" +
+visibility +
+"' border=0 name='orange_alternate_" +
+this.paid +
+"' id='orange_alternate_" +
+this.paid +
+"' src='" +
+tempAlternateMovieName +
+"?spd=" +
+this.Version +
+"'></a>" +
+"<map name=\"AtlasAltMap" +
+(isFirefox ? "" : "_" + this.paid) +
+"\"><area href='javascript:" +
+getReportCall() +
+"' shape='default'></map>" +
+"<div style='visibility:hidden;position:absolute;height:0;width:0;top:0;left:0;'>" +
+(isFirefox ?
+(this.tplParams.atlas_view_url.indexOf("jview") != -1 ? "<script src='" + this.tplParams.atlas_view_url + "'></script>" : "") +
+(this.tplParams.atlas_view_url.indexOf("iview") != -1 ? "<iframe src='" + this.tplParams.atlas_view_url + "'></iframe>" : "")
+:
+"<img style='visibility:hidden;position:absolute;top:0;left:0;'  border=0 width=1 height=1 name='" +
+"orange_alternate_" + this.paid +
+"_rep' id='" +
+"orange_alternate_" + this.paid +
+"_rep' src='" +
+this.tplParams.atlas_view_url + "'>"
+) +
+"</div>";
+}
+ARMRedirLib.RmAdAlt.WindowWrap = function(window)
+{
+this.win = window;
+}
+}
+if(!ARMRedirLib.client.isGenerallySupported()) {
+if(window.__atlas_ad_info && __atlas_ad_info["2bae074742d1460c96154cd857e4729c6ec162060d6b4bbf8027f13238fd13c8"] && ARM_rtc.getByPaid("2bae074742d1460c96154cd857e4729c6ec162060d6b4bbf8027f13238fd13c8")) {
+var rmAdAlt = new ARMRedirLib.RmAdAlt(ARM_rtc.getByPaid("2bae074742d1460c96154cd857e4729c6ec162060d6b4bbf8027f13238fd13c8"),__atlas_ad_info["2bae074742d1460c96154cd857e4729c6ec162060d6b4bbf8027f13238fd13c8"]);
+rmAdAlt.runAlternateAd(false);
+}
+} else {
+var moduleId = "ARMRedirLib_c1";
+ARMRedirLib.client.supportsRichMediaAd = function(rmAdAlt) {
+if(rmAdAlt.playWindow.isMsnHotmail() && (!this.os.isWindows() || !this.platform.isInternetExplorer() )) return false;
+if(!ARMRedirLib.FlashPlayer.IsVersionSupported(rmAdAlt.blContent[rmAdAlt.blTreeLocation][MOVIE_FLASH_VERSION])) return false;
+return this.isGenerallySupported();
+};
+ARMRedirLib.client.scrollbarWidth = 16;
+ARMRedirLib.client.getViewportElement = function()
+{
+return document.compatMode == "CSS1Compat" ? document.documentElement : document.body;
+}
+ARMRedirLib.client.getHeight = function() {
+if(window.innerHeight || window.innerHeight == 0) {
+if(window.innerHeight >= this.scrollbarWidth) return window.innerHeight - this.scrollbarWidth;
+return window.innerHeight;
+}
+if(this.getViewportElement().clientHeight || this.getViewportElement().clientHeight == 0) return this.getViewportElement().clientHeight;
+return null;
+}
+ARMRedirLib.client.getWidth = function() {
+if(window.innerWidth || window.innerWidth == 0) {
+if(window.innerWidth >= this.scrollbarWidth) return window.innerWidth - this.scrollbarWidth;
+return window.innerWidth;
+}
+if(this.getViewportElement().clientWidth || this.getViewportElement().clientWidth == 0) return this.getViewportElement().clientWidth;
+return null;
+}
+ARMRedirLib.client.getScrollHeight = function() {
+return this.getViewportElement().scrollHeight;
+}
+ARMRedirLib.client.getScrollWidth = function() {
+return this.getViewportElement().scrollWidth;
+}
+ARMRedirLib.client.getScrollLeft = function() {
+return this.getViewportElement().scrollLeft;
+}
+ARMRedirLib.client.getScrollTop = function() {
+return this.getViewportElement().scrollTop;
+}
+ARMRedirLib.AD_PARAMS_DELIM = "adparamdelim";
+ARMRedirLib.RmAdAlt.prototype.getSerializedTplParams = function()
+{
+var serializedParams = '';
+for (var paramName in this.tplParams)
+{
+serializedParams += (paramName + "=" + this.tplParams[paramName]+ ARMRedirLib.AD_PARAMS_DELIM);
+}
+serializedParams = serializedParams.substr(0,(serializedParams.length - ARMRedirLib.AD_PARAMS_DELIM.length));
+return escape(serializedParams);
+}
+ARMRedirLib.getTplParamsByPaid = function(paid)
+{
+if(!__atlas_ad_info[paid] && window.oAdsSerializedParams && window.oAdsSerializedParams[paid]) {
+__atlas_ad_info[paid] = {};
+var oRegExpDelimiter = new RegExp(ARMRedirLib.AD_PARAMS_DELIM);
+var oRegExpSeparator = new RegExp("([^\\=]*)=(.*)","i");
+var sSerializedParams = unescape(oAdsSerializedParams[paid]);
+var aParams = sSerializedParams.split(oRegExpDelimiter);
+var aParam = new Array();
+for (var index = 0; index < aParams.length; index++)
+{
+aParam = aParams[index].match(oRegExpSeparator);
+__atlas_ad_info[paid][aParam[1]] = aParam[2];
+}
+}
+return __atlas_ad_info[paid];
+}
+ARMRedirLib.RmAdAlt.prototype.inIframe = function()
+{
+return (window.self != window.top);
+}
+ARMRedirLib.RmAdAlt.prototype.getParamaterContainingForm = function() {
+var returnString = "<form name='atlasTPLinfo" + this.paid + "' id='atlasTPLinfo" + this.paid + "'>";
+for (propName in this.atlasObject)
+{
+returnString += "<input type=hidden name=" + propName + " value='" + escape(this.atlasObject[propName]) + "'></input>";	
+}
+return escape(returnString + "</form>");
+}
+ARMRedirLib.RmAdAlt.prototype.setUpDynamicIframe = function() {
+var rmAdAlt = this;
+window.onerror = function(){return rmAdAlt.handleDomainError();}
+if (this.inIframe())
+if (ARMRedirLib.Domain.GetDomain()) {
+if (Iframes.isSelfLocationSameAsTopLocation() || this.loadWindow.inDynamicIframe())
+{
+this.dynamicIframe = true;
+if(this.loadWindow.inAjaxDynamicIframe())
+{
+this.unloadableIframe = true;
+AdRootElement.setAdRootElement(this);
+var elem = this.getAdRootElement();
+AdRootElement.setDivsOverflowToVisible(elem);
+}
+}
+}
+window.onerror = null;
+}
+ARMRedirLib.RmAdAlt.prototype.setBaseLinkTarget = function() {
+if (this.alternateExists && !this.playWindow.document.layers)
+{
+var baseElements = this.playWindow.document.getElementsByTagName('BASE');
+if (baseElements[0]) baseElements[0].target = "_self";
+}
+}
+ARMRedirLib.RmAdAlt.WindowWrap = function(win) {
+this.win = win;
+this.document = this.win.document;
+this.frames = this.win.frames;
+}
+ARMRedirLib.RmAdAlt.WindowWrap.prototype.inAjaxDynamicIframe = function() {
+return (this.inMsnAjaxDynamicIframe() || this.inAOLAjaxDynamicIframe());
+}
+ARMRedirLib.RmAdAlt.WindowWrap.prototype.inDynamicIframe = function() {
+return (this.inMsnDynamicIframe() || this.inAOLDynamicIframe());
+}
+
+ARMRedirLib.RmAdAlt.WindowWrap.prototype.inMsnDynamicIframe = function() {
+return ( typeof(this.win.inDapIF) != "undefined" && this.win.inDapIF );
+}
+ARMRedirLib.RmAdAlt.WindowWrap.prototype.inMsnAjaxDynamicIframe = function() {
+return ( typeof(this.win.inDapMgrIf) != "undefined" && this.win.inDapMgrIf );
+}
+
+ARMRedirLib.RmAdAlt.WindowWrap.prototype.inAOLDynamicIframe = function() {
+return ( typeof(this.win.inFIF) != "undefined" && this.win.inFIF );
+}
+ARMRedirLib.RmAdAlt.WindowWrap.prototype.inAOLAjaxDynamicIframe = function()
+{
+var result = false;
+if (typeof(this.win.inFIF) != "undefined" && this.win.inFIF)
+{
+if (this.win.parent.adsAJAX)
+{
+result = true;
+}
+}
+return result;
+}
+ARMRedirLib.RmAdAlt.WindowWrap.prototype.inAOLAjaxWhiteList = function()
+{
+var result = false;
+if (document.referrer)
+{
+var ref = document.referrer;
+if (ref.indexOf("browsertest.web.aol.com") != -1)
+{
+result = true;
+}
+}
+return result;
+}
+ARMRedirLib.RmAdAlt.WindowWrap.prototype.isMsnHotmail = function() {
+return (document.referrer && document.referrer.match(/mail\.live\.com/));
+}
+ARMRedirLib.RmAdAlt.WindowWrap.prototype.inMsnHotmailOnNonWindowsOs = function() { 
+return (this.isMsnHotmail() && !ARMRedirLib.client.platform.isWindows());
+}
+function UserAgentIsFireFox(userAgent)
+{
+if(userAgent) ARMRedirLib.client.setUserAgentString(userAgent);
+var version = ARMRedirLib.client.userAgent.getVersion();
+if (ARMRedirLib.client.userAgent.isFirefox() &&
+(version.major == 1 && version.minor >= 5 || version.major > 1)) {
+return true;
+}
+return false;
+}
+function Alternate() {}
+Alternate.Exists = function(destObj)
+{
+var sAlternateAdName = destObj.blContent[destObj.blTreeLocation][ALTERNATE_MOVIE_NAME];
+if (sAlternateAdName == '' || sAlternateAdName == null || sAlternateAdName == 'null' ||
+sAlternateAdName == -1 || sAlternateAdName == '-1')
+{
+return false;
+}
+else
+{
+return true;
+}
+}
+Alternate.SetStylePosition = function(paid)
+{
+
+var altImage = ARMRedirLib.Dom.GetObj("orange_alternate_" + paid);
+var element = altImage;
+if (element)
+{
+while(element.offsetParent)
+{
+element = element.offsetParent;
+if (element.tagName.toLowerCase() == "table" && element.style.display == "inline")
+{
+altImage.style.position = 'relative';
+break;
+}
+}
+}
+}
+function IframesPrivate() {}
+IframesPrivate.canAccessNameProperty = function(frameObject)
+{
+try
+{
+frameObject.name;
+}
+catch(e)
+{
+return false;
+}
+return true;
+}
+IframesPrivate.frameNameContainsSearchString = function(frameObject, iframeNameSubstring)
+{
+if(IframesPrivate.canAccessNameProperty(frameObject))
+{
+if(frameObject.name.indexOf(iframeNameSubstring) != -1)
+{
+return true;
+}
+}
+return false;
+}
+function Iframes() {}
+Iframes.isSelfLocationSameAsTopLocation = function()
+{
+return (top.location.href == self.location.href);
+}
+Iframes.getDocumentReferrer = function()
+{
+return document.referrer;
+}
+Iframes.getIframeBusterUrl = function(sIframeBusterUrl)
+{
+var sDocumentReferrer = "";
+var DEFAULT_IFRAME_BUSTER_PATH = "atlas/atlas_rm.htm";
+var sIframeBusterPath = DEFAULT_IFRAME_BUSTER_PATH;
+try
+{
+sDocumentReferrer = Iframes.getDocumentReferrer();
+}
+catch(e)
+{
+}
+if (sDocumentReferrer == "")
+{
+return sIframeBusterUrl;
+}
+var regExpReferrerDomain = new RegExp("([http[s]*[\:\/\/]*]*[^\/]*\/).*","i");
+var sReferrerDomain = sDocumentReferrer.match(regExpReferrerDomain)[1];
+if (sIframeBusterUrl != "")
+{
+var regExpIframeBusterPath = new RegExp("(http[s]?\:\/\/[^\/]+[\/]|[^\.]+[\.]+[^\/]+[\/])*(.*)" ,"i");
+sIframeBusterPath = sIframeBusterUrl.match(regExpIframeBusterPath)[2];
+}
+if (sReferrerDomain.length > 0 &&
+sReferrerDomain.substr(sReferrerDomain.length - 1) == "/" &&
+sIframeBusterPath.length > 0 &&
+sIframeBusterPath.substr(0, 1) == "/")
+{
+sIframeBusterPath = sIframeBusterPath.substr(1);
+}
+return sReferrerDomain + sIframeBusterPath;
+}
+Iframes.recurseFramesForBustingIframe = function(baseFrame, bustingIframeNameSubstring)
+{
+if(IframesPrivate.frameNameContainsSearchString(baseFrame, bustingIframeNameSubstring))
+{
+return baseFrame;
+}
+for(var i=0; i<baseFrame.length; i++)
+{
+if(IframesPrivate.frameNameContainsSearchString(baseFrame[i], bustingIframeNameSubstring))
+{
+return baseFrame[i];
+}
+if(baseFrame[i].length > 0)
+{
+var recursionResult = Iframes.recurseFramesForBustingIframe(baseFrame[i], bustingIframeNameSubstring);
+if(recursionResult != null)
+{
+return recursionResult;
+}
+}
+}
+return null;
+}
+Iframes.getCrossDomainBustedIframe = function(bustingIframeNameSubstring)
+{
+var iframes = ARMRedirLib.Dom.GetObjsByTagName('iframe');
+for(var i=0; i<iframes.length; i++)
+{
+var recursionResult = ARMRedirLib.Iframes.recurseFramesForBustingIframe(iframes[i].contentWindow, bustingIframeNameSubstring);
+if(recursionResult != null)
+{
+return iframes[i];
+}
+}
+return null;
+}
+function DomPrivate() {}
+DomPrivate.createScriptElement = function()
+{
+var script = document.createElement("SCRIPT");
+script.type = "text/javascript";
+return script;
+}
+DomPrivate.addScript = function(targetNode, data, isInline)
+{
+var script = DomPrivate.createScriptElement();
+if(isInline)
+{
+script.text = data;
+}
+else
+{
+script.src = data;
+}
+targetNode.appendChild(script);
+}
+function Dom() {}
+Dom.AddExternalScript = function(targetNode, scriptSrc)
+{
+DomPrivate.addScript(targetNode, scriptSrc, false);
+}
+Dom.AddInlineScript = function(targetNode, scriptText)
+{
+DomPrivate.addScript(targetNode, scriptText, true);
+}
+Dom.AddHtmlForAndEventInlineScript = function(targetNode, scriptText, htmlFor, eventAttribute)
+{
+var script = DomPrivate.createScriptElement();
+script.text = scriptText;
+script.htmlFor = htmlFor;
+script.event = eventAttribute;
+targetNode.appendChild(script);
+}
+Dom.InsertHtmlAfterBegin = function(targetNode, htmlText)
+{
+if(targetNode.insertAdjacentHTML) {
+targetNode.insertAdjacentHTML('afterBegin', htmlText);
+} else {
+var divContainer = document.createElement("DIV");
+divContainer.innerHTML = htmlText;
+this.InsertChildrenAfterBegin(targetNode,divContainer);
+divContainer = undefined;
+}
+}
+Dom.InsertChildrenAfterBegin = function(targetNode,oldParent)
+{
+if(targetNode.childNodes.length == 0)
+{
+while(oldParent.childNodes[0])
+{
+targetNode.appendChild(oldParent.childNodes[0]);
+}
+}
+else
+{
+var previousFirst = targetNode.childNodes[0];
+while(oldParent.childNodes[0])
+{
+targetNode.insertBefore( oldParent.childNodes[0], previousFirst );
+}
+}
+}
+Dom.InsertScript = function(oTargetDocument, sTargetTag, sSrcOrText, sScriptType, sForAttribute, sEventAttribute)
+{
+var oTargetDocumentAndTag = oTargetDocument.getElementsByTagName(sTargetTag)[0];
+var oScript = oTargetDocument.createElement("SCRIPT");
+oScript.type = "text/javascript";
+oScript.defer = "true";
+if (typeof(sScriptType)=='undefined')
+{
+var sScriptType = "src";
+}
+if ((typeof(sForAttribute) != 'undefined') && (typeof(sEventAttribute) != 'undefined'))
+{
+oScript.htmlFor = sForAttribute;
+oScript.event = sEventAttribute;
+}
+oScript[sScriptType] = sSrcOrText;
+oTargetDocumentAndTag.appendChild(oScript);
+}
+Dom.InsertAdjacentHtml = function(oTargetDocument, sTargetTag, sTagsAsString, doUnescape)
+{
+var oTargetDocumentAndTag = oTargetDocument.getElementsByTagName(sTargetTag)[0];
+var oDvStringContainer = oTargetDocument.createElement("DIV");
+oDvStringContainer.name = "dvStringContainer";
+oDvStringContainer.id = "dvStringContainer";
+oDvStringContainer.style.visibility = "hidden";
+oTargetDocumentAndTag.appendChild(oDvStringContainer);
+if (doUnescape)
+{
+oDvStringContainer.innerHTML = unescape(sTagsAsString);
+}
+else
+{
+oDvStringContainer.innerHTML = sTagsAsString;
+}
+for (i=0 ; i < oDvStringContainer.childNodes.length ; i++)
+{
+oTargetDocumentAndTag.appendChild(oDvStringContainer.childNodes[i]);
+}
+oTargetDocumentAndTag.removeChild(oDvStringContainer);
+}
+Dom.GetObj = function (name)
+{
+var obj;
+if (document.getElementById)
+{
+obj = document.getElementById(name);
+if (obj == null)
+{
+var aObjects = document.getElementsByName(name);
+if (aObjects.length != 0)
+{
+obj = aObjects[0];
+}
+else
+{
+obj = null;
+}
+}
+}
+else if (document.all)
+{
+obj = document.all[name];
+}
+else if (document.layers)
+{
+if (document.layers[name])
+{
+obj = document.layers[name];
+obj.style = document.layers[name];
+}
+else
+{
+obj = document.layers.testP.layers[name];
+obj.style = document.layers.testP.layers[name];
+}
+}
+return obj;
+}
+Dom.GetObjsByTagName = function(TagName)
+{
+var objs;
+if(document.getElementsByTagName)
+{
+objs = document.getElementsByTagName(TagName);
+}
+return objs;
+}
+Dom.AddEvent = function (object, event, funct, capturing)
+{
+if(!capturing)
+{
+capturing = false;
+}
+if(object.addEventListener)
+{
+object.addEventListener(event, funct, capturing);
+}
+else if(object.attachEvent)
+{
+object.attachEvent("on" + event, funct);
+}
+}
+Dom.RemoveEvent = function(object, event, funct)
+{
+if (object.removeEventListener)
+{
+object.removeEventListener(event, funct, false);
+}
+else if (object.detachEvent)
+{
+object.detachEvent("on" + event, funct);
+}
+}
+function getElementPosition(element)
+{
+var coord = { x:0, y:0 };
+while (element)
+{
+coord.x += element.offsetLeft;
+coord.y += element.offsetTop;
+var leftBorderWidth = "NaN";
+var topBorderWidth = "NaN";
+if(element.currentStyle)
+{
+if (element.currentStyle.borderLeftWidth)
+{
+leftBorderWidth = parseInt(element.currentStyle.borderLeftWidth);
+}
+if (element.currentStyle.borderTopWidth)
+{
+topBorderWidth = parseInt(element.currentStyle.borderTopWidth);
+}
+}
+else if(element.style)
+{
+if(element.style.borderLeftWidth)
+{
+leftBorderWidth = parseInt(element.style.borderLeftWidth);
+}
+if(element.style.borderTopWidth)
+{
+topBorderWidth = parseInt(element.style.borderTopWidth);
+}
+}
+if(!isNaN(leftBorderWidth))
+{
+coord.x += leftBorderWidth;
+}
+if(!isNaN(topBorderWidth))
+{
+coord.y += topBorderWidth;
+}
+element = element.offsetParent;
+}
+return coord;
+}
+function FlashPlayer() {}
+FlashPlayer.IsVersionSupported = function(RequiredVersion)
+{
+var InstalledVersion = 0;
+if (navigator.plugins && navigator.plugins.length > 0)
+{
+var plugin = navigator.plugins["Shockwave Flash"];
+if (plugin)
+{
+if (plugin.description)
+{
+var re = new RegExp("-?[0-9]+\.[0-9]+");
+InstalledVersion = parseInt(plugin.description.match(re)[0]);
+}
+}
+}
+else
+{
+try
+{
+var obj = new ActiveXObject("ShockwaveFlash.ShockwaveFlash." + RequiredVersion);
+if (typeof(obj) != 'undefined')
+{
+InstalledVersion = RequiredVersion;
+}
+}
+catch(e)
+{
+}
+}
+return InstalledVersion >= RequiredVersion;
+}
+function ClientCapabilities() {}
+ClientCapabilities.checkScreenResolution = function(destObj)
+{
+var nScreenSize = ARMRedirLib.ClientCapabilities.ScreenSize();
+nScreenWidth = nScreenSize.width;
+nScreenHeight = nScreenSize.height;
+if (destObj.showAnyResolution)
+{
+return true;
+}
+var bResolution = destObj["res_" + String(nScreenWidth) + "x" + String(nScreenHeight)];
+if (typeof(bResolution) == "undefined")
+{
+return false;
+}
+else
+{
+return bResolution;
+}
+}
+ClientCapabilities.ScreenSize = function()
+{
+var screenSize = { width:screen.width, height:screen.height };
+return screenSize;
+}
+ClientCapabilities.getBrowserVesion = function()
+{
+return navigator.appVersion;
+}
+ClientCapabilities.getBrowserUserAgent = function()
+{
+return navigator.userAgent;
+}
+function AdRootElement() {}
+AdRootElement.setAdRootElement = function(adObjAlt)
+{
+adObjAlt.adRootElement = null;
+if (adObjAlt.unloadableIframe)
+{
+for (var iwin = window;
+iwin != window.top && iwin.frameElement.tagName != "FRAME" && adObjAlt.adRootElement == null;
+iwin = iwin.parent)
+{
+var frames = iwin.parent.document.getElementsByTagName("iframe");
+for (var i = 0; i < frames.length; i++)
+{
+var element = frames[i];
+if (element == iwin.frameElement)
+{
+var rootElement = element.parentNode;
+if (rootElement.tagName != "BODY")
+{
+adObjAlt.adRootElement = rootElement;
+}
+break;
+}
+}
+}
+}
+}
+AdRootElement.setDivsOverflowToVisible = function(adRootElement)
+{
+if(adRootElement)
+{
+adRootElement.style.overflow = "visible";
+if(adRootElement.parentNode)
+{
+adRootElement.parentNode.style.overflow = "visible";
+}
+}
+}
+function Domain() {}
+Domain.GetDomain = function()
+{
+return window.top.document.domain;
+}
+ARMRedirLib.moduleId = moduleId;
+ARMRedirLib.Alternate = Alternate;
+ARMRedirLib.Iframes = Iframes;
+ARMRedirLib.Dom = Dom;
+ARMRedirLib.GetElementPosition = getElementPosition;
+ARMRedirLib.UserAgentIsFireFox = UserAgentIsFireFox;
+ARMRedirLib.FlashPlayer = FlashPlayer;
+ARMRedirLib.ClientCapabilities = ClientCapabilities;
+ARMRedirLib.AdRootElement = AdRootElement;
+ARMRedirLib.Domain = Domain;
+}
+if(ARMRedirLib.client.isGenerallySupported()) {
+function handleError()
+{
+}
+function runAlternateAd(destObj, isCompatibleClient)
+{
+destObj.runAlternateAd(isCompatibleClient);
+destObj.setBaseLinkTarget();
+return true;
+}
+function ARM_AdObjAltConstructor(parms,tplParams)
+{
+var obj = new ARMRedirLib.RmAdAlt(parms,tplParams);
+obj.adRootElement = null;
+obj.Run = function()
+{
+if(ARMRedirLib.client.userAgent.isFirefox() && this.bFirefoxEnabled)
+{
+if (this.loadWindow.inAOLAjaxDynamicIframe()|| this.loadWindow.inMsnHotmailOnNonWindowsOs())
+{
+runAlternateAd(obj, false);
+return;
+}
+else
+{
+var filesDir = __atlas_ad_info[this.paid].TL_files_path;
+RedirectToFirefox(filesDir,this.paid);
+return;
+}
+}
+generalSetup(this, true);
+if (!nonCompliantClient)
+{
+this.setUpDynamicIframe();
+generalValidation(this, true);
+}
+}
+obj.writeBusterHtml = function()
+{
+ARMRedirLib.Alternate.SetStylePosition(this.paid);
+if (this.bustingOut)
+{
+var tempSWFObjectName = new String("orange_alternate_" + this.paid);
+var altPosition = ARMRedirLib.GetElementPosition(document.getElementById(tempSWFObjectName));
+var ol = altPosition.x;
+var ot = altPosition.y;
+if (!this.dynamicIframe)
+{
+busterIframeHtml = busterIframeHtml.replace("a4eol=a4edelim", "a4eol="+ol+"a4edelim");
+busterIframeHtml = busterIframeHtml.replace("a4eot=a4edelim", "a4eot="+ot+"a4edelim");
+if((document.readyState == "complete" || document.readyState == "interactive") && document.body)
+{
+ARMRedirLib.Dom.InsertHtmlAfterBegin(this.getAdRootElement(), busterIframeHtml);
+}
+else
+{
+document.write(busterIframeHtml);
+document.close();
+}
+}
+else
+{
+busterIframeHtml = busterIframeHtml.replace("a4eol=a4edelim", "a4eol="+ol+"a4edelim");
+busterIframeHtml = busterIframeHtml.replace("a4eot=a4edelim", "a4eot="+ot+"a4edelim");
+busterIframeHtml.match("name='(.*?)'");
+var atlasIfrName = RegExp.$1;
+
+var adPaid = this.paid;
+if (adPaid.indexOf("3b4e2325943a48b9b90b7fc97f2eb3b4efe8f1f704f3404491bf4faf7bc5ba70") >= 0 ||
+adPaid.indexOf("3b4e2325943a48b9b90b7fc97f2eb3b425c6feb5c5ab42c4bfddd940520eb529") >= 0 ||
+adPaid.indexOf("d1c81f8b536144b58d8bd81b0ce19433efe8f1f704f3404491bf4faf7bc5ba70") >= 0 ||
+adPaid.indexOf("d1c81f8b536144b58d8bd81b0ce1943325c6feb5c5ab42c4bfddd940520eb529") >= 0)
+{
+var varStr = getBusterQueryString(this, this.uniqueA4EIdForTag2, this.innerTempTopLayerAdURL, this.imageServerURL);
+varStr = varStr.replace("a4eol=a4edelim", "a4eol="+ol+"a4edelim");
+varStr = varStr.replace("a4eot=a4edelim", "a4eot="+ot+"a4edelim");
+var imgSrvStart = varStr.indexOf("imgSrv");
+var workStr = new String (varStr);
+var imgSrv = varStr.substr(imgSrvStart+7);
+var A4E_URL = imgSrv + workStr.substr(0,imgSrvStart-1);
+var uniqueIframeAdId = workStr.substring(workStr.indexOf("/")+1,workStr.indexOf("."));
+var tempScript = new String("<input type=hidden width=260 height=20 name=ad4Input"+uniqueIframeAdId+" value=" + "\"" + A4E_URL + "\"><script DEFER LANGUAGE='JavaScript' src='' id='ad4everscript2"+uniqueIframeAdId+"'><\/script><script LANGUAGE='JavaScript' DEFER src='' id='ad4everscript"+uniqueIframeAdId+"'>var a4eIframe=true; document.all.ad4everscript2"+uniqueIframeAdId+".src = document.all.ad4Input"+uniqueIframeAdId+".value;<\/script>");
+var ifrName = this.getParamaterContainingForm();
+this.adPlayWindow = top;
+this.adFormHtml = unescape(ifrName);
+this.adScriptHtml = tempScript;
+this.insertAdElementsInBody();
+}
+else
+{
+if((document.readyState == "complete" || document.readyState == "interactive") && document.body)
+{
+var bodyOfIframe = document.body;
+ARMRedirLib.Dom.InsertHtmlAfterBegin(bodyOfIframe, busterIframeHtml);
+}
+else
+{
+document.write(busterIframeHtml);
+document.close();
+}
+}
+}
+}
+}
+obj.getAdRootElement = function()
+{
+if (!this.adRootElement)
+{
+this.adRootElement = document.getElementsByTagName("body")[0];
+}
+return this.adRootElement;
+}
+obj.handleDomainError = function()
+{
+window.onerror = null;
+generalValidation(this, true);
+return true;
+}
+obj.runAlt = function()
+{
+var paid = obj.paid;
+var tempSWFObjectName = new String("orange_alternate_" + paid);
+var altObj = document.getElementById(tempSWFObjectName);
+if (altObj)
+altObj.style.visibility = 'visible';
+}
+obj.onunloadIframe = function()
+{
+if (this.unloadableIframeParent.ARM_onunloadIframe)
+{
+this.unloadableIframeParent.ARM_onunloadIframe(this.paid);
+}
+}
+return obj;
+}
+function RedirectToFirefox(filesDir, paid)
+{
+var script = getRedirectScript(filesDir, paid)
+document.write(script);
+}
+function getRedirectScript(filesDir, paid)
+{
+var redirectScript = "";
+redirectScript = "<script src='" + filesDir + paid + ".ff.js?ver=" + TopLayer_version + "'></scr" + "ipt>";
+return redirectScript;
+}
+function generalSetup(destObj, VBEngineEnabled)
+{
+destObj.alternateExists = ARMRedirLib.Alternate.Exists(destObj);
+var appVersion = new String(ARMRedirLib.ClientCapabilities.getBrowserVesion());
+populateAtlasAdObject(destObj);
+if (appVersion.indexOf("Windows") == -1 )
+nonCompliantClient = true;
+var pos1 = appVersion.indexOf("MSIE");
+if (pos1 == -1)
+nonCompliantClient = true;
+var fappVersion = new String(appVersion.substring(pos1));
+var a4e_ver1 = fappVersion.substring(5,8);
+var a4e_ver = parseFloat(a4e_ver1);
+if (a4e_ver < EXPLORER_MIN_VERSION)
+nonCompliantClient = true;
+if (typeof(window.opera)=="object")
+if (window.opera != null)
+nonCompliantClient = true;
+if(appVersion.indexOf("Safari") != -1)
+nonCompliantClient = true;
+if (!ARMRedirLib.FlashPlayer.IsVersionSupported(destObj.blContent[destObj.blTreeLocation][MOVIE_FLASH_VERSION]))
+nonCompliantClient = true;
+if (nonCompliantClient)
+{
+runAlternateAd(destObj, !nonCompliantClient);
+return true;
+}
+}
+function generalValidation(destObj, VBEngineEnabled)
+{
+var newTopLayerAdURL;
+var innerTempTopLayerAdURL = "";
+var uniqueA4EIdForTag2 = new String (destObj.idCampaign + "\/" + destObj.paid + ".js");
+var varStr = "";
+destObj.TopLayerAdURL = destObj.tempTopLayerAdURL + "?spd=" + destObj.Version + "&atdmt=";
+newTopLayerAdURL = destObj.TopLayerAdURL;
+window.onerror = null;
+for (i=0;i<document.scripts.length;i++)
+{
+if (document.scripts(i).src.indexOf(uniqueA4EIdForTag2) >-1)
+varStr = new String(document.scripts(i).src);
+}
+if ((varStr != null) && (varStr.length != 0))
+{
+varStr = varStr.split(".js?");
+for (i=1;i<varStr.length;i++)
+{
+innerTempTopLayerAdURL = innerTempTopLayerAdURL + varStr[i];
+}
+innerTempTopLayerAdURL = innerTempTopLayerAdURL.substr(innerTempTopLayerAdURL.indexOf("atdmt=")+7);
+newTopLayerAdURL = destObj.TopLayerAdURL + innerTempTopLayerAdURL;
+}
+if (destObj.inIframe())
+destObj.bustingOut = true;
+if (newTopLayerAdURL.indexOf("a4eflag") != -1)
+{
+innerTempTopLayerAdURL = "?spd=" + destObj.Version + "&atdmt=" + innerTempTopLayerAdURL;
+destObj.bustingOut = false;
+var tempLocationString = escape(String(document.location));
+var A4ERecordNumberParam = tempLocationString.indexOf("A4ERecordNumber=");
+if (A4ERecordNumberParam != -1)
+{
+var endOfString = tempLocationString.indexOf("a4edelim",A4ERecordNumberParam+1);
+if (endOfString > -1)
+{
+A4ERecordNumberParam = tempLocationString.substring(A4ERecordNumberParam+16,endOfString);
+}
+newTopLayerAdURL = newTopLayerAdURL + A4ERecordNumberParam;
+}
+}
+else
+{
+if (!runAlternateAd(destObj, !nonCompliantClient))
+return false;
+if (destObj.A4ERecordNumber != -1)
+{
+var temAddonStr = "A4ERecordNumber=" + destObj.A4ERecordNumber + "a4edelim";
+innerTempTopLayerAdURL = innerTempTopLayerAdURL + temAddonStr;
+newTopLayerAdURL = newTopLayerAdURL + temAddonStr;
+}
+}
+if (destObj.bustingOut)
+{
+if (destObj.alternateExists)
+{
+setOnloadHandlerForAltImageLoaded(destObj);
+}
+if (typeof(a4eHTM) == 'undefined')
+{
+if (destObj.tempTopLayerAdURL != "")
+{
+var a4eHTM = newTopLayerAdURL.indexOf("a4ehtm=");
+if (a4eHTM > -1)
+{
+var endOfString = newTopLayerAdURL.indexOf("a4edelim",a4eHTM+1);
+if (endOfString > -1)
+{
+a4eHTM = newTopLayerAdURL.substring(a4eHTM+7,endOfString);
+if (a4eHTM.length >1)
+{
+a4eHTM = ARMRedirLib.Iframes.getIframeBusterUrl(a4eHTM);
+}
+else
+{
+if (!destObj.dynamicIframe)
+destObj.bustingOut = false;
+}
+}
+}
+else
+{
+if (!destObj.dynamicIframe)
+destObj.bustingOut = false; 
+}
+}
+else
+{
+if (!destObj.dynamicIframe)
+destObj.bustingOut = false;
+}
+}
+else
+if ((a4eHTM.indexOf('http') != 0) && (a4eHTM.indexOf('https') != 0))
+a4eHTM = httpConst + a4eHTM;
+}
+if (typeof(a4eIframe) != 'undefined')
+destObj.oIframeTag = a4eIframe;
+if (destObj.bustingOut)
+{
+if (destObj.alternateExists)
+{
+if (!document.layers)
+{
+var oBaseColl = document.all.tags('BASE');
+if (oBaseColl.length > 0)
+oBaseColl[0].target = "_self";
+}
+}
+if (destObj.adRootElement)
+{
+destObj.atlasObject.adRootElementId = destObj.adRootElement.id;
+}
+if (destObj.dynamicIframe)
+{ 
+addUniqueIdToParentIframe(destObj.paid);
+}
+destObj.innerTempTopLayerAdURL = innerTempTopLayerAdURL;
+destObj.imageServerURL = imageServerURL;
+destObj.a4eHTM = a4eHTM;
+destObj.uniqueA4EIdForTag2 = uniqueA4EIdForTag2;
+busterIframeHtml = getBusterIframeHtml(destObj, a4eHTM, uniqueA4EIdForTag2, innerTempTopLayerAdURL, imageServerURL);
+if (!destObj.alternateExists)
+{
+destObj.writeBusterHtml();
+}
+else
+{
+runAltAsync(destObj, 6000);
+}
+}
+else
+{
+if (!destObj.oIframeTag)
+{
+document.write("<\script src='" + newTopLayerAdURL + "'> <\/script>");
+}
+else
+{
+var tempScript10 = new String("<input type=hidden width=260 height=20 name=ad4Input31"+destObj.paid+" value=" + "\"" + newTopLayerAdURL + "\"><script LANGUAGE='JavaScript' src='' id='ad4everscript41"+destObj.paid+"'><\/script><script DEFER LANGUAGE='JavaScript' src='' id='ad4everscript31"+destObj.paid+"'>document.all.ad4everscript41"+destObj.paid+".src = document.all.ad4Input31"+destObj.paid+".value<\/script>");
+ARMRedirLib.Dom.InsertHtmlAfterBegin(destObj.getAdRootElement(), tempScript10);
+}
+}
+return true;
+}
+function getBusterIframeHtml(destObj, a4eHTM, uniqueA4EIdForTag2, innerTempTopLayerAdURL, imageServerURL)
+{
+return getBusterIframeHead(destObj) + 
+(destObj.dynamicIframe ? getBusterDynamicIframeSource(destObj, uniqueA4EIdForTag2, innerTempTopLayerAdURL, imageServerURL) 
+: getBusterIframeSource(destObj, a4eHTM, uniqueA4EIdForTag2, innerTempTopLayerAdURL, imageServerURL));
+}
+function getBusterIframeHead(destObj)
+{
+var atlasIfrName = destObj.getParamaterContainingForm();
+return "<iframe name='" + atlasIfrName + "' id='" + atlasIfrName + "' height=0 width=0 src=\"";
+}
+function getBusterDynamicIframeSource(destObj, uniqueA4EIdForTag2, innerTempTopLayerAdURL, imageServerURL)
+{
+return "javascript:void(document.write('" +
+("<html><head><title>Advertisement</title></head><body leftmargin=\\'0\\' topmargin=\\'0\\'><scr" +
+"ipt type=\\'text/javascript\\' src=\\'" +
+destObj.atlasObject.TL_files_path.substring(0,destObj.atlasObject.TL_files_path.indexOf("/tl/") + 4) + 
+"newIframeScript.js?" +
+getBusterQueryString(destObj, uniqueA4EIdForTag2, innerTempTopLayerAdURL, imageServerURL) +
+"\\'></scr" + "ipt>"+ 
+"<scr" + "ipt type=\\'text/javascript\\'>" +
+"window.setTimeout(\\'document.close();\\', 3000);" +
+"</scr" +"ipt></body></html>" + "'))" 
+) + "\" frameborder='0' scrolling='no'> <\/iframe>";
+}
+function getBusterIframeSource(destObj, a4eHTM, uniqueA4EIdForTag2, innerTempTopLayerAdURL, imageServerURL)
+{
+return a4eHTM + "?" +
+getBusterQueryString(destObj, uniqueA4EIdForTag2, innerTempTopLayerAdURL, imageServerURL) + 
+"\"> <\/iframe>";
+}
+function getBusterQueryString(destObj, uniqueA4EIdForTag2, innerTempTopLayerAdURL, imageServerURL)
+{
+return uniqueA4EIdForTag2 +
+"?spd=" + destObj.Version + "&atdmt=" +
+innerTempTopLayerAdURL + "a4eflag&fn=" +
+(destObj.dynamicIframe ? "di" : "") + "a4edelim" +
+(destObj.dynamicIframe && destObj.atlasObject.adRootElementId ? "&adRootElemId=" + destObj.atlasObject.adRootElementId + "a4edelim" : "") +
+"&a4eol=a4edelim&a4eot=a4edelim" +
+"&imgSrv=" + imageServerURL;
+}
+function setOnloadHandlerForAltImageLoaded(destObj)
+{
+var tempSWFObjectName = new String("orange_alternate_" + destObj.paid);
+document.getElementById(tempSWFObjectName).onload = function() {destObj.writeBusterHtml();}
+}
+function populateAtlasAdObject(destObj)
+{
+var formId = "atlasTPLinfo" + destObj.paid;
+if (typeof(window[formId]) != 'undefined')
+{
+destObj.internalViewReport = unescape(document.body.all[formId].atlas_view_url.value);
+destObj.internalClickReport = unescape(document.body.all[formId].click_url_t.value) + "1";
+destObj.advertiserID = unescape(document.body.all[formId].advertiserID.value);
+destObj.filesDir = unescape(document.body.all[formId].TL_files_path.value);
+destObj.tempTopLayerAdURL = destObj.filesDir + destObj.paid + "a.js";
+destObj.dsPath = unescape(document.body.all[formId].ds_path.value);
+destObj.clickTrackingURL1 = unescape(document.body.all[formId].pub_click_url.value);
+destObj.impressionTrackingURL1 = unescape(document.body.all[formId].pub_view_url.value);
+if(typeof(document.body.all[formId].adRootElementId) != 'undefined')
+{
+var adRootElemId = unescape(document.body.all[formId].adRootElementId.value);
+}
+if (adRootElemId != "" )
+{
+destObj.adRootElement = document.getElementById(adRootElemId); 
+}
+else
+{
+destObj.adRootElement = null;
+} 
+destObj.atlasObject = new Object();
+var atlasTPLinfo = document.body.all[formId];
+for (var i=0;i<atlasTPLinfo.length;i++)
+{
+destObj.atlasObject[atlasTPLinfo[i].name] = unescape(atlasTPLinfo[i].value);
+}
+atlasTPLinfo.parentNode.removeChild(atlasTPLinfo);
+}
+else
+{
+destObj.atlasObject = eval('__atlas_ad_info["'+destObj.paid+'"];');
+destObj.internalViewReport = destObj.atlasObject.atlas_view_url;
+destObj.internalClickReport = destObj.atlasObject.click_url_t + "1";
+destObj.advertiserID = destObj.atlasObject.advertiserID;
+destObj.filesDir = destObj.atlasObject.TL_files_path;
+destObj.tempTopLayerAdURL = destObj.filesDir + destObj.paid + "a.js";
+destObj.dsPath = destObj.atlasObject.ds_path;
+destObj.clickTrackingURL1 = destObj.atlasObject.pub_click_url;
+destObj.impressionTrackingURL1 = destObj.atlasObject.pub_view_url;
+}
+if ((destObj.clickTrackingURL1).indexOf('pub_click_url') != -1)
+destObj.clickTrackingURL1 = '';
+if ((destObj.impressionTrackingURL1).indexOf ('pub_view_url') != -1)
+destObj.impressionTrackingURL1 = '';
+}
+function runAltAsync(destObj, delay)
+{
+window.setTimeout(function(){destObj.runAlt();}, delay);
+}
+function addUniqueIdToParentIframe(uniqueId)
+{
+var iframeList = top.document.getElementsByTagName('iframe');
+for(var j=0; j < iframeList.length; j++)
+{
+if (iframeList[j] == window.frameElement)
+{
+iframeList[j].atlasUniqueId = uniqueId;
+}
+}
+}
+function ClientCompatibilityManager(){}
+ClientCompatibilityManager.getClientBrowser = function(userAgent)
+{
+return {browser:"notFirefox"};
+}
+if (typeof(ARM_rtc) == "undefined")
+{
+var ARM_rtc = {};
+}
+if (!ARM_rtc.AdLoad)
+{
+ARM_rtc.AdLoad = function(AdModule)
+{
+AdModule.Run();
+}
+}
+if (!ARM_rtc.AddModule)
+{
+ARM_rtc.AddModule = function(module)
+{
+var moduleId = module.moduleId;
+for (var i = 0; i < ARM_rtc.RmAdParms.length; i++)
+{
+var parms = ARM_rtc.RmAdParms[i];
+for (var j = 0; j < parms.mods.length; j++)
+{
+var mod = parms.mods[j];
+if (mod.moduleId == moduleId)
+{
+if (!mod.moduleObject)
+mod.moduleObject = module;
+if (!mod.moduleInitialized)
+{
+mod.moduleInitialized = true;
+var adObjAlt = new ARM_AdObjAltConstructor(parms,(__atlas_ad_info[parms.paid] ? __atlas_ad_info[parms.paid] : new Object() ));
+ARM_rtc.AdLoad(adObjAlt);
+}
+}
+}
+}
+}
+}
+if (typeof(ARM_TestMode) == 'undefined')
+{
+ARM_rtc.AddModule(ARMRedirLib);
+}
+}
